@@ -8,24 +8,21 @@ import javax.swing.JPanel;
 public class TitleDescription extends JPanel{
 	
 	JPanel titleDescriptionPanel = new JPanel(new GridBagLayout());
-	
+	JLabel albumTitleLabel = new JLabel("Album Title");
+	JLabel albumDescriptionLabel = new JLabel("Album Description");
 	
 //	TitleDescription(){
 //		
 //	}
 //	
-	TitleDescription(String title, String description){
-				
-		populatePanel(title, description);
+	TitleDescription(title, description){
+		String albumTitle = new String();
 		
-	}
-	
-	private void populatePanel(String title, String description){
-		JLabel albumTitleLabel = new JLabel(title);
-		JLabel albumDescriptionLabel = new JLabel(description);
 		titleDescriptionPanel.add(albumTitleLabel);
 		titleDescriptionPanel.add(albumDescriptionLabel);
 		add(titleDescriptionPanel);
+		
+		
 	}
 	
 	
