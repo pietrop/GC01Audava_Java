@@ -5,27 +5,28 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 
-public class TitleDescription extends JPanel{
-	
-	JPanel titleDescriptionPanel = new JPanel(new GridBagLayout());
+public class AlbumInfoPanel extends JPanel{
 	
 	
 //	TitleDescription(){
 //		
 //	}
 //	
-	TitleDescription(String title, String description){
+	AlbumInfoPanel(String title, String description){
 				
 		populatePanel(title, description);
 		
 	}
 	
 	private void populatePanel(String title, String description){
+		
 		JLabel albumTitleLabel = new JLabel(title);
+		albumTitleLabel.setBounds(100, 6, 73, 10);
 		JLabel albumDescriptionLabel = new JLabel(description);
-		titleDescriptionPanel.add(albumTitleLabel);
-		titleDescriptionPanel.add(albumDescriptionLabel);
-		add(titleDescriptionPanel);
+		albumDescriptionLabel.setBounds(10, 20, 279, 171);
+		setLayout(null);
+		add(albumTitleLabel);
+		add(albumDescriptionLabel);
 	}
 	
 	
