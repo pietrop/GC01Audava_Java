@@ -1,0 +1,16 @@
+import javax.swing.JFrame;
+
+
+public class TitleDescription extends JFrame{
+	
+	JPanel aPanel = new JPanel();
+	JLable aLabel = new JLable("Hello Label");
+	
+	TitleDescription(){
+		
+		aPanel.add(aLabel);
+		add(aPanel);
+	}
+	
+	
+}

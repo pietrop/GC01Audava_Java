@@ -1,0 +1,8 @@
+import javax.swing.JFrame;
+
+
+public class TitleDescription extends JFrame{
+	
+	JPanel aPanel = new JPanel();
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;aPanel&apos; in &apos;TitleDescription&apos; to &apos;titleDescriptionPanel&apos;&#x0A;- Original project: &apos;AuJava&apos;&#x0A;- Original element: &apos;TitleDescription.aPanel&apos;&#x0A;- Renamed element: &apos;TitleDescription.titleDescriptionPanel&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;aPanel&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;{TitleDescription.java[TitleDescription^aPanel" name="titleDescriptionPanel" references="true" setter="false" stamp="1415898389564" textual="false" version="1.0"/>
+</session>

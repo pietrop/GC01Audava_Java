@@ -1,0 +1,8 @@
+
+public class AlbumPage extends Page{
+
+	AlbumPage(){
+
+		add(add(titleDescription);
+	}
+}

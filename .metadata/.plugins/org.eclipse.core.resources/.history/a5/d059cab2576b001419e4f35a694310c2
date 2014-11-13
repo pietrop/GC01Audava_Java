@@ -1,0 +1,12 @@
+import javax.swing.JFrame;
+
+
+public abstract class Page extends JFrame{
+	TitleDescription titleDescription= new TitleDescription();
+	
+	Page(){
+	super("AuJava");
+	
+	}
+
+}

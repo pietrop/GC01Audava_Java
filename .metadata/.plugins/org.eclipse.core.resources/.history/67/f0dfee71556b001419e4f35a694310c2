@@ -1,0 +1,7 @@
+
+public class Page extends JFrame{
+	Page(){
+		super("A Page");
+	}
+
+}

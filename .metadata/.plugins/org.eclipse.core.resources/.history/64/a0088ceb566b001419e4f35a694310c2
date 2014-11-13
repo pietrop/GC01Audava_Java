@@ -1,0 +1,14 @@
+import javax.swing.JFrame;
+
+
+public class Controller {
+
+	public static void main(String[] args) {
+		Page page = new Page();// create JFrame window(?)
+		page.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+		page.setSize( 600, 300 );
+		page.setVisible( true ); 
+		page.setResizable(true);
+	}
+
+}
