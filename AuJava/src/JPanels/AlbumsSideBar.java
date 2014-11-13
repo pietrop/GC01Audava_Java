@@ -25,7 +25,7 @@ public class AlbumsSideBar extends JPanel {
 		add(btnAlbum_1);
 		
 		JButton btnAlbum_2 = new JButton("Album 3");
-		btnAlbum_2.setBounds(181, 190, 117, 29);
+		btnAlbum_2.setBounds(181, 186, 117, 29);
 		add(btnAlbum_2);
 		
 		JLabel lblAlbums = new JLabel("Albums");
