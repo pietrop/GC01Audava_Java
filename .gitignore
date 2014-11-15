@@ -1,0 +1,5 @@
+#ignore .DS_Store system file
+.DS_Store
+
+#ignore RemoteSystemsTempFiles
+RemoteSystemsTempFiles
