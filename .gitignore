@@ -3,3 +3,7 @@
 
 #ignore RemoteSystemsTempFiles
 RemoteSystemsTempFiles
+
+
+#metadata , eclipse plugin files
+.metadata
