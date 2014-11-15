@@ -12,6 +12,9 @@ public class AlbumsSideBar extends JPanel {
 	public AlbumsSideBar() {
 		setLayout(null);
 		
+		int panelWidth = getSize().width;
+		int panelHeight = getSize().height;
+		
 		JButton btnDefaultAlbum = new JButton("Default Album");
 		btnDefaultAlbum.setBounds(181, 61, 117, 29);
 		add(btnDefaultAlbum);

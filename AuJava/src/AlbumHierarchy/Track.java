@@ -1,5 +1,10 @@
 package AlbumHierarchy;
 
-public class Track {
-
+/**
+ * 
+ * @author SamiStart
+ *
+ */
+public class Track extends AlbumOrTitle{
+	
 }
