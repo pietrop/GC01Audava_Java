@@ -7,3 +7,4 @@ RemoteSystemsTempFiles
 
 #metadata , eclipse plugin files
 .metadata
+/bin/
