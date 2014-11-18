@@ -9,14 +9,14 @@ public class PictureLabel extends JLabel {
 
 	public PictureLabel () {
 		
-		Image image = new ImageIcon(this.getClass().getResource("/Track.png")).getImage();
+		//Image image = new ImageIcon(this.getClass().getResource("/Track.png")).getImage();
 		
-		ImageIcon img2 = new ImageIcon("Track.png");
+		ImageIcon img2 = new ImageIcon("img/Track.png");
+		System.out.println(this.getClass().toString());
+		//this.setIcon(new ImageIcon(image));
+		this.setIcon(img2); //Why does this not work?
 		
-		this.setIcon(new ImageIcon(image));
-//		this.setIcon(img2); Why does this not work?
-		
-		this.setBounds(20,50,256,256);
+		this.setBounds(20,50,20,20);
 		
 		
 	}
