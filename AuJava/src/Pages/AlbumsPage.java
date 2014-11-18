@@ -6,10 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import jComponents.MenuBar;
 
 
-
-import JPanels.MenuBar;
+import jComponents.MenuBar;
 
 public class AlbumsPage extends Page {
 
@@ -42,7 +42,7 @@ public class AlbumsPage extends Page {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		
-		add(new MenuBar());
+		add(new MenuBar("user"));
 		
 	}
 

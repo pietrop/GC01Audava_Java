@@ -10,14 +10,14 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextPane;
-
+import jComponents.MenuBar;
 import java.awt.Font;
 
 public class AboutUsPage extends JFrame {
 	
 	public AboutUsPage(){
 		super("AuJava - About Us Page");
-		MenuBar menuBar = new MenuBar();
+		MenuBar menuBar = new MenuBar("user");
 		getContentPane().add(menuBar);
 		
 		

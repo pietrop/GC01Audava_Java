@@ -30,7 +30,7 @@ import javax.swing.JFrame;
 import javax.swing.Timer;
 import javax.swing.JTextPane;
 import javax.swing.JTextField;
-
+import jComponents.MenuBar;
 
 
 
@@ -59,7 +59,7 @@ public class RecordPage extends Page{
 		super("AuJava - Rec Page");
 
 
-		MenuBar menuBar = new MenuBar();
+		MenuBar menuBar = new MenuBar("user");
 		getContentPane().add(menuBar);
 
 		JPanel recPanel = new JPanel();

@@ -13,7 +13,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import JPanels.MenuBar;
+import jComponents.MenuBar;
 
 public class TrackPage extends JFrame {
 

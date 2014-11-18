@@ -2,8 +2,7 @@ package AlbumHierarchy;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
-import JPanels.AlbumsSideBar;
+import jComponents.AlbumsSideBar;
 import Utilities.AlbumFileReadWrite;
 
 public class Album extends AlbumOrTitle {

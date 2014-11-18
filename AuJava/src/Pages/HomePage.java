@@ -19,6 +19,7 @@ import javax.swing.JLabel;
 import javax.swing.JTextPane;
 
 import java.awt.Font;
+import jComponents.MenuBar;
 
 public class HomePage extends JFrame{
 	public HomePage() {
@@ -26,7 +27,7 @@ public class HomePage extends JFrame{
 	
 		String dummyTextForAudava = new String("Audava is a ..Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ipsum lacus, ultrices eget consectetur vel, aliquet id justo. Fusce in malesuada ante. Vestibulum accumsan dolor nec orci rutrum tempor. Maecenas tincidunt laoreet tempus. Vivamus maximus, neque non tempus tincidunt, ante turpis pellentesque massa, et bibendum metus ligula ut eros.\n \n Maecenas venenatis nisi eget imperdiet lacinia. Nullam eget interdum mauris, non scelerisque felis.");
 		
-		MenuBar menuBar = new MenuBar();
+		MenuBar menuBar = new MenuBar("user");
 		getContentPane().add(menuBar);
 		
 		JTextPane txtAudava = new JTextPane();

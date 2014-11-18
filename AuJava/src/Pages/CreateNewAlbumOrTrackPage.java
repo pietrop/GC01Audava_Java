@@ -9,7 +9,7 @@ import javax.swing.border.EmptyBorder;
 
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
-import JPanels.MenuBar;
+import jComponents.MenuBar;
 
 import javax.swing.JTextField;
 import javax.swing.JEditorPane;

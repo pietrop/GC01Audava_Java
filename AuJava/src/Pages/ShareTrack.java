@@ -17,12 +17,13 @@ import javax.swing.JButton;
 import javax.swing.JTextArea;
 
 import users.LoginDialog;
+import jComponents.MenuBar;
 
 public class ShareTrack extends Page {
 	private JTextField emailField;
 	
 	public ShareTrack(){
-		MenuBar menuBar = new MenuBar();
+		MenuBar menuBar = new MenuBar("user");
 		getContentPane().add(menuBar);
 
 		JPanel shareTrackPanel = new JPanel();

@@ -22,7 +22,7 @@ public class AudioPlayer extends JFrame{
 	
 	AudioPlayer(){
 		super("Audio Player");
-		MenuBar menuBar = new MenuBar();
+		MenuBar menuBar = new MenuBar("user");
 		getContentPane().add(menuBar);
 		
 		JButton btnPlay = new JButton("play");

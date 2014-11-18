@@ -33,11 +33,11 @@ public class Controller {
 //		home.setResizable(true);
 		
 		//testing about us page
-//		AboutUsPage aboutUsPage = new AboutUsPage();// create JFrame window(?)
-//		aboutUsPage.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-//		aboutUsPage.setSize( PAGE_WIDTH, PAGE_HEIGHT );
-//		aboutUsPage.setVisible( true ); 
-//		aboutUsPage.setResizable(true);
+		AboutUsPage aboutUsPage = new AboutUsPage();// create JFrame window(?)
+		aboutUsPage.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+		aboutUsPage.setSize( PAGE_WIDTH, PAGE_HEIGHT );
+		aboutUsPage.setVisible( true ); 
+		aboutUsPage.setResizable(true);
 		
 		//album page
 //		AlbumPage albumPage = new AlbumPage();// create JFrame window(?)
@@ -54,11 +54,11 @@ public class Controller {
 //		shareTrack.setResizable(true);
 		
 		//RecordPage		
-		RecordPage recordPage = new RecordPage();// create JFrame window(?)
-		recordPage.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-		recordPage.setSize( PAGE_WIDTH, PAGE_HEIGHT );
-		recordPage.setVisible( true ); 
-		recordPage.setResizable(true);
+//		RecordPage recordPage = new RecordPage();// create JFrame window(?)
+//		recordPage.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+//		recordPage.setSize( PAGE_WIDTH, PAGE_HEIGHT );
+//		recordPage.setVisible( true ); 
+//		recordPage.setResizable(true);
 //		
 		
 	}
