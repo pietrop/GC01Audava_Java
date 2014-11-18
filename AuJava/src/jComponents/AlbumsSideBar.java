@@ -1,4 +1,4 @@
-package JPanels;
+package jComponents;
 
 import javax.swing.JPanel;
 import javax.swing.JButton;

@@ -1,4 +1,4 @@
-package JPanels;
+package jComponents;
 import java.awt.GridBagLayout;
 import java.awt.TextArea;
 
@@ -8,17 +8,22 @@ import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import javax.swing.JProgressBar;
 
-
+/**
+ * @author: Pietro 
+ * 
+ */
 
 public class AlbumInfoPanel extends JPanel{
-	
-	public AlbumInfoPanel(String title, String description){
-				
-		populatePanel(title, description);
-		
+
+	public AlbumInfoPanel(String title, String description, String albumImage) {
+		populatePanel(title,description,albumImage);
 	}
 	
-	private void populatePanel(String title, String description){
+//	public AlbumInfoPanel(String title, String description) {
+//		populatePanelWithoutAlbumPicture(title,description);
+//	}
+
+	private void populatePanel(String title, String description,String albumImage){
 		
 //		JLabel albumTitleLabel = new JLabel(title);
 		TextArea albumTitleLabel = new TextArea(title,1,1, TextArea.SCROLLBARS_NONE);
@@ -42,7 +47,7 @@ public class AlbumInfoPanel extends JPanel{
 		albulmDescription.setBounds(20, 58, 131, 16);
 		add(albulmDescription);
 		//album image
-		ImageIcon  albumPictureIcon = new ImageIcon("duke-java.png");
+		ImageIcon  albumPictureIcon = new ImageIcon(albumImage);
 		JLabel alblAlbumImage = new JLabel(albumPictureIcon);
 		alblAlbumImage.setBounds(388, 11, 289, 188);
 		add(alblAlbumImage);
