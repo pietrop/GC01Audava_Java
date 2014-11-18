@@ -7,11 +7,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-
-
 import JPanels.MenuBar;
+import JPanels.PictureLabel;
 
-public class AlbumsPage extends Page {
+public class TrackPage extends JFrame {
 
 	private JPanel contentPane;
 
@@ -34,17 +33,20 @@ public class AlbumsPage extends Page {
 	/**
 	 * Create the frame.
 	 */
-	public AlbumsPage() {
+	public TrackPage() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 400, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		
-		add(new MenuBar());
+		JPanel menubar = new MenuBar();
+		menubar.setBounds(0, 0, this.getWidth(), 40);
 		
+		add(menubar);
+				
+		add(new PictureLabel());
 	}
-
 
 }
