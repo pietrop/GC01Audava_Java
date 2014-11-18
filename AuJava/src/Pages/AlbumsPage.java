@@ -11,7 +11,7 @@ import javax.swing.border.EmptyBorder;
 
 import JPanels.MenuBar;
 
-public class AlbumsPage extends JFrame {
+public class AlbumsPage extends Page {
 
 	private JPanel contentPane;
 
@@ -45,5 +45,6 @@ public class AlbumsPage extends JFrame {
 		add(new MenuBar());
 		
 	}
+
 
 }
