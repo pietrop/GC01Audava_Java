@@ -11,6 +11,11 @@ import java.util.Arrays;
 
 import AlbumHierarchy.Album;
 
+/**
+ * 
+ * @author SamiStart
+ *
+ */
 public class AlbumFileReadWrite {
 
 	private static final String ALBUMFILEPATH = "/Users/SamiStart/Desktop/blog.txt";
