@@ -8,3 +8,6 @@ RemoteSystemsTempFiles
 #metadata , eclipse plugin files
 .metadata
 /bin/
+
+# excluding eclipse recomenders
+.recommenders
