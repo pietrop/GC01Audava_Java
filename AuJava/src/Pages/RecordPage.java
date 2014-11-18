@@ -60,7 +60,7 @@ public class RecordPage extends Page{
 
 
 		MenuBar menuBar = new MenuBar("user");
-		getContentPane().add(menuBar);
+		this.setJMenuBar(menuBar);
 
 		JPanel recPanel = new JPanel();
 		recPanel.setLayout(null);

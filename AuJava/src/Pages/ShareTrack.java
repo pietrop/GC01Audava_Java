@@ -24,7 +24,7 @@ public class ShareTrack extends Page {
 	
 	public ShareTrack(){
 		MenuBar menuBar = new MenuBar("user");
-		getContentPane().add(menuBar);
+		this.setJMenuBar(menuBar);
 
 		JPanel shareTrackPanel = new JPanel();
 		shareTrackPanel.setLayout(null);
