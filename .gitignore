@@ -2,7 +2,7 @@
 .DS_Store
 
 #ignore RemoteSystemsTempFiles
-./RemoteSystemsTempFiles
+RemoteSystemsTempFiles
 
 
 #metadata , eclipse plugin files
