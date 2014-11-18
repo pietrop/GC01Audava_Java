@@ -1,5 +1,7 @@
 package Pages;
 
+import jComponents.PictureLabel;
+
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.EventQueue;
@@ -12,7 +14,6 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import JPanels.MenuBar;
-import JPanels.PictureLabel;
 
 public class TrackPage extends JFrame {
 

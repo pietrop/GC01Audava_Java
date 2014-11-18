@@ -1,4 +1,4 @@
-package JPanels;
+package jComponents;
 
 import java.awt.Image;
 
