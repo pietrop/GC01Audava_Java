@@ -1,9 +1,13 @@
 package Pages;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
@@ -41,12 +45,14 @@ public class TrackPage extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		
-		JPanel menubar = new MenuBar();
-		menubar.setBounds(0, 0, this.getWidth(), 40);
+		MenuBar menubar = new MenuBar("Maximilian");
 		
-		add(menubar);
+		this.setJMenuBar(menubar);
+		//this.add(menubar);
 				
-		add(new PictureLabel());
+		this.add(new PictureLabel());
+		
+		
 	}
 
 }
