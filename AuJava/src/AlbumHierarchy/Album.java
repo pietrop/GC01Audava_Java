@@ -5,7 +5,11 @@ import java.util.ArrayList;
 import jComponents.AlbumsSideBar;
 import Utilities.AlbumFileReadWrite;
 
-public class Album extends AlbumOrTitle {
+public class Album extends AlbumOrTrack {
+	
+	public Album(){
+		super();
+	}
 	
 	public Album(String ttl, String dsc, String pic) {
 		super(ttl, dsc, pic);

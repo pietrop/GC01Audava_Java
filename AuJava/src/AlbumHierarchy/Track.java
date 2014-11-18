@@ -5,7 +5,7 @@ package AlbumHierarchy;
  * @author SamiStart
  *
  */
-public class Track extends AlbumOrTitle {
+public class Track extends AlbumOrTrack {
 
 	private String audioFileLocation;
 

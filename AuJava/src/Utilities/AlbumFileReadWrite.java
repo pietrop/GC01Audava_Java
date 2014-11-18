@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import AlbumHierarchy.Album;
 
@@ -28,50 +29,62 @@ public class AlbumFileReadWrite {
 		}
 	}
 
-	private static Album returnSpecificAlbum(String title) throws IOException {
+	/**
+	 * Returns a specific album that you choose by it's title. If the album does
+	 * not exist an album with all fields equal to 'album not found" will be
+	 * returned and an error message printed to console.
+	 * 
+	 * @param title
+	 *            Title of the album that you want to return (case-insensitive)
+	 * @return
+	 * @throws IOException
+	 */
+	public static Album returnAlbum(String title) throws IOException {
 
 		FileReader fR = new FileReader(ALBUMFILEPATH);
 		BufferedReader textReader = new BufferedReader(fR);
 
-		String[] testString;
-		Album album;
-		do {
-			testString = textReader.readLine().split(TAB);
-			album = new Album(testString[0], testString[1], testString[2]);
-		} while (testString[0] != title);
-		
+		String[] testStrings = new String[getNumberOfFields()];
+		Album album = new Album("album not found", "album not found",
+				"album not found");
+		String testString = textReader.readLine();
+		// TODO make something to flag up when the database is empty
+		while (testString != null) {
 
-		textReader.close();
-		fR.close();
+			testStrings = testString.split(TAB);
 
-		return album;
-	}
+			if (testStrings[0].equalsIgnoreCase(title)) {
 
-	public static ArrayList<Album> readAllAlbums() throws IOException {
-		ArrayList<Album> albums = new ArrayList<Album>();
+				textReader.close();
+				fR.close();
 
-		FileReader fR = new FileReader(ALBUMFILEPATH);
-		BufferedReader textReader = new BufferedReader(fR);
+				album.setTitle(testStrings[0]);
+				album.setDescription(testStrings[1]);
+				album.setPicFileLocation(testStrings[2]);
+				return album;
+			}
 
-		String[] testString;
+			testString = textReader.readLine();
 
-		try {
-			testString = textReader.readLine().split(TAB);
-			do {
-				albums.add(new Album(testString[0], testString[1],
-						testString[2]));
-				testString = textReader.readLine().split(TAB);
-
-			} while (testString[0] != "");
-
-		} catch (Exception e) {
-			e.printStackTrace();
 		}
 
+		System.err.println("album not found");
+		return album;
+
+	}
+
+	private static int getNumberOfFields() throws IOException {
+		int numberOfFields;
+
+		FileReader fR = new FileReader(ALBUMFILEPATH);
+		BufferedReader textReader = new BufferedReader(fR);
+
+		numberOfFields = textReader.readLine().split(TAB).length;
+
 		textReader.close();
 		fR.close();
 
-		return albums;
+		return numberOfFields;
 
 	}
 

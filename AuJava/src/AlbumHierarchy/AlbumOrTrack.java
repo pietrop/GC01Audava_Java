@@ -6,12 +6,18 @@ package AlbumHierarchy;
  * 
  * @author SamiStart
  */
-public abstract class AlbumOrTitle {
+public abstract class AlbumOrTrack {
 	private String title;
 	private String description;
 	private String picFileLocation;
+	
+	public AlbumOrTrack(){
+		this.title = "default constructor title";
+		this.description = "default constructor description";
+		this.picFileLocation = "default constructor pic location";
+	}
 
-	public AlbumOrTitle(String ttl, String dsc, String pic) {
+	public AlbumOrTrack(String ttl, String dsc, String pic) {
 		this.title = ttl;
 		this.description = dsc;
 		this.picFileLocation = pic;
