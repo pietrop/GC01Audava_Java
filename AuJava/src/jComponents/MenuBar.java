@@ -12,8 +12,14 @@ import javax.swing.JMenuItem;
  */
 public class MenuBar extends JMenuBar {	
 	
-	private String username = "Username"; 
+	private static String username = "Username"; 
 	
+	/**
+	 * Cascading constructor.
+	 */
+	public MenuBar () {
+		this(username);
+	}
 	/**
 	 * Populate the menubar.
 	 */
@@ -40,7 +46,6 @@ public class MenuBar extends JMenuBar {
 		
 		account.add(settings);
 		account.add(logout);
-		
 		
 	}
 	
