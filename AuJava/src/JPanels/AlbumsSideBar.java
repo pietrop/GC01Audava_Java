@@ -1,8 +1,10 @@
 package JPanels;
 
+import java.util.ArrayList;
+
 import javax.swing.JPanel;
 import javax.swing.JButton;
-import javax.swing.JLabel;
+import AlbumHierarchy.Album;
 
 public class AlbumsSideBar extends JPanel {
 
@@ -12,28 +14,21 @@ public class AlbumsSideBar extends JPanel {
 	public AlbumsSideBar() {
 		setLayout(null);
 		
-		int panelWidth = getSize().width;
-		int panelHeight = getSize().height;
+		//one button for each album plus one more for the New Album button
+		int buttonCount = Album.allAlbums.size() + 1;
 		
-		JButton btnDefaultAlbum = new JButton("Default Album");
-		btnDefaultAlbum.setBounds(181, 61, 117, 29);
-		add(btnDefaultAlbum);
+		int buttonWidth = this.getWidth();
+		int buttonHeight = 40;
 		
-		JButton btnAlbum = new JButton("Album 1");
-		btnAlbum.setBounds(181, 102, 117, 29);
-		add(btnAlbum);
+		ArrayList<JButton> btns = new ArrayList<JButton>();
 		
-		JButton btnAlbum_1 = new JButton("Album 2");
-		btnAlbum_1.setBounds(181, 143, 117, 29);
-		add(btnAlbum_1);
+		for (int i = 0; i < buttonCount; i++) {
+			btns.add(new JButton(Album.allAlbums.get(i).getTitle()));
+			btns.get(i).setBounds(0, buttonHeight*i, buttonWidth, buttonHeight);
+			add(btns.get(i));
+		}
 		
-		JButton btnAlbum_2 = new JButton("Album 3");
-		btnAlbum_2.setBounds(181, 186, 117, 29);
-		add(btnAlbum_2);
 		
-		JLabel lblAlbums = new JLabel("Albums");
-		lblAlbums.setBounds(208, 33, 61, 16);
-		add(lblAlbums);
 
 	}
 }

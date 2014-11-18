@@ -1,8 +1,21 @@
 package AlbumHierarchy;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
+import JPanels.AlbumsSideBar;
+import Utilities.AlbumFileReadWrite;
+
 public class Album extends AlbumOrTitle {
+	
+	public Album(String ttl, String dsc, String pic) {
+		super(ttl, dsc, pic);
+	}
+
+	/**
+	 *A static ArrayList of all the albums (this only works for one user)
+	 */
+	public static ArrayList<Album> allAlbums = new ArrayList<Album>();
 
 	private ArrayList<Track> tracksInAlbum = new ArrayList<Track>();
 
@@ -31,6 +44,15 @@ public class Album extends AlbumOrTitle {
 	 */
 	public ArrayList<Track> getTracks(){
 		return tracksInAlbum;
+	}
+	
+	private void populateAlbums() {
+		try {
+			allAlbums = AlbumFileReadWrite.readAllAlbums();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }
