@@ -36,7 +36,7 @@ import jComponents.MenuBar;
 
 public class RecordPage extends Page{
 
-	
+
 
 	//add date to filename to make them all different
 	static Calendar cal = Calendar.getInstance();
@@ -56,43 +56,35 @@ public class RecordPage extends Page{
 	private JTextField timerTextField;
 
 	public RecordPage(){
-		super("AuJava - Rec Page");
 
-
-		MenuBar menuBar = new MenuBar("user");
-		this.setJMenuBar(menuBar);
-
-		JPanel recPanel = new JPanel();
-		recPanel.setLayout(null);
-		getContentPane().add(recPanel, BorderLayout.CENTER);
-		getContentPane().add(recPanel);
 
 		ImageIcon  recButtonIcon = new ImageIcon("img/rec.png");
 		ImageIcon  stopButtonIcon = new ImageIcon("img/stop.png");
+		setLayout(null);
 
 		JButton btnRec = new JButton(recButtonIcon);
-		btnRec.setBounds(24, 90, 319, 281);
-		recPanel.add(btnRec);
+		btnRec.setBounds(36, 58, 258, 260);
+		add(btnRec);
 
 		JButton btnStop = new JButton(stopButtonIcon);
 		btnStop.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnStop.setBounds(397, 90, 275, 281);
-		recPanel.add(btnStop);
-		System.out.println("rec");
+		btnStop.setBounds(365, 58, 258, 260);
+		add(btnStop);
+
 
 		btnRec.setEnabled(true);
 		btnStop.setEnabled(false);
 
 		timerTextField = new JTextField();
-		timerTextField.setBounds(306, 393, 134, 28);
-		recPanel.add(timerTextField);
+		timerTextField.setBounds(264, 414, 134, 28);
+		add(timerTextField);
 		timerTextField.setEditable(false);
 		timerTextField.setColumns(10);
 
-		
+
 
 
 		ActionListener actListner = new ActionListener() {
@@ -101,11 +93,11 @@ public class RecordPage extends Page{
 			public void actionPerformed(ActionEvent event) {
 
 				long elapsedTime = System.currentTimeMillis() - startTime;
-				
+
 				long elapsedSeconds = elapsedTime / 1000;
 				long elapsedMinutes = elapsedSeconds / 60;
 				timerTextField.setText(Long.toString(elapsedMinutes)+":"+Long.toString(elapsedSeconds));
-				
+
 				System.out.print("Inside actListner action listener for timer  \t");
 				System.out.println(Long.toString(elapsedMinutes)+":"+Long.toString(elapsedSeconds));
 			}
@@ -121,7 +113,7 @@ public class RecordPage extends Page{
 				btnRec.setEnabled(false);
 				btnStop.setEnabled(true);
 				rec.startRecording();
-				
+
 				timer.start();
 
 			}
@@ -134,8 +126,8 @@ public class RecordPage extends Page{
 				btnRec.setEnabled(true);
 				btnStop.setEnabled(false);
 				rec.stopRecording();
-				
-				 timer.stop();
+
+				timer.stop();
 			}
 
 		});

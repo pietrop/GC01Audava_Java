@@ -1,4 +1,6 @@
 package jComponents;
+import java.awt.event.ActionListener;
+
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -34,6 +36,9 @@ public class MenuBar extends JMenuBar {
 		JMenu aboutUs = new JMenu("AboutUs");
 		JMenu account = new JMenu(username);
 		
+		
+		
+        
 		this.add(audava);
 		this.add(record);
 		this.add(upload);
@@ -46,6 +51,9 @@ public class MenuBar extends JMenuBar {
 		
 		account.add(settings);
 		account.add(logout);
+		
+	
+
 		
 	}
 	

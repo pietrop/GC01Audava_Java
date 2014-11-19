@@ -24,11 +24,11 @@ public class ShareTrack extends Page {
 	
 	public ShareTrack(){
 		MenuBar menuBar = new MenuBar("user");
-		this.setJMenuBar(menuBar);
+		add(menuBar);
 
 		JPanel shareTrackPanel = new JPanel();
 		shareTrackPanel.setLayout(null);
-		getContentPane().add(shareTrackPanel, BorderLayout.CENTER);
+		getRootPane().add(shareTrackPanel, BorderLayout.CENTER);
 		
 		JLabel lblNewLabel = new JLabel("Or send link by e-mail to:");
 		lblNewLabel.setBounds(92, 186, 294, 16);
