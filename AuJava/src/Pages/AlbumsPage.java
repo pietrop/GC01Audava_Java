@@ -11,6 +11,11 @@ import jComponents.MenuBar;
 
 import jComponents.MenuBar;
 
+/**
+ * 
+ * @author SamiStart
+ *
+ */
 public class AlbumsPage extends Page {
 
 	private JPanel contentPane;

@@ -8,6 +8,11 @@ import javax.swing.JPanel;
 
 import Utilities.AlbumFileReadWrite;
 
+/**
+ * 
+ * @author SamiStart
+ *
+ */
 public class CreateNewAlbumPage extends CreateNewAlbumOrTrackPage {
 
 	private JPanel contentPane;
