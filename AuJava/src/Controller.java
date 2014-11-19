@@ -42,11 +42,11 @@ public class Controller {
 
 		
 //		//ShareTrack		
-		ShareTrack shareTrack = new ShareTrack();// create JFrame window(?)
-		shareTrack.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-		shareTrack.setSize( PAGE_WIDTH, PAGE_HEIGHT );
-		shareTrack.setVisible( true ); 
-		shareTrack.setResizable(true);
+//		ShareTrack shareTrack = new ShareTrack();// create JFrame window(?)
+//		shareTrack.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+//		shareTrack.setSize( PAGE_WIDTH, PAGE_HEIGHT );
+//		shareTrack.setVisible( true ); 
+//		shareTrack.setResizable(true);
 		
 //		//RecordPage		
 		RecordPage recordPage = new RecordPage();// create JFrame window(?)
