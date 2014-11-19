@@ -82,25 +82,16 @@ public class Controller {
 	        };
 	        
 	        
-	        JComponent uplaodCard = makeTextPanel("Panel #2");//
+//	        JComponent uplaodCard = makeTextPanel("Panel #2");//
 	        
 	        /*Upload Page*/   
-//	        UploadPage uplaodCard = new UploadPage();
-//	        {
-//	            //Make the panel wider than it really needs, so
-//	            //the window's wide enough for the tabs to stay
-//	            //in one row.
-//	            public Dimension getPreferredSize() {
-//	                Dimension size = super.getPreferredSize();
-//	                size.width += extraWindowWidth;
-//	                size.height += extraWindowHeight;
-//	                return size;
-//	            }
-//	        };
+	        UploadPage uplaodCard = new UploadPage();
+	        
+	        /*Albums Page*/
+	        AlbumsPage albumsCard = new AlbumsPage();
 //	      
 
-	        JComponent albumsCard = makeTextPanel("Panel #3");//AlbumsPage
-	       
+	        
 	        
 	        /* Adding Cards to the Tabs*/
 	        tabbedPaneMenu.addTab(HOMEPANEL, homeCard);
