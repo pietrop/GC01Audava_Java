@@ -14,8 +14,14 @@ public abstract class ReadWriteUtilities {
 
 		FileReader fR = new FileReader(FILEPATH);
 		BufferedReader textReader = new BufferedReader(fR);
+		
+		String testString = textReader.readLine();
+		
+		if (testString==null) {
+			return 0;
+		}
 
-		numberOfFields = textReader.readLine().split(TAB).length;
+		numberOfFields = testString.split(TAB).length;
 
 		textReader.close();
 		fR.close();
