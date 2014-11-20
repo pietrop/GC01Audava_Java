@@ -15,6 +15,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import AlbumHierarchy.Album;
 import Pages.AboutUsPage;
 import Pages.AlbumsPage;
 import Pages.HomePage;
@@ -159,6 +160,11 @@ public class Controller {
                 createAndShowGUI();
             }
         });
+        
+//        Album defaultStoryAlbum = new Album("Default Story Album Title", "Default Story Album Description", "duke-java.png");
+//    	allAlbums.add(defaultStoryAlbum);
+    	
+    	
 		//		createAndShowGUI();	
 
 		//testing album page
