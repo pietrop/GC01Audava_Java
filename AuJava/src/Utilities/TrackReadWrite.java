@@ -16,7 +16,7 @@ import AlbumHierarchy.Track;
  */
 public class TrackReadWrite extends ReadWriteUtilities{
 
-	private static final String FILEPATH = "/Users/SamiStart/Desktop/tracks.txt";
+	private static final String FILEPATH = "db/tracks.txt";
 
 	public static void appendtrack(String title, String description,
 			String picLocation, String audioLocation) {
@@ -63,7 +63,7 @@ public class TrackReadWrite extends ReadWriteUtilities{
 				track.setTitle(testStrings[0]);
 				track.setDescription(testStrings[1]);
 				track.setPicFileLocation(testStrings[2]);
-				track.setaudioFileLocation(testStrings[3]);
+				track.setAudioFileLocation(testStrings[3]);
 				return track;
 			}
 
