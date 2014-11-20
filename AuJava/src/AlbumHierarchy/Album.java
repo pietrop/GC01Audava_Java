@@ -14,11 +14,13 @@ public class Album extends AlbumOrTrack {
 	public Album(String ttl, String dsc, String pic) {
 		super(ttl, dsc, pic);
 	}
+	
+	
 
 	/**
 	 *A static ArrayList of all the albums (this only works for one user)
 	 */
-	public static ArrayList<Album> allAlbums = new ArrayList<Album>();
+	private static ArrayList<Album> allAlbums = new ArrayList<Album>();
 
 	private ArrayList<Track> tracksInAlbum = new ArrayList<Track>();
 
@@ -48,6 +50,23 @@ public class Album extends AlbumOrTrack {
 	public ArrayList<Track> getTracks(){
 		return tracksInAlbum;
 	}
+	
+	public static ArrayList<Album> getAllAlbums() {
+		return allAlbums;
+	}
+	
+	public static void setAllAlbums(ArrayList<Album> allAlbums) {
+		Album.allAlbums = allAlbums;
+	}
+	
+	public void delete() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+	
+	
 	
 	
 }
