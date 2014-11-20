@@ -13,6 +13,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
@@ -28,7 +29,7 @@ public class TrackPage extends Page {
 		
 		this.setLayout(null);
 		
-		JLabel albumName = new JLabel(track.)
+		
 		
 		trackInfo = new JPanel();
 		trackInfo.setBorder(new LineBorder(Color.blue));
