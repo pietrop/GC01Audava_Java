@@ -3,7 +3,7 @@ package Testing;
 import java.io.IOException;
 
 import AlbumHierarchy.Album;
-import Utilities.AlbumFileReadWrite;
+import Utilities.AlbumReadWrite;
 
 /**
  * 
@@ -17,7 +17,7 @@ public class TestUtilitiesNOTAREALCLASS {
 		Album albm = new Album();
 
 		try {
-			albm = AlbumFileReadWrite.returnAlbum("e");
+			albm = AlbumReadWrite.returnAlbum("e");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

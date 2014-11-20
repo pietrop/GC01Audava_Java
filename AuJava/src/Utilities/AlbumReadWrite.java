@@ -7,7 +7,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import AlbumHierarchy.Album;
 
@@ -16,16 +15,14 @@ import AlbumHierarchy.Album;
  * @author SamiStart
  *
  */
-public class AlbumFileReadWrite {
+public class AlbumReadWrite extends ReadWriteUtilities {
 
-	private static final String ALBUMFILEPATH = "/Users/SamiStart/Desktop/blog.txt";
-
-	private final static String TAB = "\t";
+	private static final String FILEPATH = "/Users/SamiStart/Desktop/albums.txt";
 
 	public static void appendAlbum(String title, String description,
 			String picLocation) {
 		try (PrintWriter out = new PrintWriter(new BufferedWriter(
-				new FileWriter(ALBUMFILEPATH, true)))) {
+				new FileWriter(FILEPATH, true)))) {
 			out.println(title + TAB + description + TAB + picLocation);
 			out.flush();
 			out.close();
@@ -46,10 +43,10 @@ public class AlbumFileReadWrite {
 	 */
 	public static Album returnAlbum(String title) throws IOException {
 
-		FileReader fR = new FileReader(ALBUMFILEPATH);
+		FileReader fR = new FileReader(FILEPATH);
 		BufferedReader textReader = new BufferedReader(fR);
 
-		String[] testStrings = new String[getNumberOfFields()];
+		String[] testStrings = new String[getNumberOfFields(FILEPATH)];
 		Album album = new Album("album not found", "album not found",
 				"album not found");
 		String testString = textReader.readLine();
@@ -78,18 +75,28 @@ public class AlbumFileReadWrite {
 
 	}
 
-	private static int getNumberOfFields() throws IOException {
-		int numberOfFields;
+	public static ArrayList<Album> returnAllAlbums() throws IOException {
 
-		FileReader fR = new FileReader(ALBUMFILEPATH);
+		FileReader fR = new FileReader(FILEPATH);
 		BufferedReader textReader = new BufferedReader(fR);
 
-		numberOfFields = textReader.readLine().split(TAB).length;
+		String[] testStrings = new String[getNumberOfFields(FILEPATH)];
+		ArrayList<Album> albums = new ArrayList<Album>();
+		String testString = textReader.readLine();
+		
+		while (testString != null) {
+
+			testStrings = testString.split(TAB);
+
+			albums.add(new Album(testStrings[0], testStrings[1], testStrings[2]));
+
+			testString = textReader.readLine();
+
+		}
 
 		textReader.close();
 		fR.close();
-
-		return numberOfFields;
+		return albums;
 
 	}
 

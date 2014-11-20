@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
 
-import Utilities.AlbumFileReadWrite;
+import Utilities.AlbumReadWrite;
 
 /**
  * 
@@ -37,6 +37,8 @@ public class CreateNewAlbumPage extends CreateNewAlbumOrTrackPage {
 	 * Create the frame.
 	 */
 	public CreateNewAlbumPage() {
+		lblCreateNewTrackalbum.setText("Create New Album");
+		
 		super.btnCreate.addActionListener(new ActionListener() {
 			
 			@Override
@@ -49,6 +51,6 @@ public class CreateNewAlbumPage extends CreateNewAlbumOrTrackPage {
 	}
 	
 	private void writeInfoToFile(){
-		AlbumFileReadWrite.appendAlbum(super.textField_ttl.getText(), super.textField_dscrptn.getText(), super.textField_pic.getText());
+		AlbumReadWrite.appendAlbum(super.textField_ttl.getText(), super.textField_dscrptn.getText(), super.textField_pic.getText());
 	}
 }

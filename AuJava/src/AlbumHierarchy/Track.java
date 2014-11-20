@@ -9,6 +9,11 @@ public class Track extends AlbumOrTrack {
 
 	private String audioFileLocation;
 
+	public Track() {
+		super();
+		this.audioFileLocation = "default constructor audio location";
+	}
+
 	public Track(String ttl, String dsc, String pic, String aud) {
 		super(ttl, dsc, pic);
 		this.audioFileLocation = aud;
