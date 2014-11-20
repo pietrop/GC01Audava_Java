@@ -2,7 +2,9 @@ package AlbumHierarchy;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
 import jComponents.AlbumsSideBar;
+import Pages.CreateNewAlbumOrTrackPage;
 import Utilities.AlbumReadWrite;
 
 public class Album extends AlbumOrTrack {
@@ -55,18 +57,11 @@ public class Album extends AlbumOrTrack {
 		return allAlbums;
 	}
 	
-	public static void setAllAlbums(ArrayList<Album> allAlbums) {
-		Album.allAlbums = allAlbums;
-	}
 	
-	public void delete() {
-		// TODO Auto-generated method stub
+	
+	
+	public void delete(Album album) {
 
 	}
-	
-	
-	
-	
-	
 	
 }

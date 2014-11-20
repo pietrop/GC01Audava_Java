@@ -20,12 +20,17 @@ public class Track extends AlbumOrTrack {
 		this.audioFileLocation = aud;
 	}
 
-	public String getaudioFileLocation() {
+	public String setAudioFileLocation() {
 		return audioFileLocation;
 	}
 
-	public void setaudioFileLocation(String audioFileLocation) {
+	public void setAudioFileLocation(String audioFileLocation) {
 		this.audioFileLocation = audioFileLocation;
 	}
 
+	private void delete() {
+		// TODO Auto-generated method stub
+
+	}
+	
 }
