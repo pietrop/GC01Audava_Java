@@ -3,56 +3,78 @@ package Pages;
 import jComponents.PictureLabel;
 
 import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Color;
+import java.io.File;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 
-import jComponents.MenuBar;
+import AlbumHierarchy.Track;
 
-public class TrackPage extends JFrame {
+public class TrackPage extends Page {
 
-	private JPanel contentPane;
+	private JPanel trackInfo;
+	private JPanel trackPlayer;
+	private Clip clip = null;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
+	public TrackPage(Track track) {
+		
+		this.setLayout(null);
+		
+		JLabel albumName = new JLabel(track.)
+		
+		trackInfo = new JPanel();
+		trackInfo.setBorder(new LineBorder(Color.blue));
+		this.add(new PictureLabel());
+		
+		
+		
+		/* need a substitute for this */
+		// frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		JButton btnPlay = new JButton("Play");
+		btnPlay.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
 				try {
-					TrackPage frame = new TrackPage();
-					frame.setVisible(true);
+					File file = new File("src/test.wav");
+					if (file.exists()) {
+						 AudioInputStream inputStream = AudioSystem.getAudioInputStream(file);
+					       clip = AudioSystem.getClip();
+					       clip.open(inputStream);	
+					} else { System.out.println("file does not exist.");}
+					clip.setFramePosition(0);
+					clip.start(); 
 				} catch (Exception e) {
 					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
 			}
 		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
-	public TrackPage() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 400, 600);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
-		setContentPane(contentPane);
+		btnPlay.setBounds(40, 39, 117, 29);
+		this.add(btnPlay);
 		
-		MenuBar menubar = new MenuBar("Maximilian");
 		
-		this.setJMenuBar(menubar);
-		//this.add(menubar);
+		
+		JButton btnStop = new JButton("Stop");
+		btnStop.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
 				
-		this.add(new PictureLabel());
+			}
+		});
+		btnStop.setBounds(40, 80, 117, 29);
+		this.add(btnStop);
 		
+		JButton btnPause = new JButton("Pause");
+		btnPause.setBounds(40, 121, 117, 29);
+		this.add(btnPause);
 		
 	}
 
