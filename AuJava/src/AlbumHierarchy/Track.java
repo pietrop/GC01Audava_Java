@@ -8,7 +8,7 @@ package AlbumHierarchy;
 public class Track extends AlbumOrTrack {
 
 	private String audioFileLocation;
-	private String albumString;
+	private String albumTitle;
 
 	public Track() {
 		super();
@@ -32,5 +32,13 @@ public class Track extends AlbumOrTrack {
 		// TODO Auto-generated method stub
 
 	}
-	
+
+	public String getAlbumTitle() {
+		return albumTitle;
+	}
+
+	public void setAlbumTitle(String albumTitle) {
+		this.albumTitle = albumTitle;
+	}
+
 }
