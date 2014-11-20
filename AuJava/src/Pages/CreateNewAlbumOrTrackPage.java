@@ -12,7 +12,6 @@ import java.awt.Insets;
 import jComponents.MenuBar;
 
 import javax.swing.JTextField;
-import javax.swing.JEditorPane;
 import javax.swing.JButton;
 
 
@@ -33,6 +32,8 @@ public abstract class CreateNewAlbumOrTrackPage extends JFrame {
 	protected JTextField textField_dscrptn;
 	protected JTextField textField_pic;
 	protected JButton btnCreate;
+	protected MenuBar menuBar;
+	protected JLabel lblCreateNewTrackalbum;
 
 	/**
 	 * Create the frame.
@@ -40,6 +41,9 @@ public abstract class CreateNewAlbumOrTrackPage extends JFrame {
 	public CreateNewAlbumOrTrackPage() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 960, 700);
+		
+		menuBar = new MenuBar();
+		setJMenuBar(menuBar);
 
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -50,15 +54,7 @@ public abstract class CreateNewAlbumOrTrackPage extends JFrame {
 		gbl.columnWeights = new double[]{0.0, 1.0};
 		contentPane.setLayout(gbl);
 		
-		/*MenuBar menuBar = new MenuBar();
-		GridBagConstraints gbc_menuBar = new GridBagConstraints();
-		gbc_menuBar.gridwidth = 2;
-		gbc_menuBar.insets = new Insets(0, 0, 5, 5);
-		gbc_menuBar.gridx = 0;
-		gbc_menuBar.gridy = 0;
-		contentPane.add(menuBar, gbc_menuBar);*/
-		
-		JLabel lblCreateNewTrackalbum = new JLabel("Create new track/album (edit this text in subclass!!)");
+		lblCreateNewTrackalbum = new JLabel("Create new track/album (edit this text in subclass!!)");
 		GridBagConstraints gbc_lblCreateNewTrackalbum = new GridBagConstraints();
 		gbc_lblCreateNewTrackalbum.gridwidth = 2;
 		gbc_lblCreateNewTrackalbum.insets = new Insets(0, 0, 5, 0);
@@ -120,7 +116,7 @@ public abstract class CreateNewAlbumOrTrackPage extends JFrame {
 		btnCreate = new JButton("Create");
 		GridBagConstraints gbc_btnCreate = new GridBagConstraints();
 		gbc_btnCreate.gridx = 1;
-		gbc_btnCreate.gridy = 5;
+		gbc_btnCreate.gridy = 6;
 		contentPane.add(btnCreate, gbc_btnCreate);
 		
 		

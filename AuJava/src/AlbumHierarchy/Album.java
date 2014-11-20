@@ -3,7 +3,7 @@ package AlbumHierarchy;
 import java.io.IOException;
 import java.util.ArrayList;
 import jComponents.AlbumsSideBar;
-import Utilities.AlbumFileReadWrite;
+import Utilities.AlbumReadWrite;
 
 public class Album extends AlbumOrTrack {
 	
@@ -49,13 +49,5 @@ public class Album extends AlbumOrTrack {
 		return tracksInAlbum;
 	}
 	
-	private void populateAlbums() {
-		try {
-			allAlbums = AlbumFileReadWrite.readAllAlbums();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 	
 }
