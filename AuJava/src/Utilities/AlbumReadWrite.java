@@ -17,7 +17,7 @@ import AlbumHierarchy.Album;
  */
 public class AlbumReadWrite extends ReadWriteUtilities {
 
-	private static final String FILEPATH = "/Users/SamiStart/Desktop/albums.txt";
+	private static final String FILEPATH = "db/albums.txt";
 
 	public static void appendAlbum(String title, String description,
 			String picLocation) {

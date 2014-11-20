@@ -8,6 +8,7 @@ package AlbumHierarchy;
 public class Track extends AlbumOrTrack {
 
 	private String audioFileLocation;
+	private String albumString;
 
 	public Track() {
 		super();
