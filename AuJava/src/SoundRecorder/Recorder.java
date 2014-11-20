@@ -42,11 +42,16 @@ public class Recorder extends Thread{
 
 	long startTime;
 
-
+	String outputFilename;
 
 	//constructor
-	public Recorder(String outputFilename){
+	public Recorder(String outputFile){
+		
+		outputFilename = outputFile;
+	}//end of constructor
 
+	public void startRecording(){
+		
 		{
 			try
 			{
@@ -84,9 +89,8 @@ public class Recorder extends Thread{
 				e.printStackTrace();
 			}
 		}
-	}//end of constructor
-
-	public void startRecording(){
+		
+		
 		recording = true;
 		// Start the TargetDataLine
 		this.line.start();
@@ -96,8 +100,6 @@ public class Recorder extends Thread{
 		System.out.println("started recording");
 		long startTime = System.currentTimeMillis();
 		//		System.out.println(startTime);
-		
-
 	}
 
 	public void stopRecording()
@@ -106,8 +108,7 @@ public class Recorder extends Thread{
 		this.line.stop();
 		this.line.close();
 		System.out.println("Stoped recording button");
-		recording = false;
-		
+		recording = false; 
 	}
 	
 	public void writeAudio(){
@@ -116,8 +117,7 @@ public class Recorder extends Thread{
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			
-			System.out.println("problem with writing audio");
-			
+			System.out.println("problem with writing audio");		
 		}
 	}
 	
@@ -143,7 +143,9 @@ public class Recorder extends Thread{
 			}
 
 		}
+		System.out.println("exiting while loop inside thread run");
 	}
+	
 
 	//////////////////////
 	//	public static void main( String[] args ){

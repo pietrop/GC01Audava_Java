@@ -21,6 +21,8 @@ import javax.swing.JLabel;
 
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.awt.Component;
+import javax.swing.Box;
 
 
 public class AlbumsPage extends JPanel {
@@ -32,43 +34,31 @@ public class AlbumsPage extends JPanel {
 	 * Create the frame.
 	 */
 	public AlbumsPage() {
+		setLayout(null);
 
 	
 		
 		JLabel anAlbumLabel = new JLabel("album label");
+		anAlbumLabel.setBounds(165, 42, 73, 16);
 		add(anAlbumLabel);
-
-
-		GridBagLayout gbl_contentPane = new GridBagLayout();
-		gbl_contentPane.columnWidths = new int[]{0, 0, 0};
-		gbl_contentPane.rowHeights = new int[]{0, 0, 0};
-		gbl_contentPane.columnWeights = new double[]{0.0, 1.0, Double.MIN_VALUE};
-		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
-		setLayout(gbl_contentPane);
 
 		
 		AlbumsSideBar albumSideBar = new AlbumsSideBar();
-		GridBagConstraints gbc_albumSideBar = new GridBagConstraints();
-		gbc_albumSideBar.gridheight = 2;
-		gbc_albumSideBar.insets = new Insets(0, 0, 5, 5);
-		gbc_albumSideBar.gridx = 0;
-		gbc_albumSideBar.gridy = 0;
-		add(albumSideBar, gbc_albumSideBar);
+		albumSideBar.setBounds(6, 29, 121, 229);
+		add(albumSideBar);
 		
 		AlbumInfoPanel albumInfoPanel = new AlbumInfoPanel("title", "description", "albumImage");
-		GridBagConstraints gbc_albumInfoPanel = new GridBagConstraints();
-		gbc_albumInfoPanel.insets = new Insets(0, 0, 5, 0);
-		gbc_albumInfoPanel.gridx = 1;
-		gbc_albumInfoPanel.gridy = 0;
-		add(albumInfoPanel, gbc_albumInfoPanel);
+		albumInfoPanel.setBounds(277, 5, 1, 1);
+		add(albumInfoPanel);
 		
 		JLabel lblTracks = new JLabel("Tracks");
-		GridBagConstraints gbc_lblTracks = new GridBagConstraints();
-		gbc_lblTracks.gridx = 1;
-		gbc_lblTracks.gridy = 1;
-		add(lblTracks, gbc_lblTracks);
+		lblTracks.setBounds(162, 110, 42, 16);
+		add(lblTracks);
+		
+		Component verticalStrut = Box.createVerticalStrut(20);
+		verticalStrut.setBounds(139, 29, 1, 229);
+		add(verticalStrut);
 		
 
 	}
-
 }
