@@ -11,11 +11,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-<<<<<<< Updated upstream
 
 import jComponents.MenuBar;
 import jComponents.MenuBar;
-=======
 
 import java.awt.GridBagLayout;
 
