@@ -8,7 +8,13 @@ public abstract class ReadWriteUtilities {
 
 	protected final static String TAB = "\t";
 
-	
+	/**
+	 * 
+	 * @param FILEPATH
+	 * @return
+	 * Returns the number of fields in that database
+	 * @throws IOException
+	 */
 	public static int getNumberOfFields(String FILEPATH) throws IOException {
 		int numberOfFields;
 
@@ -18,6 +24,8 @@ public abstract class ReadWriteUtilities {
 		String testString = textReader.readLine();
 		
 		if (testString==null) {
+			textReader.close();
+			fR.close();
 			return 0;
 		}
 
