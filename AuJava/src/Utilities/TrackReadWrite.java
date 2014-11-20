@@ -63,7 +63,7 @@ public class TrackReadWrite extends ReadWriteUtilities{
 				track.setTitle(testStrings[0]);
 				track.setDescription(testStrings[1]);
 				track.setPicFileLocation(testStrings[2]);
-				track.setaudioFileLocation(testStrings[3]);
+				track.setAudioFileLocation(testStrings[3]);
 				return track;
 			}
 

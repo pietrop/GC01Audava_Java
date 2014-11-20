@@ -21,6 +21,7 @@ import Pages.AlbumsPage;
 import Pages.HomePage;
 import Pages.RecordPage;
 import Pages.ShareTrack;
+import Pages.TrackPage;
 import Pages.UploadPage;
 
 /**
@@ -34,7 +35,7 @@ public class Controller {
 	    final static String RECORDPAGE = "Record";
 	    final static String UPLOADPAGE = "Upload";//
 	    final static String ALBUMSPAGE = "Albums";//
-	    
+	    final static String TRACKPAGE = "Track";
 	    
 	    final static int extraWindowWidth = 700 ;
 	    final static int extraWindowHeight = 600;
@@ -86,10 +87,12 @@ public class Controller {
 //	        JComponent uplaodCard = makeTextPanel("Panel #2");//
 	        
 	        /*Upload Page*/   
-	        UploadPage uplaodCard = new UploadPage();
+	        UploadPage uploadCard = new UploadPage();
 	        
 	        /*Albums Page*/
 	        AlbumsPage albumsCard = new AlbumsPage();
+	        
+	        TrackPage trackCard = new TrackPage();
 //	      
 
 	        
@@ -98,9 +101,11 @@ public class Controller {
 	        tabbedPaneMenu.addTab(HOMEPANEL, homeCard);
 	       
 	        tabbedPaneMenu.addTab( RECORDPAGE, recordCard);
-	        tabbedPaneMenu.addTab( UPLOADPAGE, uplaodCard);//
+	        tabbedPaneMenu.addTab( UPLOADPAGE, uploadCard);//
 	        tabbedPaneMenu.addTab( ALBUMSPAGE, albumsCard);//
+	        tabbedPaneMenu.addTab(TRACKPAGE, trackCard);
 	        tabbedPaneMenu.addTab(ABOUTUSPANEL, aboutUsCard);
+	        
 	        /*adding the main one */
 	        pane.add(tabbedPaneMenu, BorderLayout.CENTER);
 	    }//end addComponent To pane

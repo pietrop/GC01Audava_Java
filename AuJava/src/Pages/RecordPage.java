@@ -36,27 +36,19 @@ import jComponents.MenuBar;
 
 public class RecordPage extends Page{
 
-
-
-	//add date to filename to make them all different
-	static Calendar cal = Calendar.getInstance();
-	static Date timeNow = cal.getTime();
-	static SimpleDateFormat ft = new SimpleDateFormat ("HH.mm.ss_dd:MM:yyyy");
-
-	//end of date time now
-	static String outputFilename = ft.format(timeNow) +"_AuJava"+".wav" ;
-
-
-	SoundRecorder.Recorder rec = new SoundRecorder.Recorder(outputFilename);
-
 	//to measure recording time, and give feedback to user that audio is beeing recorded
 	long startTime = System.currentTimeMillis();
 
-
+	public static SoundRecorder.Recorder rec ;
+	
 	private JTextField timerTextField;
+	
+	private static Calendar cal;
+	 private static Date timeNow ;
+	private static SimpleDateFormat ft ;
 
 	public RecordPage(){
-
+		
 
 		ImageIcon  recButtonIcon = new ImageIcon("img/rec.png");
 		ImageIcon  stopButtonIcon = new ImageIcon("img/stop.png");
@@ -110,8 +102,20 @@ public class RecordPage extends Page{
 		btnRec.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				
+				//add date to filename to make them all different
+				 Calendar cal = Calendar.getInstance();
+				 Date timeNow = cal.getTime();
+				 SimpleDateFormat ft = new SimpleDateFormat ("HH.mm.ss_dd:MM:yyyy");
+				
+				
 				btnRec.setEnabled(false);
 				btnStop.setEnabled(true);
+				//end of date time now
+				String outputFilename = ft.format(timeNow) +"_AuJava"+".wav" ;
+				
+				rec = new SoundRecorder.Recorder(outputFilename);
+				
 				rec.startRecording();
 
 				timer.start();
