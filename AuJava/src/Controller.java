@@ -2,17 +2,12 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 
-import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-<<<<<<< HEAD
 import AlbumHierarchy.Album;
-import AlbumHierarchy.Track;
-=======
->>>>>>> 6a602a693a63935d8d020e0c3a769d2171194625
 import Pages.AboutUsPage;
 import Pages.AlbumsPage;
 import Pages.HomePage;

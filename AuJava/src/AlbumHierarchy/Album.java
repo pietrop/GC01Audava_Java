@@ -14,22 +14,14 @@ public class Album extends AlbumOrTrack {
 
 	public Album() {
 		super();
-<<<<<<< HEAD
-		appendAlbum(this);
-=======
 		allAlbums.add(this);
 		Utilities.AlbumReadWrite.appendAlbum(this);
->>>>>>> 6a602a693a63935d8d020e0c3a769d2171194625
 	}
 
 	public Album(String ttl, String dsc, String pic) {
 		super(ttl, dsc, pic);
-<<<<<<< HEAD
-		appendAlbum(this);
-=======
 		allAlbums.add(this);
 		Utilities.AlbumReadWrite.appendAlbum(this);
->>>>>>> 6a602a693a63935d8d020e0c3a769d2171194625
 	}
 
 	/**
@@ -71,31 +63,15 @@ public class Album extends AlbumOrTrack {
 	}
 
 	public static ArrayList<Album> getAllAlbums() {
-//		try {
-//			allAlbums = AlbumReadWrite.returnAllAlbums();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			allAlbums = AlbumReadWrite.returnAllAlbums();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return allAlbums;
 	}
 
 	public static Album getAlbum(int index) {
-<<<<<<< HEAD
-//		try {
-//			allAlbums = AlbumReadWrite.returnAllAlbums();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-		return allAlbums.get(index);
-	}
-
-	private void appendAlbum(Album album) {
-		allAlbums.add(album);
-
-//		AlbumReadWrite.appendAlbum(album);
-
-	}
-=======
 		try {
 			allAlbums = AlbumReadWrite.returnAllAlbums();
 		} catch (IOException e) {
@@ -104,7 +80,6 @@ public class Album extends AlbumOrTrack {
 		return allAlbums.get(index);
 	}
 
->>>>>>> 6a602a693a63935d8d020e0c3a769d2171194625
 
 	public void delete(Album album) {
 
