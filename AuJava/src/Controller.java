@@ -142,7 +142,7 @@ public class Controller {
 	        
 	public static void main(String[] args) {
 		
-		createDefaultStoryAlbum();
+		//createDefaultStoryAlbum();
 
 		 /* Use an appropriate Look and Feel */
         try {
@@ -219,14 +219,16 @@ public class Controller {
 	/**
 	 * create default story album at runtime
 	 */
-	private static void createDefaultStoryAlbum() {
-		Album defaultStoryAlbum = new Album("Default Story Album", "A default album for your tracks","/img/Album.png");
+//	private static void createDefaultStoryAlbum() {
+//		Album defaultStoryAlbum = new Album("Default Story Album", "A default album for your tracks","/img/Album.png");
 //		System.out.println(defaultStoryAlbum.getTitle().toString());
 //		System.out.println(defaultStoryAlbum.getDescription().toString());
 //		System.out.println(defaultStoryAlbum.getPicFileLocation().toString());
+
 		
 //		Album.addAlbumToallAlbums(defaultStoryAlbum);
-	}
+//	}
+
 	
 
 }
