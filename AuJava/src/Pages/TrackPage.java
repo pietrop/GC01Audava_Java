@@ -21,8 +21,8 @@ public class TrackPage extends Page {
 		infoPanel.setBounds(200, 23, 480, 282);
 		add(infoPanel);
 		
-		this.add(new InfoPanel("empty", "empty2", "empty3"));
-		AudioPlayer ap = new AudioPlayer("TRACK FILE LOCATION AS STRING"); 
+		this.add(new InfoPanel(track.getTitle(), track.getDescription(), track.getPicFileLocation()));
+		AudioPlayer ap = new AudioPlayer(track.getAudioFileLocation()); 
 		ap.setLocation(0,300);
 		this.add(ap);
 	}
