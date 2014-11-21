@@ -16,12 +16,12 @@ public class Album extends AlbumOrTrack {
 
 	public Album() {
 		super();
-		AlbumReadWrite.appendAlbum(this);
+		appendAlbum(this);
 	}
 
 	public Album(String ttl, String dsc, String pic) {
 		super(ttl, dsc, pic);
-		AlbumReadWrite.appendAlbum(this);
+		appendAlbum(this);
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class Album extends AlbumOrTrack {
 	 * 
 	 */
 	public Track getTrackAt(int index) {
-		//TODO get tracks from database
+		// TODO get tracks from database
 		return tracksInAlbum.get(index);
 	}
 
@@ -58,7 +58,7 @@ public class Album extends AlbumOrTrack {
 	 * @return
 	 */
 	public ArrayList<Track> getTracks() {
-		//TODO get tracks from database
+		// TODO get tracks from database
 		return tracksInAlbum;
 	}
 
@@ -81,7 +81,7 @@ public class Album extends AlbumOrTrack {
 	}
 
 	private void appendAlbum(Album album) {
-allAlbums.add(album);
+		allAlbums.add(album);
 
 		AlbumReadWrite.appendAlbum(album);
 
