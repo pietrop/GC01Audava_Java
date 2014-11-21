@@ -14,28 +14,24 @@ import javax.sound.sampled.Clip;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-<<<<<<< HEAD
-=======
+
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
->>>>>>> 014d34a3f976a7b3f78a185d94bfb4a8154a3e36
+
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
 import AlbumHierarchy.Track;
 
-<<<<<<< HEAD
+
 public class TrackPage extends Page {
-=======
-public class TrackPage extends JPanel {
->>>>>>> 014d34a3f976a7b3f78a185d94bfb4a8154a3e36
+
 
 	private JPanel trackInfo;
 	private JPanel trackPlayer;
 	private Clip clip = null;
 
-<<<<<<< HEAD
 	public TrackPage(Track track) {
 		
 		this.setLayout(null);
@@ -83,7 +79,8 @@ public class TrackPage extends JPanel {
 		});
 		btnStop.setBounds(40, 80, 117, 29);
 		this.add(btnStop);
-=======
+	}
+
 	/**
 	 * Launch the application.
 	 */
@@ -95,7 +92,6 @@ public class TrackPage extends JPanel {
 	public TrackPage() {
 		JLabel aLabel = new JLabel("Track Pane");
 		add(aLabel);
->>>>>>> 014d34a3f976a7b3f78a185d94bfb4a8154a3e36
 		
 		JButton btnPause = new JButton("Pause");
 		btnPause.setBounds(40, 121, 117, 29);

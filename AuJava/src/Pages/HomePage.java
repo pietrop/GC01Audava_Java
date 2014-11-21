@@ -5,25 +5,8 @@ package Pages;
  * 
  */
 
-import jComponents.MenuBar;
-
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.BoxLayout;
-import javax.swing.JPanel;
-
-import java.awt.BorderLayout;
-import java.awt.GridBagLayout;
-import java.awt.TextArea;
-
 import javax.swing.JLabel;
-import javax.swing.JTextPane;
-
-import java.awt.Font;
-
-import jComponents.MenuBar;
-
-import javax.swing.JScrollBar;
 
 public class HomePage extends Page {
 	public HomePage() {

@@ -2,22 +2,14 @@ package Pages;
 import jComponents.MenuBar;
 
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.math.BigInteger;
-import java.security.SecureRandom;
-
-import javax.swing.JTextPane;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
-
-import users.LoginDialog;
-import jComponents.MenuBar;
 
 public class ShareTrack extends Page {
 	private JTextField emailField;

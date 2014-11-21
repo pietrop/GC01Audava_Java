@@ -4,19 +4,8 @@ package Pages;
  * 
  */
 
-import jComponents.MenuBar;
-
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextPane;
-
-import jComponents.MenuBar;
-
-import java.awt.Font;
-import java.awt.BorderLayout;
-import java.awt.Label;
 
 public class AboutUsPage extends Page {
 

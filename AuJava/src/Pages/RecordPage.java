@@ -1,36 +1,15 @@
 package Pages;
 
-import jComponents.MenuBar;
-
 import java.util.Calendar;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
-import java.awt.geom.Ellipse2D;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.Executor;
-import java.awt.Canvas;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.IOException;
-
-import javax.swing.JFrame;
 import javax.swing.Timer;
-import javax.swing.JTextPane;
 import javax.swing.JTextField;
-import jComponents.MenuBar;
 
 
 

@@ -1,7 +1,8 @@
 package Pages;
 
-import jComponents.AlbumInfoPanel;
+import jComponents.InfoPanel;
 import jComponents.AlbumsSideBar;
+import jComponents.InfoPanel;
 import jComponents.MenuBar;
 
 import java.awt.BorderLayout;
@@ -13,7 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import jComponents.MenuBar;
-import jComponents.MenuBar;
+import jComponents.InfoPanel;
 
 import java.awt.GridBagLayout;
 
@@ -22,42 +23,42 @@ import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.Component;
+
 import javax.swing.Box;
 
 
-public class AlbumsPage extends JPanel {
-
-	private JPanel contentPane;
-
-
+public class AlbumsPage extends Page {
 	/**
 	 * Create the frame.
 	 */
 	public AlbumsPage() {
 		setLayout(null);
 
-	
+		InfoPanel infoPanel = new InfoPanel("Title", "Description", "img/duke-java.png");
+		infoPanel.setBounds(200, 23, 480, 282);
+		add(infoPanel);
 		
-		JLabel anAlbumLabel = new JLabel("album label");
-		anAlbumLabel.setBounds(165, 42, 73, 16);
-		add(anAlbumLabel);
-
 		
 		AlbumsSideBar albumSideBar = new AlbumsSideBar();
-		albumSideBar.setBounds(6, 29, 121, 229);
+		albumSideBar.setBounds(6, 29, 149, 425);
 		add(albumSideBar);
-		
-		AlbumInfoPanel albumInfoPanel = new AlbumInfoPanel("title", "description", "albumImage");
-		albumInfoPanel.setBounds(277, 5, 1, 1);
-		add(albumInfoPanel);
-		
-		JLabel lblTracks = new JLabel("Tracks");
-		lblTracks.setBounds(162, 110, 42, 16);
-		add(lblTracks);
-		
-		Component verticalStrut = Box.createVerticalStrut(20);
-		verticalStrut.setBounds(139, 29, 1, 229);
-		add(verticalStrut);
+//		
+//		
+//		JLabel lblTracks = new JLabel("Tracks");
+//		lblTracks.setBounds(211, 164, 64, 31);
+//		add(lblTracks);
+//		
+//		Component verticalStrut = Box.createVerticalStrut(20);
+//		verticalStrut.setBounds(139, 29, 1, 229);
+//		add(verticalStrut);
+//		
+//		Component horizontalGlue = Box.createHorizontalGlue();
+//		horizontalGlue.setBounds(162, 143, 201, 9);
+//		add(horizontalGlue);
+//		
+//		Component verticalGlue = Box.createVerticalGlue();
+//		verticalGlue.setBounds(126, 39, 14, 218);
+//		add(verticalGlue);
 		
 
 	}
