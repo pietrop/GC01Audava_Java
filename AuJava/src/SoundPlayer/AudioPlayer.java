@@ -1,7 +1,5 @@
 package SoundPlayer;
 
-import jComponents.MenuBar;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -9,32 +7,30 @@ import java.io.File;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
+ * Audioplayer with minimal GUI as JPanel
  * 
- * @author Pietro
  * @author Axel
- *
- * @version 18 Nov 2014 
- * @time 12:52:38
+ * @version 21 Nov 2014
  */
-
-
 public class AudioPlayer extends JPanel {
 	
 	private Clip clip = null;
 	
-	public AudioPlayer () {
+	public AudioPlayer (String fileLocation) {
+		
+		this.setSize(700, 250);
+		this.setLayout(null);
 		
 		/* Play Button */
 		JButton btnPlay = new JButton("Play");
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
 				try {
-					File file = new File("src/test.wav");
+					File file = new File(fileLocation);
 					if (file.exists()) {
 						 AudioInputStream inputStream = AudioSystem.getAudioInputStream(file);
 					       clip = AudioSystem.getClip();
@@ -55,7 +51,8 @@ public class AudioPlayer extends JPanel {
 		JButton btnStop = new JButton("Stop");
 		btnStop.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
-				
+				clip.setFramePosition(0);
+				clip.stop();
 			}
 		});
 		btnStop.setBounds(40, 80, 117, 29);
