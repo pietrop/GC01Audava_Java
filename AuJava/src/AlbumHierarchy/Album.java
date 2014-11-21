@@ -62,7 +62,7 @@ public class Album extends AlbumOrTrack {
 	}
 	
 	private void appendAlbum(Album album) {
-allAlbums.add(album);
+		allAlbums.add(album);
 	}
 
 	public void delete(Album album) {
