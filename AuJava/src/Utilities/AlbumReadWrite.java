@@ -30,6 +30,21 @@ public class AlbumReadWrite extends ReadWriteUtilities {
 			e1.printStackTrace();
 		}
 	}
+	
+	/**
+	 * 
+	 * @param album
+	 */
+	public static void appendAlbum(Album album) {
+		try (PrintWriter out = new PrintWriter(new BufferedWriter(
+				new FileWriter(FILEPATH, true)))) {
+			out.println(album.getTitle() + TAB + album.getDescription() + TAB + album.getPicFileLocation());
+			out.flush();
+			out.close();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+	}
 
 	/**
 	 * Returns a specific album that you choose by it's title. If the album does
