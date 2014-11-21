@@ -1,27 +1,17 @@
-import jComponents.MenuBar;
-
 import java.awt.BorderLayout;
-import java.awt.CardLayout;
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.event.ItemEvent;
 
-import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import AlbumHierarchy.Album;
 import Pages.AboutUsPage;
 import Pages.AlbumsPage;
 import Pages.HomePage;
 import Pages.RecordPage;
-import Pages.ShareTrack;
-import Pages.TrackPage;
 import Pages.UploadPage;
 
 /**

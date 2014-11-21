@@ -3,8 +3,6 @@ package AlbumHierarchy;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import jComponents.AlbumsSideBar;
-import Pages.CreateNewAlbumOrTrackPage;
 import Utilities.AlbumReadWrite;
 
 /**
@@ -16,12 +14,14 @@ public class Album extends AlbumOrTrack {
 
 	public Album() {
 		super();
-		appendAlbum(this);
+		allAlbums.add(this);
+		Utilities.AlbumReadWrite.appendAlbum(this);
 	}
 
 	public Album(String ttl, String dsc, String pic) {
 		super(ttl, dsc, pic);
-		appendAlbum(this);
+		allAlbums.add(this);
+		Utilities.AlbumReadWrite.appendAlbum(this);
 	}
 
 	/**
@@ -80,12 +80,6 @@ public class Album extends AlbumOrTrack {
 		return allAlbums.get(index);
 	}
 
-	private void appendAlbum(Album album) {
-		allAlbums.add(album);
-
-		AlbumReadWrite.appendAlbum(album);
-
-	}
 
 	public void delete(Album album) {
 
