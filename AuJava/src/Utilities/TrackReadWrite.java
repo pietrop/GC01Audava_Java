@@ -29,6 +29,17 @@ public class TrackReadWrite extends ReadWriteUtilities{
 			e1.printStackTrace();
 		}
 	}
+	
+	public static void appendtrack(Track track) {
+		try (PrintWriter out = new PrintWriter(new BufferedWriter(
+				new FileWriter(FILEPATH, true)))) {
+			out.println(track.getTitle() + TAB + track.getDescription() + TAB + track.getPicFileLocation()+ TAB + track.getAudioFileLocation());
+			out.flush();
+			out.close();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+	}
 
 	
 	/**

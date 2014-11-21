@@ -1,4 +1,4 @@
-
+import jComponents.MenuBar;
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
@@ -141,7 +141,7 @@ public class Controller {
 	    
 	        
 	public static void main(String[] args) {
-		
+
 		//createDefaultStoryAlbum();
 
 		 /* Use an appropriate Look and Feel */
@@ -228,7 +228,5 @@ public class Controller {
 		
 //		Album.addAlbumToallAlbums(defaultStoryAlbum);
 //	}
-
-	
 
 }
