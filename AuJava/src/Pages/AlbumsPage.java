@@ -26,6 +26,8 @@ import java.awt.Component;
 
 import javax.swing.Box;
 
+import AlbumHierarchy.Album;
+
 
 public class AlbumsPage extends Page {
 	/**
@@ -34,7 +36,12 @@ public class AlbumsPage extends Page {
 	public AlbumsPage() {
 		setLayout(null);
 
-		InfoPanel infoPanel = new InfoPanel("Title", "Description", "img/duke-java.png");
+		
+		String title = Album.getAlbum(0).getTitle().toString();
+		String description = Album.getAlbum(0).getDescription().toString();
+		String image = Album.getAlbum(0).getPicFileLocation().toString();
+		
+		InfoPanel infoPanel = new InfoPanel(title, description, image);
 		infoPanel.setBounds(200, 23, 480, 282);
 		add(infoPanel);
 		
@@ -42,6 +49,7 @@ public class AlbumsPage extends Page {
 		AlbumsSideBar albumSideBar = new AlbumsSideBar();
 		albumSideBar.setBounds(6, 29, 149, 425);
 		add(albumSideBar);
+		
 //		
 //		
 //		JLabel lblTracks = new JLabel("Tracks");

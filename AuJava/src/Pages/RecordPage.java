@@ -1,6 +1,7 @@
 package Pages;
 
 import java.util.Calendar;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
@@ -8,8 +9,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import javax.swing.Timer;
 import javax.swing.JTextField;
+
+import AlbumHierarchy.AlbumOrTrack;
+import AlbumHierarchy.Track;
 
 
 
@@ -25,6 +30,8 @@ public class RecordPage extends Page{
 	private static Calendar cal;
 	 private static Date timeNow ;
 	private static SimpleDateFormat ft ;
+	static String outputFilename;
+	public static Track recordedTrack;
 
 	public RecordPage(){
 		
@@ -91,14 +98,15 @@ public class RecordPage extends Page{
 				btnRec.setEnabled(false);
 				btnStop.setEnabled(true);
 				//end of date time now
-				String outputFilename = ft.format(timeNow) +"_AuJava"+".wav" ;
+				outputFilename = ft.format(timeNow) +"_AuJava"+".wav" ;
 				
 				rec = new SoundRecorder.Recorder(outputFilename);
 				
 				rec.startRecording();
 
 				timer.start();
-
+	
+		
 			}
 		});
 
@@ -111,6 +119,11 @@ public class RecordPage extends Page{
 				rec.stopRecording();
 
 				timer.stop();
+				/* creating a track object with the audio file name constructor*/
+				Track recordedTrack = new Track(outputFilename);
+				System.out.println("--");
+				System.out.println(recordedTrack.getTitle().toString());
+				System.out.println(recordedTrack.getDescription().toString());
 			}
 
 		});

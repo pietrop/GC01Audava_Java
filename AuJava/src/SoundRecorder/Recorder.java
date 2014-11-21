@@ -44,7 +44,7 @@ public class Recorder extends Thread{
 	//constructor
 	public Recorder(String outputFile){
 		
-		outputFilename = outputFile;
+		outputFilename = "audio/"+outputFile;
 	}//end of constructor
 
 	public void startRecording(){
@@ -126,57 +126,11 @@ public class Recorder extends Thread{
 				// Ask the AudioSystem class to write audio data from the audio input stream
 				// to our file in the specified data type (PCM 44.1Khz, 16-bit, stereo)
 				writeAudio();
-				
-				System.out.println("thread recording running-writing file");
-			
-//				long estimatedTime = System.currentTimeMillis() - startTime;
-				//			System.out.println(estimatedTime);	
-
 			}
 			catch( Exception e )
 			{
-//				e.printStackTrace();
-				
+				e.printStackTrace();	
 			}
-
 		}
-		System.out.println("exiting while loop inside thread run");
 	}
-	
-
-	//////////////////////
-	//	public static void main( String[] args ){
-	//		//add date to filename to make them all different
-	//		Calendar cal = Calendar.getInstance();
-	//		Date timeNow = cal.getTime();
-	//		SimpleDateFormat ft = new SimpleDateFormat ("HH.mm.ss_dd:MM:yyyy");
-	//
-	//		//end of date time now
-	//		String outputFilename = ft.format(timeNow) +"_AuJava"+".wav" ;
-	//
-	//
-	//
-	//		try{
-	//			// Create a recorder that writes WAVE data to the specified filename
-	//			Recorder r = new Recorder(outputFilename);
-	//			System.out.println( "Press ENTER to start recording" );
-	//			System.in.read();
-	//
-	//			// Start the recorder
-	//			r.startRecording();
-	//
-	//			System.out.println( "Press ENTER to stop recording" );
-	//			System.in.read();
-	//
-	//			// Stop the recorder
-	//			r.stopRecording();
-	//
-	//			System.out.println( "Recording complete" );
-	//		}
-	//		catch( Exception e )
-	//		{
-	//			e.printStackTrace();
-	//		}
-	//	}
-	//////////////////////
 }

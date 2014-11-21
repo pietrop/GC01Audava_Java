@@ -16,12 +16,12 @@ public class Album extends AlbumOrTrack {
 
 	public Album() {
 		super();
-		AlbumReadWrite.appendAlbum(this);
+		appendAlbum(this);
 	}
 
 	public Album(String ttl, String dsc, String pic) {
 		super(ttl, dsc, pic);
-		AlbumReadWrite.appendAlbum(this);
+		appendAlbum(this);
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class Album extends AlbumOrTrack {
 	 * 
 	 */
 	public Track getTrackAt(int index) {
-		//TODO get tracks from database
+		// TODO get tracks from database
 		return tracksInAlbum.get(index);
 	}
 
@@ -58,32 +58,32 @@ public class Album extends AlbumOrTrack {
 	 * @return
 	 */
 	public ArrayList<Track> getTracks() {
-		//TODO get tracks from database
+		// TODO get tracks from database
 		return tracksInAlbum;
 	}
 
 	public static ArrayList<Album> getAllAlbums() {
-		try {
-			allAlbums = AlbumReadWrite.returnAllAlbums();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			allAlbums = AlbumReadWrite.returnAllAlbums();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 		return allAlbums;
 	}
 
-	public Album getAlbum(int index) {
-		try {
-			allAlbums = AlbumReadWrite.returnAllAlbums();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public static Album getAlbum(int index) {
+//		try {
+//			allAlbums = AlbumReadWrite.returnAllAlbums();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 		return allAlbums.get(index);
 	}
 
 	private void appendAlbum(Album album) {
-allAlbums.add(album);
+		allAlbums.add(album);
 
-		AlbumReadWrite.appendAlbum(album);
+//		AlbumReadWrite.appendAlbum(album);
 
 	}
 

@@ -16,6 +16,7 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 import AlbumHierarchy.Album;
+import AlbumHierarchy.Track;
 import Pages.AboutUsPage;
 import Pages.AlbumsPage;
 import Pages.HomePage;
@@ -30,6 +31,8 @@ import Pages.UploadPage;
  */
 
 public class Controller {
+	
+		/*declaring var Strings to name the cards */
 		final static String HOMEPANEL = "AuJava";
 	    final static String ABOUTUSPANEL = "About Us";
 	    final static String RECORDPAGE = "Record";
@@ -37,11 +40,16 @@ public class Controller {
 	    final static String ALBUMSPAGE = "Albums";//
 	    final static String TRACKPAGE = "Track";
 	    
+	    /*declaring var width of the app */
 	    final static int extraWindowWidth = 700 ;
 	    final static int extraWindowHeight = 600;
+	    
+	    /* initialised tabbed menu */
+	    static JTabbedPane tabbedPaneMenu = new JTabbedPane();
 
+	    /* creating cards of pages and add them to the tabbedPaneMenu */
 	    public void addComponentToPane(Container pane) {
-	        JTabbedPane tabbedPaneMenu = new JTabbedPane();
+	       
 	        /* Home Page*/
 	        HomePage homeCard = new HomePage() 
 	        {
@@ -58,9 +66,6 @@ public class Controller {
 	        /* about us page*/
 	        AboutUsPage aboutUsCard = new AboutUsPage() 
 	        {
-	            //Make the panel wider than it really needs, so
-	            //the window's wide enough for the tabs to stay
-	            //in one row.
 	            public Dimension getPreferredSize() {
 	                Dimension size = super.getPreferredSize();
 	                size.width += extraWindowWidth;
@@ -72,9 +77,6 @@ public class Controller {
 	        /* Record Page */
 	        RecordPage recordCard = new RecordPage() 
 	        {
-	            //Make the panel wider than it really needs, so
-	            //the window's wide enough for the tabs to stay
-	            //in one row.
 	            public Dimension getPreferredSize() {
 	                Dimension size = super.getPreferredSize();
 	                size.width += extraWindowWidth;
@@ -83,23 +85,18 @@ public class Controller {
 	            }
 	        };
 	        
-	        
-//	        JComponent uplaodCard = makeTextPanel("Panel #2");//
-	        
 	        /*Upload Page*/   
 	        UploadPage uploadCard = new UploadPage();
 	        
 	        /*Albums Page*/
 	        AlbumsPage albumsCard = new AlbumsPage();
-	        
-//	        TrackPage trackCard = new TrackPage();
-//	      
 
-	        
-	        
+	        /*Track page*/
+//	        TrackPage trackCard = new TrackPage();
+
+        
 	        /* Adding Cards to the Tabs*/
 	        tabbedPaneMenu.addTab(HOMEPANEL, homeCard);
-	       
 	        tabbedPaneMenu.addTab( RECORDPAGE, recordCard);
 	        tabbedPaneMenu.addTab( UPLOADPAGE, uploadCard);//
 	        tabbedPaneMenu.addTab( ALBUMSPAGE, albumsCard);//
@@ -110,15 +107,6 @@ public class Controller {
 	        pane.add(tabbedPaneMenu, BorderLayout.CENTER);
 	    }//end addComponent To pane
 
-	    /**
-		 * @param string
-		 * @return
-		 */
-		private JComponent makeTextPanel(String string) {
-			// TODO Auto-generated method stub
-			return null;
-		}
-
 		/**
 	     * Create the GUI and show it.  For thread safety,
 	     * this method should be invoked from the
@@ -127,22 +115,16 @@ public class Controller {
 	    private static void createAndShowGUI() {
 	    	JFrame frame = new JFrame("AuJava - Demo");
 	    	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	  
-	    	
 	    	Controller demoAuJava = new Controller();
-//	    	TabDemo demoAuJava = new TabDemo();
 	    	demoAuJava.addComponentToPane(frame.getContentPane());
 	         //Display the window.
 	         frame.pack();
-	         frame.setVisible(true);
-	         
+	         frame.setVisible(true);        
 	    }//end create and show GUI
-	    
-	    
-	        
+	    	        
 	public static void main(String[] args) {
 
-		//createDefaultStoryAlbum();
+		createDefaultStoryAlbum();
 
 		 /* Use an appropriate Look and Feel */
         try {
@@ -165,68 +147,19 @@ public class Controller {
         //creating and showing this application's GUI.
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                createAndShowGUI();
+            		createAndShowGUI();
             }
         });
         
-//        Album defaultStoryAlbum = new Album("Default Story Album Title", "Default Story Album Description", "duke-java.png");
-//    	allAlbums.add(defaultStoryAlbum);
-    	
-    	
-		//		createAndShowGUI();	
+  
+	}//end of main method
 
-		//testing album page
-
-		//		AlbumsPage albumsPage = new AlbumsPage();// create JFrame window(?)
-		//		albumsPage.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-		//		albumsPage.setSize( PAGE_WIDTH, PAGE_HEIGHT );
-		//		albumsPage.setVisible( true ); 
-		//		albumsPage.setResizable(true);
-
-		//		//testing home page
-
-		//		HomePage home = new HomePage();// create JFrame window(?)
-		//		home.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-		//		home.setSize( PAGE_WIDTH, PAGE_HEIGHT );
-		//		home.setVisible( true ); 
-		//		home.setResizable(true);
-
-		//testing about us page
-		//		AboutUsPage aboutUsPage = new AboutUsPage();// create JFrame window(?)
-		//		aboutUsPage.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-		//		aboutUsPage.setSize( PAGE_WIDTH, PAGE_HEIGHT );
-		//		aboutUsPage.setVisible( true ); 
-		//		aboutUsPage.setResizable(true);
-
-
-		//		//ShareTrack		
-		//		ShareTrack shareTrack = new ShareTrack();// create JFrame window(?)
-		//		shareTrack.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-		//		shareTrack.setSize( PAGE_WIDTH, PAGE_HEIGHT );
-		//		shareTrack.setVisible( true ); 
-		//		shareTrack.setResizable(true);
-
-		//		//RecordPage		
-		//		RecordPage recordPage = new RecordPage();// create JFrame window(?)
-		//		recordPage.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-		//		recordPage.setSize( PAGE_WIDTH, PAGE_HEIGHT );
-		//		recordPage.setVisible( true ); 
-		//		recordPage.setResizable(true);
-
-
-	}
-
+	
 	/**
 	 * create default story album at runtime
 	 */
-//	private static void createDefaultStoryAlbum() {
-//		Album defaultStoryAlbum = new Album("Default Story Album", "A default album for your tracks","/img/Album.png");
-//		System.out.println(defaultStoryAlbum.getTitle().toString());
-//		System.out.println(defaultStoryAlbum.getDescription().toString());
-//		System.out.println(defaultStoryAlbum.getPicFileLocation().toString());
-
-		
-//		Album.addAlbumToallAlbums(defaultStoryAlbum);
-//	}
+	private static void createDefaultStoryAlbum() {
+		Album defaultStoryAlbum = new Album("Default Story Album 1", "A default album for your tracks1","img/Album.png");
+	}
 
 }
