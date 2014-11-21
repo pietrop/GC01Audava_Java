@@ -71,7 +71,7 @@ public class Album extends AlbumOrTrack {
 		return allAlbums;
 	}
 
-	private Album getAlbum(int index) {
+	public Album getAlbum(int index) {
 		try {
 			allAlbums = AlbumReadWrite.returnAllAlbums();
 		} catch (IOException e) {
