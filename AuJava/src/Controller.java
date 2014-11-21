@@ -92,7 +92,7 @@ public class Controller {
 	        /*Albums Page*/
 	        AlbumsPage albumsCard = new AlbumsPage();
 	        
-	        TrackPage trackCard = new TrackPage();
+//	        TrackPage trackCard = new TrackPage();
 //	      
 
 	        
@@ -103,7 +103,7 @@ public class Controller {
 	        tabbedPaneMenu.addTab( RECORDPAGE, recordCard);
 	        tabbedPaneMenu.addTab( UPLOADPAGE, uploadCard);//
 	        tabbedPaneMenu.addTab( ALBUMSPAGE, albumsCard);//
-	        tabbedPaneMenu.addTab(TRACKPAGE, trackCard);
+//	        tabbedPaneMenu.addTab(TRACKPAGE, trackCard);
 	        tabbedPaneMenu.addTab(ABOUTUSPANEL, aboutUsCard);
 	        
 	        /*adding the main one */
@@ -141,6 +141,9 @@ public class Controller {
 	    
 	        
 	public static void main(String[] args) {
+
+		//createDefaultStoryAlbum();
+
 		 /* Use an appropriate Look and Feel */
         try {
             //UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
@@ -212,5 +215,18 @@ public class Controller {
 
 
 	}
+
+	/**
+	 * create default story album at runtime
+	 */
+//	private static void createDefaultStoryAlbum() {
+//		Album defaultStoryAlbum = new Album("Default Story Album", "A default album for your tracks","/img/Album.png");
+//		System.out.println(defaultStoryAlbum.getTitle().toString());
+//		System.out.println(defaultStoryAlbum.getDescription().toString());
+//		System.out.println(defaultStoryAlbum.getPicFileLocation().toString());
+
+		
+//		Album.addAlbumToallAlbums(defaultStoryAlbum);
+//	}
 
 }

@@ -8,19 +8,17 @@ import Pages.CreateNewAlbumOrTrackPage;
 import Utilities.AlbumReadWrite;
 
 public class Album extends AlbumOrTrack {
-	
-	public Album(){
+
+	public Album() {
 		super();
 	}
-	
+
 	public Album(String ttl, String dsc, String pic) {
 		super(ttl, dsc, pic);
 	}
-	
-	
 
 	/**
-	 *A static ArrayList of all the albums (this only works for one user)
+	 * A static ArrayList of all the albums (this only works for one user)
 	 */
 	private static ArrayList<Album> allAlbums = new ArrayList<Album>();
 
@@ -28,40 +26,47 @@ public class Album extends AlbumOrTrack {
 
 	/**
 	 * Append a track to the end of the ArrayList of tracks held in this album
+	 * 
 	 * @param track
 	 */
 	public void addTrack(Track track) {
 		tracksInAlbum.add(track);
 	}
-	
+
 	/**
 	 * 
-	 * @param index 
-	 * the index of the ArrayList of tracks for this album that you want to access (starts at 0!)
+	 * @param index
+	 *            the index of the ArrayList of tracks for this album that you
+	 *            want to access (starts at 0!)
 	 * @return Track
 	 * 
 	 */
-	public Track getTrackAt(int index){
+	public Track getTrackAt(int index) {
 		return tracksInAlbum.get(index);
 	}
-	
+
 	/**
 	 * 
 	 * @return
 	 */
-	public ArrayList<Track> getTracks(){
+	public ArrayList<Track> getTracks() {
 		return tracksInAlbum;
 	}
-	
+
 	public static ArrayList<Album> getAllAlbums() {
 		return allAlbums;
 	}
+
+	private Album getAlbum(int index) {
+		return allAlbums.get(index);
+	}
 	
-	
-	
-	
+	private void appendAlbum(Album album) {
+allAlbums.add(album);
+	}
+
 	public void delete(Album album) {
 
 	}
-	
+
 }
