@@ -4,9 +4,14 @@ import jComponents.MenuBar;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.JFrame;
 import javax.swing.JButton;
+import javax.swing.JPanel;
 
 /**
  * 
@@ -18,52 +23,49 @@ import javax.swing.JButton;
  */
 
 
-public class AudioPlayer extends JFrame{
+public class AudioPlayer extends JPanel {
 	
-	AudioPlayer(){
-		super("Audio Player");
-		MenuBar menuBar = new MenuBar("user");
-		getContentPane().add(menuBar);
+	private Clip clip = null;
+	
+	public AudioPlayer () {
 		
-		JButton btnPlay = new JButton("play");
-		btnPlay.setBounds(120, 143, 69, 29);
-		menuBar.add(btnPlay);
-		
-		JButton btnStop = new JButton("stop");
-		btnStop.setBounds(231, 143, 69, 29);
-		menuBar.add(btnStop);
-		
-		
-		AePlayWave aw = new AePlayWave( "AuJava.wav" );
-//        aw.start();     
-//        aw.stop(); 
-        
-        btnPlay.addActionListener(new ActionListener(){
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				btnPlay.setEnabled(false);
-				btnStop.setEnabled(true);
-				aw.start();	
+		/* Play Button */
+		JButton btnPlay = new JButton("Play");
+		btnPlay.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				try {
+					File file = new File("src/test.wav");
+					if (file.exists()) {
+						 AudioInputStream inputStream = AudioSystem.getAudioInputStream(file);
+					       clip = AudioSystem.getClip();
+					       clip.open(inputStream);	
+					} else { System.out.println("file does not exist.");}
+					clip.setFramePosition(0);
+					clip.start(); 
+				} catch (Exception e) {
+					e.printStackTrace();
+					System.err.println(e.getMessage());
+				}
 			}
-        	
-        });
-        
-        //
-        btnStop.addActionListener(new ActionListener(){
-
-			@SuppressWarnings("deprecation")
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				btnPlay.setEnabled(true);
-				btnStop.setEnabled(false);
-				aw.stop();	
+		});
+		btnPlay.setBounds(40, 39, 117, 29);
+		this.add(btnPlay);
+		
+		/* Stop Button */
+		JButton btnStop = new JButton("Stop");
+		btnStop.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				
 			}
-        	
-        });
+		});
+		btnStop.setBounds(40, 80, 117, 29);
+		this.add(btnStop);
 		
-        
-		
+		/*
+		JButton btnPause = new JButton("Pause");
+		btnPause.setBounds(40, 121, 117, 29);
+		this.add(btnPause);
+		*/
 	}
 	
 }
