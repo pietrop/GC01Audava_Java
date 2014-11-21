@@ -83,6 +83,8 @@ public class TrackReadWrite extends ReadWriteUtilities{
 		}
 
 		System.err.println("track not found");
+		textReader.close();
+		fR.close();
 		return track;
 
 	}

@@ -85,6 +85,8 @@ public class AlbumReadWrite extends ReadWriteUtilities {
 
 		}
 
+		textReader.close();
+		fR.close();
 		System.err.println("album not found");
 		return album;
 

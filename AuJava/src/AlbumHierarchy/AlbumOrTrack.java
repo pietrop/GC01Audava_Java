@@ -1,5 +1,7 @@
 package AlbumHierarchy;
 
+import java.util.Date;
+
 /**
  * This is an abstract class to hold the common members for albums and tracks.
  * Albums and tracks should extend this class.
