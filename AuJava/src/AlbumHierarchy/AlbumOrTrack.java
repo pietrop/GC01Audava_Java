@@ -9,20 +9,31 @@ import java.util.Date;
  * @author SamiStart
  */
 public abstract class AlbumOrTrack {
+	
+	// data item names from JSON file
+	public static final String ID = "id", TITLE = "name",
+			DESCRIPTION = "description", PICLOCATION = "picture",
+			ADDED = "added";
+	
+	private int id;
 	private String title;
 	private String description;
 	private String picFileLocation;
+	private Date added;
 	
 	public AlbumOrTrack(){
 		this.title = "default constructor title";
 		this.description = "default constructor description";
 		this.picFileLocation = "default constructor pic location";
+		this.added = new Date();
+
 	}
 
 	public AlbumOrTrack(String ttl, String dsc, String pic) {
 		this.title = ttl;
 		this.description = dsc;
 		this.picFileLocation = pic;
+		this.added = new Date();
 	}
 
 	public void setTitle(String title) {
@@ -47,5 +58,9 @@ public abstract class AlbumOrTrack {
 
 	public String getPicFileLocation() {
 		return picFileLocation;
+	}
+	
+	public Date getAdded() {
+		return added;
 	}
 }

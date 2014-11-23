@@ -1,5 +1,4 @@
 package AlbumHierarchy;
-import Utilities.TrackReadWrite;
 
 /**
  * 
@@ -14,14 +13,12 @@ public class Track extends AlbumOrTrack {
 	public Track() {
 		super();
 		this.audioFileLocation = "default constructor audio location";
-		TrackReadWrite.appendtrack(this);
 
 	}
 
 	public Track(String ttl, String dsc, String pic, String aud) {
 		super(ttl, dsc, pic);
 		this.audioFileLocation = aud;
-		TrackReadWrite.appendtrack(this);
 	}
 /*P trying out stuff */
 	static String dsc = "A default track description";

@@ -3,8 +3,6 @@ package AlbumHierarchy;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import Utilities.AlbumReadWrite;
-
 /**
  * 
  * @author SamiStart
@@ -12,16 +10,18 @@ import Utilities.AlbumReadWrite;
  */
 public class Album extends AlbumOrTrack {
 
+	private int id;
+
 	public Album() {
 		super();
+		this.id = allAlbums.size();
 		allAlbums.add(this);
-		Utilities.AlbumReadWrite.appendAlbum(this);
 	}
 
 	public Album(String ttl, String dsc, String pic) {
 		super(ttl, dsc, pic);
+		this.id = allAlbums.size();
 		allAlbums.add(this);
-		Utilities.AlbumReadWrite.appendAlbum(this);
 	}
 
 	/**
@@ -62,24 +62,32 @@ public class Album extends AlbumOrTrack {
 		return tracksInAlbum;
 	}
 
+	/**
+	 * 
+	 * @return Arraylist<Album> all currently stored albums.
+	 */
 	public static ArrayList<Album> getAllAlbums() {
-		try {
-			allAlbums = AlbumReadWrite.returnAllAlbums();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+
 		return allAlbums;
 	}
 
+	/**
+	 * 
+	 * @param index
+	 * @return Album at specified position in ArrayList
+	 */
 	public static Album getAlbum(int index) {
-		try {
-			allAlbums = AlbumReadWrite.returnAllAlbums();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+
 		return allAlbums.get(index);
 	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getId() {
+		return id;
+	}
 
 	public void delete(Album album) {
 
