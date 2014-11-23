@@ -8,7 +8,6 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 
 import AlbumHierarchy.Album;
-import Utilities.AlbumReadWrite;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 
@@ -27,14 +26,7 @@ public class AlbumsSideBar extends JPanel {
 		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
 	
-		
-		try {
-			albums = AlbumReadWrite.returnAllAlbums();
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		ArrayList<Album> albums = Album.getAllAlbums();
 		
 		for (int i = 0; i < albums.size(); i++) {
 			GridBagConstraints gbc = new GridBagConstraints();
