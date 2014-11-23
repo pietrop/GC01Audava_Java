@@ -12,7 +12,6 @@ import org.w3c.dom.CDATASection;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import AlbumHierarchy.Album;
 import AlbumHierarchy.Track;
 
 /**
@@ -24,7 +23,6 @@ import AlbumHierarchy.Track;
  */
 public class TrackDOMCreator {
 
-	@SuppressWarnings("unused")
 	private static final String XMLDATEFORMAT = "yyyy-MM-dd'T'HH:mm:ss";
 
 	Document doc = null;
@@ -39,7 +37,7 @@ public class TrackDOMCreator {
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		doc = builder.newDocument();
 
-		Element root = doc.createElement("albums");
+		Element root = doc.createElement("tracks");
 		doc.appendChild(root);
 
 		for (Track track : data) {
@@ -52,12 +50,16 @@ public class TrackDOMCreator {
 			addElement(albumElement, Track.ALBUMID,
 					Integer.toString(track.getId()));
 
-			Element description = addElement(albumElement, Album.DESCRIPTION,
+			Element description = addElement(albumElement, Track.DESCRIPTION,
 					"");
 			CDATASection cdata = doc.createCDATASection(track.getDescription());
-			addElement(albumElement, Album.PICLOCATION,
-					track.getPicFileLocation());
 			description.appendChild(cdata);
+
+			addElement(albumElement, Track.PICLOCATION,
+					track.getPicFileLocation());
+
+			addElement(albumElement, Track.AUDIOLOCATION,
+					track.getAudioFileLocation());
 
 			DateFormat df = new SimpleDateFormat(XMLDATEFORMAT);
 			addElement(albumElement, Track.ADDED, df.format(track.getAdded()));

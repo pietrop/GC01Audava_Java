@@ -1,2 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<albums/>
+<tracks>
+  <track id="0">
+    <name>default constructor title</name>
+    <albumid>0</albumid>
+    <description><![CDATA[default constructor description]]></description>
+    <picture>default constructor pic location</picture>
+    <audiolocation>default constructor audio location</audiolocation>
+    <added>2014-11-23T20:31:42</added>
+  </track>
+  <track id="1">
+    <name>default constructor title</name>
+    <albumid>1</albumid>
+    <description><![CDATA[default constructor description]]></description>
+    <picture>default constructor pic location</picture>
+    <audiolocation>default constructor audio location</audiolocation>
+    <added>2014-11-23T20:31:42</added>
+  </track>
+  <track id="2">
+    <name>default constructor title</name>
+    <albumid>2</albumid>
+    <description><![CDATA[default constructor description]]></description>
+    <picture>default constructor pic location</picture>
+    <audiolocation>default constructor audio location</audiolocation>
+    <added>2014-11-23T20:31:42</added>
+  </track>
+  <track id="3">
+    <name>default constructor title</name>
+    <albumid>3</albumid>
+    <description><![CDATA[default constructor description]]></description>
+    <picture>default constructor pic location</picture>
+    <audiolocation>default constructor audio location</audiolocation>
+    <added>2014-11-23T20:31:42</added>
+  </track>
+  <track id="4">
+    <name>default constructor title</name>
+    <albumid>4</albumid>
+    <description><![CDATA[default constructor description]]></description>
+    <picture>default constructor pic location</picture>
+    <audiolocation>default constructor audio location</audiolocation>
+    <added>2014-11-23T20:31:42</added>
+  </track>
+  <track id="5">
+    <name>default constructor title</name>
+    <albumid>5</albumid>
+    <description><![CDATA[default constructor description]]></description>
+    <picture>default constructor pic location</picture>
+    <audiolocation>default constructor audio location</audiolocation>
+    <added>2014-11-23T20:31:42</added>
+  </track>
+  <track id="6">
+    <name>default constructor title</name>
+    <albumid>6</albumid>
+    <description><![CDATA[default constructor description]]></description>
+    <picture>default constructor pic location</picture>
+    <audiolocation>default constructor audio location</audiolocation>
+    <added>2014-11-23T20:31:42</added>
+  </track>
+  <track id="7">
+    <name>default constructor title</name>
+    <albumid>7</albumid>
+    <description><![CDATA[default constructor description]]></description>
+    <picture>default constructor pic location</picture>
+    <audiolocation>default constructor audio location</audiolocation>
+    <added>2014-11-23T20:31:42</added>
+  </track>
+  <track id="8">
+    <name>default constructor title</name>
+    <albumid>8</albumid>
+    <description><![CDATA[default constructor description]]></description>
+    <picture>default constructor pic location</picture>
+    <audiolocation>default constructor audio location</audiolocation>
+    <added>2014-11-23T20:31:42</added>
+  </track>
+  <track id="9">
+    <name>default constructor title</name>
+    <albumid>9</albumid>
+    <description><![CDATA[default constructor description]]></description>
+    <picture>default constructor pic location</picture>
+    <audiolocation>default constructor audio location</audiolocation>
+    <added>2014-11-23T20:31:42</added>
+  </track>
+</tracks>

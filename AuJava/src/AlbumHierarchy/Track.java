@@ -20,6 +20,8 @@ public class Track extends AlbumOrTrack {
 
 	public static final String ALBUMID = "albumid";
 
+	public static final String AUDIOLOCATION = "audiolocation";
+
 	
 	private String audioFileLocation;
 	private int id;
