@@ -1,7 +1,14 @@
 package AlbumHierarchy;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+
+import Utilities.AlbumCreateXMLWithDOM;
+import Utilities.AlbumDOMReader;
 
 /**
  * 
@@ -10,26 +17,48 @@ import java.util.ArrayList;
  */
 public class Album extends AlbumOrTrack {
 
+	public static final String ALBUMFILE = "db/albums.txt";
+
+	private static ArrayList<Album> allAlbums = new ArrayList<Album>();
+	private ArrayList<Track> tracksInAlbum = new ArrayList<Track>();
 	private int id;
 
 	public Album() {
 		super();
 		this.id = allAlbums.size();
 		allAlbums.add(this);
+		for (int i = 0; i < Track.getAllTracks().size(); i++) {
+			if (Track.getTrack(i).getAlbumId()==this.id) {
+				tracksInAlbum.add(Track.getTrack(i));
+			}
+		}
 	}
 
 	public Album(String ttl, String dsc, String pic) {
 		super(ttl, dsc, pic);
 		this.id = allAlbums.size();
 		allAlbums.add(this);
+		for (int i = 0; i < Track.getAllTracks().size(); i++) {
+			if (Track.getTrack(i).getAlbumId()==this.id) {
+				tracksInAlbum.add(Track.getTrack(i));
+			}
+		}
 	}
 
-	/**
-	 * A static ArrayList of all the albums (this only works for one user)
-	 */
-	private static ArrayList<Album> allAlbums = new ArrayList<Album>();
+	static public ArrayList<Album> loadAlbums() {
+		AlbumDOMReader reader = new AlbumDOMReader();
+		return reader.getDataFromXML();
+	}
 
-	private ArrayList<Track> tracksInAlbum = new ArrayList<Track>();
+	static public void saveAlbums() {
+		try {
+			AlbumCreateXMLWithDOM.createXmlAllAlbums(allAlbums);
+		} catch (FileNotFoundException | ParserConfigurationException
+				| TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	/**
 	 * Append a track to the end of the ArrayList of tracks held in this album
@@ -91,6 +120,10 @@ public class Album extends AlbumOrTrack {
 
 	public void delete(Album album) {
 
+	}
+	
+	public static void setAllAlbums(ArrayList<Album> allAlbums) {
+		Album.allAlbums = allAlbums;
 	}
 
 }

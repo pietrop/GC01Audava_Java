@@ -2,7 +2,6 @@ package Utilities;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
 
@@ -18,7 +17,7 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 
-import AlbumHierarchy.Album;
+import AlbumHierarchy.Track;
 
 /**
  * {@link}
@@ -27,18 +26,19 @@ import AlbumHierarchy.Album;
  * @author SamiStart
  *
  */
-public class CreateXMLWithDOM {
+public class TrackCreateXMLWithDOM {
+	
 
-	public static void createXmlAllAlbums(ArrayList<Album> allAlbums)
+	public static void createXmlAllTracks(ArrayList<Track> allTracks)
 			throws ParserConfigurationException, TransformerException,
 			FileNotFoundException {
 
-		DOMCreator creator = new DOMCreator();
-		Document doc = creator.createXMLDoc(allAlbums);
+		TrackDOMCreator creator = new TrackDOMCreator();
+		Document doc = creator.createXMLDoc(allTracks);
 
 		String xmlString = outputToString(doc);
-		String filename = "db/albums.txt";
-		outputAsFile(doc, filename );
+		
+		outputAsFile(doc, Track.TRACKFILE );
 
 	}
 

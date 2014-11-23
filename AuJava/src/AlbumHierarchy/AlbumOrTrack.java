@@ -1,5 +1,6 @@
 package AlbumHierarchy;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -9,19 +10,19 @@ import java.util.Date;
  * @author SamiStart
  */
 public abstract class AlbumOrTrack {
-	
+
 	// data item names from JSON file
 	public static final String ID = "id", TITLE = "name",
 			DESCRIPTION = "description", PICLOCATION = "picture",
 			ADDED = "added";
-	
+
 	private int id;
 	private String title;
 	private String description;
 	private String picFileLocation;
 	private Date added;
-	
-	public AlbumOrTrack(){
+
+	public AlbumOrTrack() {
 		this.title = "default constructor title";
 		this.description = "default constructor description";
 		this.picFileLocation = "default constructor pic location";
@@ -59,8 +60,16 @@ public abstract class AlbumOrTrack {
 	public String getPicFileLocation() {
 		return picFileLocation;
 	}
-	
+
 	public Date getAdded() {
 		return added;
+	}
+
+	public void setAdded(Date added) {
+		this.added = added;
+	}
+
+	public String toString() {
+		return this.id + ". " + this.title + " added " + this.added;
 	}
 }
