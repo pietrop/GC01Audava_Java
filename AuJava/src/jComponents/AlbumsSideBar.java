@@ -1,7 +1,6 @@
 package jComponents;
 
 import java.awt.GridBagConstraints;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.JPanel;

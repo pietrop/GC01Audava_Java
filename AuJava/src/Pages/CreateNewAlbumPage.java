@@ -6,7 +6,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
 
-import Utilities.AlbumReadWrite;
+import AlbumHierarchy.Album;
+import AlbumHierarchy.Track;
 
 /**
  * 
@@ -51,6 +52,7 @@ public class CreateNewAlbumPage extends CreateNewAlbumOrTrackPage {
 	}
 	
 	private void writeInfoToFile(){
-		AlbumReadWrite.appendAlbum(super.textField_ttl.getText(), super.textField_dscrptn.getText(), super.textField_pic.getText());
-	}
+		Album album = new Album(super.textField_ttl.getText(),
+				super.textField_dscrptn.getText(),
+				super.textField_pic.getText());	}
 }

@@ -13,8 +13,7 @@ import java.awt.Insets;
 
 import javax.swing.JTextField;
 
-import Utilities.AlbumReadWrite;
-import Utilities.TrackReadWrite;
+import AlbumHierarchy.Track;
 
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
@@ -30,7 +29,7 @@ import java.awt.event.ActionListener;
 public class CreateNewTrackPage extends CreateNewAlbumOrTrackPage {
 
 	private JPanel contentPane;
-	private JTextField textField;
+	private JTextField textField_aud;
 
 	/**
 	 * Launch the application.
@@ -62,13 +61,13 @@ public class CreateNewTrackPage extends CreateNewAlbumOrTrackPage {
 		gbc_lblChooseAnAudio.gridy = 5;
 		getContentPane().add(lblChooseAnAudio, gbc_lblChooseAnAudio);
 
-		textField = new JTextField();
+		textField_aud = new JTextField();
 		GridBagConstraints gbc_textField = new GridBagConstraints();
 		gbc_textField.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField.gridx = 1;
 		gbc_textField.gridy = 5;
-		getContentPane().add(textField, gbc_textField);
-		textField.setColumns(10);
+		getContentPane().add(textField_aud, gbc_textField);
+		textField_aud.setColumns(10);
 
 		super.btnCreate.addActionListener(new ActionListener() {
 
@@ -82,9 +81,10 @@ public class CreateNewTrackPage extends CreateNewAlbumOrTrackPage {
 	}
 
 	private void writeInfoToFile() {
-		TrackReadWrite.appendtrack(super.textField_ttl.getText(),
+
+		Track track = new Track(super.textField_ttl.getText(),
 				super.textField_dscrptn.getText(),
-				super.textField_pic.getText(), textField.getText());
+				super.textField_pic.getText(), textField_aud.getText());
 	}
 
 }
