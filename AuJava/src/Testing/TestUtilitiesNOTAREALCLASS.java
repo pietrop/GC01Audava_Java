@@ -18,13 +18,13 @@ public class TestUtilitiesNOTAREALCLASS {
 
 	public static void main(String[] args) throws FileNotFoundException, ParserConfigurationException, TransformerException {
 		
+		Track.loadTracks();
+		Album.loadAlbums();
 		
-		for (int i = 0; i < 10; i++) {
+		
 			Track track = new Track();
-			System.out.println(Track.getAllTracks().size());
-		}
 		
-		Track.saveTracks();
+		Album.saveAlbums();
 		
 
 	}

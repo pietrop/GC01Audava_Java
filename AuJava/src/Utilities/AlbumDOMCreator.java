@@ -21,7 +21,6 @@ import AlbumHierarchy.Album;
  */
 public class AlbumDOMCreator {
 
-	@SuppressWarnings("unused")
 	private static final String XMLDATEFORMAT = "yyyy-MM-dd'T'HH:mm:ss";
 
 	Document doc = null;

@@ -45,9 +45,9 @@ public class Album extends AlbumOrTrack {
 		}
 	}
 
-	static public ArrayList<Album> loadAlbums() {
+	static public void loadAlbums() {
 		AlbumDOMReader reader = new AlbumDOMReader();
-		return reader.getDataFromXML();
+		allAlbums=reader.getDataFromXML();
 	}
 
 	static public void saveAlbums() {

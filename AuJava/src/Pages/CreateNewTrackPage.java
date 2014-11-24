@@ -1,34 +1,28 @@
 package Pages;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import AlbumHierarchy.Track;
-
-import java.awt.GridBagLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * 
  * @author SamiStart
  *
  */
-
-// you will need to set up a valid file location in Utilities for this to work
 public class CreateNewTrackPage extends CreateNewAlbumOrTrackPage {
 
-	private JPanel contentPane;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2621082381564582247L;
 	private JTextField textField_aud;
 
 	/**
@@ -59,15 +53,25 @@ public class CreateNewTrackPage extends CreateNewAlbumOrTrackPage {
 		gbc_lblChooseAnAudio.insets = new Insets(0, 0, 0, 5);
 		gbc_lblChooseAnAudio.gridx = 0;
 		gbc_lblChooseAnAudio.gridy = 5;
-		getContentPane().add(lblChooseAnAudio, gbc_lblChooseAnAudio);
+		add(lblChooseAnAudio, gbc_lblChooseAnAudio);
 
 		textField_aud = new JTextField();
 		GridBagConstraints gbc_textField = new GridBagConstraints();
 		gbc_textField.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField.gridx = 1;
 		gbc_textField.gridy = 5;
-		getContentPane().add(textField_aud, gbc_textField);
+		add(textField_aud, gbc_textField);
 		textField_aud.setColumns(10);
+		
+//		Creates a space between the fields and the create button
+		JLabel spacerComponent = new JLabel("");
+		GridBagConstraints gbc_spacerComponent = new GridBagConstraints();
+		gbc_spacerComponent.anchor = GridBagConstraints.EAST;
+		gbc_spacerComponent.insets = new Insets(0, 0, 0, 5);
+		gbc_spacerComponent.gridx = 0;
+		gbc_spacerComponent.gridy = 6;
+		gbc_spacerComponent.gridwidth=GridBagConstraints.REMAINDER;
+		add(spacerComponent, gbc_spacerComponent);
 
 		super.btnCreate.addActionListener(new ActionListener() {
 

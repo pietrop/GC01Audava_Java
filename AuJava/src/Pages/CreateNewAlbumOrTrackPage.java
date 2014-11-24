@@ -22,7 +22,7 @@ import javax.swing.JButton;
  * @author SamiStart
  *
  */
-public abstract class CreateNewAlbumOrTrackPage extends JFrame {
+public abstract class CreateNewAlbumOrTrackPage extends Page {
 
 	private JPanel contentPane;
 
@@ -39,20 +39,9 @@ public abstract class CreateNewAlbumOrTrackPage extends JFrame {
 	 * Create the frame.
 	 */
 	public CreateNewAlbumOrTrackPage() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 960, 700);
-		
-		menuBar = new MenuBar();
-		setJMenuBar(menuBar);
-
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
 		
 		GridBagLayout gbl = new GridBagLayout();
-		gbl.rowWeights = new double[]{0.0, 0.0, 0.0, 1.0, 0.0, 0.0};
-		gbl.columnWeights = new double[]{0.0, 1.0};
-		contentPane.setLayout(gbl);
+		setLayout(gbl);
 		
 		lblCreateNewTrackalbum = new JLabel("Create new track/album (edit this text in subclass!!)");
 		GridBagConstraints gbc_lblCreateNewTrackalbum = new GridBagConstraints();
@@ -60,7 +49,9 @@ public abstract class CreateNewAlbumOrTrackPage extends JFrame {
 		gbc_lblCreateNewTrackalbum.insets = new Insets(0, 0, 5, 0);
 		gbc_lblCreateNewTrackalbum.gridx = 0;
 		gbc_lblCreateNewTrackalbum.gridy = 1;
-		contentPane.add(lblCreateNewTrackalbum, gbc_lblCreateNewTrackalbum);	
+		gbc_lblCreateNewTrackalbum.gridheight=2;
+		gbc_lblCreateNewTrackalbum.anchor=GridBagConstraints.NORTH;
+		add(lblCreateNewTrackalbum, gbc_lblCreateNewTrackalbum);	
 		
 		JLabel lblTitle = new JLabel("Title");
 		GridBagConstraints gbc_lblTitle = new GridBagConstraints();
@@ -68,7 +59,7 @@ public abstract class CreateNewAlbumOrTrackPage extends JFrame {
 		gbc_lblTitle.insets = new Insets(0, 0, 5, 5);
 		gbc_lblTitle.gridx = 0;
 		gbc_lblTitle.gridy = 2;
-		contentPane.add(lblTitle, gbc_lblTitle);
+		add(lblTitle, gbc_lblTitle);
 		
 		textField_ttl = new JTextField();
 		GridBagConstraints gbc_textField = new GridBagConstraints();
@@ -76,7 +67,7 @@ public abstract class CreateNewAlbumOrTrackPage extends JFrame {
 		gbc_textField.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField.gridx = 1;
 		gbc_textField.gridy = 2;
-		contentPane.add(textField_ttl, gbc_textField);
+		add(textField_ttl, gbc_textField);
 		textField_ttl.setColumns(10);
 		
 		JLabel lblDescription = new JLabel("Description");
@@ -85,7 +76,7 @@ public abstract class CreateNewAlbumOrTrackPage extends JFrame {
 		gbc_lblDescription.insets = new Insets(0, 0, 5, 5);
 		gbc_lblDescription.gridx = 0;
 		gbc_lblDescription.gridy = 3;
-		contentPane.add(lblDescription, gbc_lblDescription);
+		add(lblDescription, gbc_lblDescription);
 		
 		textField_dscrptn = new JTextField();
 		GridBagConstraints gbc_textField_dscrptn = new GridBagConstraints();
@@ -93,7 +84,7 @@ public abstract class CreateNewAlbumOrTrackPage extends JFrame {
 		gbc_textField_dscrptn.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_dscrptn.gridx = 1;
 		gbc_textField_dscrptn.gridy = 3;
-		contentPane.add(textField_dscrptn, gbc_textField_dscrptn);
+		add(textField_dscrptn, gbc_textField_dscrptn);
 		textField_dscrptn.setColumns(10);
 		
 		JLabel lblChooseAPicture = new JLabel("Choose a picture");
@@ -102,7 +93,7 @@ public abstract class CreateNewAlbumOrTrackPage extends JFrame {
 		gbc_lblChooseAPicture.insets = new Insets(0, 0, 5, 5);
 		gbc_lblChooseAPicture.gridx = 0;
 		gbc_lblChooseAPicture.gridy = 4;
-		contentPane.add(lblChooseAPicture, gbc_lblChooseAPicture);
+		add(lblChooseAPicture, gbc_lblChooseAPicture);
 		
 		textField_pic = new JTextField();
 		GridBagConstraints gbc_textField_pic = new GridBagConstraints();
@@ -110,14 +101,15 @@ public abstract class CreateNewAlbumOrTrackPage extends JFrame {
 		gbc_textField_pic.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_pic.gridx = 1;
 		gbc_textField_pic.gridy = 4;
-		contentPane.add(textField_pic, gbc_textField_pic);
+		add(textField_pic, gbc_textField_pic);
 		textField_pic.setColumns(10);
 		
 		btnCreate = new JButton("Create");
 		GridBagConstraints gbc_btnCreate = new GridBagConstraints();
 		gbc_btnCreate.gridx = 1;
 		gbc_btnCreate.gridy = 6;
-		contentPane.add(btnCreate, gbc_btnCreate);
+		gbc_btnCreate.weighty=1.0;
+		add(btnCreate, gbc_btnCreate);
 		
 		
 

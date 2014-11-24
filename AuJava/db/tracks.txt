@@ -9,7 +9,7 @@
     <added>2014-11-23T20:31:42</added>
   </track>
   <track id="1">
-    <name>default constructor title</name>
+    <name>changed in test</name>
     <albumid>1</albumid>
     <description><![CDATA[default constructor description]]></description>
     <picture>default constructor pic location</picture>

@@ -7,7 +7,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 
 import Utilities.AlbumCreateXMLWithDOM;
+import Utilities.AlbumDOMReader;
 import Utilities.TrackCreateXMLWithDOM;
+import Utilities.TrackDOMReader;
 
 /**
  * 
@@ -30,6 +32,7 @@ public class Track extends AlbumOrTrack {
 
 	public Track() {
 		super();
+		this.AlbumId=0;
 		this.audioFileLocation = "default constructor audio location";
 		this.id=allTracks.size();
 		allTracks.add(this);
@@ -55,11 +58,6 @@ public class Track extends AlbumOrTrack {
 
 	public void setAudioFileLocation(String audioFileLocation) {
 		this.audioFileLocation = audioFileLocation;
-	}
-
-	private void delete() {
-		// TODO Auto-generated method stub
-
 	}
 
 	public static ArrayList<Track> getAllTracks() {
@@ -102,6 +100,11 @@ public class Track extends AlbumOrTrack {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}		
+	}
+	
+	static public void loadTracks() {
+		TrackDOMReader reader = new TrackDOMReader();
+		setAllTracks(reader.getDataFromXML());
 	}
 
 }
