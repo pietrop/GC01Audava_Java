@@ -82,7 +82,7 @@ public class RecordPage extends Page{
 
 		};
 
-		Timer timer = new Timer(500, actListner);
+		Timer timer = new Timer(0, actListner);
 
 
 		btnRec.addActionListener(new ActionListener() {

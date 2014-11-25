@@ -6,33 +6,49 @@ import java.util.ArrayList;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 
-import AlbumHierarchy.Album;
+import AlbumHierarchy.Track;
+
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class AlbumsSideBar extends JPanel {
+public class TrackListPanel extends JPanel {
 	
-	ArrayList<Album> albums;
+	ArrayList<Track> tracks;
+	GridBagConstraints gbc;
 
 	/**
 	 * Create the panel.
 	 */
-	public AlbumsSideBar() {
+	public TrackListPanel() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0};
 		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0};
 		gridBagLayout.columnWeights = new double[]{0.0, Double.MIN_VALUE};
 		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
-	
-		ArrayList<Album> albums = Album.getAllAlbums();
 		
-		for (int i = 0; i < albums.size(); i++) {
-			GridBagConstraints gbc = new GridBagConstraints();
+		Track.loadTracks();
+	
+		tracks = Track.getAllTracks();
+		gbc = new GridBagConstraints();
+		ArrayList<JButton> buttons = new ArrayList<JButton>();
+		
+		for (int i = 0; i < tracks.size(); i++) {
 			gbc.insets = new Insets(0, 0, 5, 0);
 			gbc.gridx = 0;
 			gbc.gridy = i;
-			add(new JButton(albums.get(i).getTitle()), gbc);
+			
+			buttons.add(new JButton(tracks.get(i).getTitle()));
+			buttons.get(i).addActionListener(new ActionListener() {
+				
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					
+				}
+			});
+			add(buttons.get(i));
 		}
 
 	}
