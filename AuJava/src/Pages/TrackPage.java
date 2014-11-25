@@ -1,13 +1,20 @@
 package Pages;
 
+import AlbumHierarchy.Track;
 import jComponents.InfoPanel;
 import jComponents.PictureLabel;
+
 import javax.sound.sampled.Clip;
 import javax.swing.JPanel;
-import AlbumHierarchy.Track;
-import SoundPlayer.AudioPlayer;
 
+import sound.AudioPlayer;
 
+/**
+ * Track page to display track information and enable playback.
+ * 
+ * @author Axel
+ * @version 22 Nov 2014
+ */
 public class TrackPage extends Page {
 	
 	public TrackPage(Track track) {

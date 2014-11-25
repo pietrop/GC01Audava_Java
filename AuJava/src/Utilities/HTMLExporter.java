@@ -1,25 +1,25 @@
 package Utilities;
 
+import AlbumHierarchy.Track;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import AlbumHierarchy.Track;
-
 /**
- * Basic HTMlExport class to enable exporting/sharing of individual tracks.
+ * HTMlExporter class to enable exporting/sharing of individual tracks.
  * 
  * @author Axel
  * @version 24 Nov 2014
  */
-public class HTMLExport {
+public class HTMLExporter {
 	
 	public void export (Track track) {
 		
 		BufferedWriter writer = null;
 		String filepath = System.getProperty("user.home") + "/Desktop/" + track.getTitle() + ".html" ;
 		
+		/* Create a new file on the users desktop using the track name. */ 
 		File file = new File(filepath);
 		try {
 			if (file.createNewFile()){
@@ -31,6 +31,7 @@ public class HTMLExport {
 			e.printStackTrace();
 		}
 		
+		/* Fill the newly created file with track info encapsulated in HTML tags. */
 		try {
 			writer = new BufferedWriter(new FileWriter(filepath));
 			writer.write(

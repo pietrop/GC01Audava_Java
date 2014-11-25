@@ -23,7 +23,7 @@ public class RecordPage extends Page{
 	//to measure recording time, and give feedback to user that audio is beeing recorded
 	long startTime = System.currentTimeMillis();
 
-	public static SoundRecorder.Recorder rec ;
+	public static sound.Recorder rec ;
 	
 	private JTextField timerTextField;
 	
@@ -100,7 +100,7 @@ public class RecordPage extends Page{
 				//end of date time now
 				outputFilename = ft.format(timeNow) +"_AuJava"+".wav" ;
 				
-				rec = new SoundRecorder.Recorder(outputFilename);
+				rec = new sound.Recorder(outputFilename);
 				
 				rec.startRecording();
 
