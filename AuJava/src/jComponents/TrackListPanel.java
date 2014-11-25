@@ -12,6 +12,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JScrollBar;
 
 public class TrackListPanel extends JPanel {
 	
@@ -23,11 +24,19 @@ public class TrackListPanel extends JPanel {
 	 */
 	public TrackListPanel() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{0, 0};
+		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0};
-		gridBagLayout.columnWeights = new double[]{0.0, Double.MIN_VALUE};
+		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
+		
+		JScrollBar scrollBar = new JScrollBar();
+		GridBagConstraints gbc_scrollBar = new GridBagConstraints();
+		gbc_scrollBar.gridheight = 5;
+		gbc_scrollBar.insets = new Insets(0, 0, 5, 0);
+		gbc_scrollBar.gridx = 14;
+		gbc_scrollBar.gridy = 0;
+		add(scrollBar, gbc_scrollBar);
 		
 		Track.loadTracks();
 	
@@ -48,7 +57,7 @@ public class TrackListPanel extends JPanel {
 					
 				}
 			});
-			add(buttons.get(i));
+			add(buttons.get(i), gbc);
 		}
 
 	}
