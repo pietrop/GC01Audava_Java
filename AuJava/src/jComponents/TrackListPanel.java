@@ -2,14 +2,11 @@ package jComponents;
 
 import java.awt.GridBagConstraints;
 import java.util.ArrayList;
-import java.util.List;
-
 import javax.swing.JPanel;
 import javax.swing.JButton;
 
 import AlbumHierarchy.Track;
 import Pages.TrackPage;
-import Pages.TrackSPage;
 import Pages.TrackView;
 
 import java.awt.CardLayout;

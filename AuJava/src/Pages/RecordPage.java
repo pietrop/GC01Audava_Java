@@ -14,7 +14,7 @@ import javax.swing.JTextField;
 import javax.swing.Timer;
 
 import AlbumHierarchy.Track;
-import SoundRecorder.Recorder;
+import sound.Recorder;
 
 
 
@@ -97,7 +97,7 @@ public class RecordPage extends Page{
 				outputFilename = ft.format(timeNow) +"_AuJava"+".wav" ;
 //				String outputFilenameWithFilePath =  "audio/" + outputFilename ;
 //				String outputFilenameWithFilePath =  "audio/" + RecordPage.recordedTrack.getPicFileLocation().toString() ;
-				rec = new SoundRecorder.Recorder(outputFilename);
+				rec = new sound.Recorder(outputFilename);
 				
 				rec.startRecording();
 

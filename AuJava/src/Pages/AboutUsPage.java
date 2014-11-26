@@ -1,53 +1,38 @@
 package Pages;
-/**
- * @author: Pietro 
- * 
- */
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import Utilities.HTMLReader;
 
+/**
+ * AboutUs page utilizing the HTMLReader to display a pre-written HTML file.
+ * 
+ * @author Axel
+ * @version 25 Nov 2014
+ */
 public class AboutUsPage extends Page {
 
 	public AboutUsPage(){
-		/*About - Us title of the page */
-		JLabel aboutUs = new JLabel("<html><h1>About us</h1></html>");
-		aboutUs.setBounds(45, 20, 113, 50);
-		add(aboutUs);
 		
-		/*  some text for their bio */
-		String dummyTextForAudava = new String("<html><p>Vestibulum scelerisque, lorem ac iaculis cursus, nibh mi elementum elit, sit amet tincidunt sapien odio at elit.</p><br><p> Donec sollicitudin molestie erat at euismod. Curabitur commodo euismod dui, quis ornare nibh pharetra sit amet. Sed eu accumsan massa. Etiam sit amet varius lorem.  </p></html>");
 		setLayout(null);
 		
-		/*Usman headline */
-		JLabel lblUsman = new JLabel("<html><h2>Usman</h2></html>");
-		lblUsman.setBounds(45, 271, 113, 20);
-		add(lblUsman);
-		/*Usman bio text*/
-		JLabel usmanTextPane = new JLabel();
-		usmanTextPane.setBounds(45, 303, 365, 118);
-		usmanTextPane.setText(dummyTextForAudava);
-		add(usmanTextPane);
-		/*Usman picture*/
+		String htmlPath = "html/AboutUs.html";
+		String imageImran = "img/duke-java.png";
+		String imageUsman = "img/duke-java.png";
+		
+		JLabel lblHome = new JLabel(HTMLReader.read(htmlPath));
+		lblHome.setBounds(39, 41, 295, 400);
+		this.add(lblHome);
+		
+		JLabel imranPicture = new JLabel("Imran Pic");
+		imranPicture.setIcon(new ImageIcon(imageImran));
+		imranPicture.setBounds(471, 37, 189, 150);
+		add(imranPicture);
+		
 		JLabel usamanPicture = new JLabel("Usman Pic");
-		usamanPicture.setIcon(new ImageIcon("img/duke-java.png"));
+		usamanPicture.setIcon(new ImageIcon(imageUsman));
 		usamanPicture.setBounds(465, 220, 195, 132);
 		add(usamanPicture);
 		
-		/*Imran headline */
-		JLabel lblIrman = new JLabel("<html><h2>Imran</h2></html>");
-		lblIrman.setBounds(45, 91, 103, 20);
-		add(lblIrman);
-		/*Imran bio text */
-		JLabel ImranTextPane = new JLabel();
-		ImranTextPane.setBounds(45, 109, 365, 138);
-		add(ImranTextPane);
-		ImranTextPane.setText(dummyTextForAudava);
-		/*Imran picture */
-		JLabel imranPicture = new JLabel("Imran Pic");
-		imranPicture.setIcon(new ImageIcon("img/duke-java.png"));
-		imranPicture.setBounds(471, 37, 189, 150);
-		add(imranPicture);
-
 	}
 }

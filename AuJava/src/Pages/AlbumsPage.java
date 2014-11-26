@@ -1,7 +1,7 @@
 package Pages;
 
 import jComponents.InfoPanel;
-import jComponents.AlbumsSideBar;
+import jComponents.TrackListPanel;
 import jComponents.InfoPanel;
 import jComponents.MenuBar;
 
@@ -46,7 +46,7 @@ public class AlbumsPage extends Page {
 		add(infoPanel);
 		
 		
-		AlbumsSideBar albumSideBar = new AlbumsSideBar();
+		TrackListPanel albumSideBar = new TrackListPanel();
 		albumSideBar.setBounds(6, 29, 149, 425);
 		add(albumSideBar);
 		

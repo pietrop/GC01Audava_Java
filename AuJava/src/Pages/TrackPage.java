@@ -10,8 +10,8 @@ import javax.sound.sampled.Clip;
 import javax.swing.JPanel;
 
 import AlbumHierarchy.Track;
-import SoundPlayer.AudioPlayer;
-import Utilities.HTMLExport;
+import sound.AudioPlayer;
+import Utilities.HTMLExporter;
 
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -38,7 +38,7 @@ public class TrackPage extends Page {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				HTMLExport.export(track);
+				HTMLExporter.export(track);
 
 
 			}
