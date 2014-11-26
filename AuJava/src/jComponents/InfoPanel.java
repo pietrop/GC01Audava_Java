@@ -8,6 +8,7 @@ import javax.swing.JButton;
 
 import AlbumHierarchy.Album;
 import AlbumHierarchy.AlbumOrTrack;
+import AlbumHierarchy.Track;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -87,17 +88,8 @@ public class InfoPanel extends JPanel{
 				btnSave.setEnabled(false);
 				albumDescriptionLabel.setEditable(false);
 				albumTitleLabel.setEditable(false);
-				
-				/*saving changes into object*/
-				 Album.getAlbum(0).setTitle(albumTitleLabel.getText().toString());
-				 Album.getAlbum(0).setDescription(albumDescriptionLabel.getText().toString());
-				
-				/* dest by print out to console*/
-				 System.out.println("- Printing out the album edited and saved: - ");
-				 System.out.println(Album.getAlbum(0).getTitle().toString());
-					System.out.println(Album.getAlbum(0).getDescription().toString());
-					System.out.println(Album.getAlbum(0).getPicFileLocation().toString());
-				 /* */
+				Track.saveTracks();
+				Track.loadTracks();
 			}
 		});
 		

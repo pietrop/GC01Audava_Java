@@ -15,7 +15,7 @@ import AlbumHierarchy.Track;
  */
 public class HTMLExport {
 	
-	public void export (Track track) {
+	public static void export (Track track) {
 		
 		BufferedWriter writer = null;
 		String filepath = System.getProperty("user.home") + "/Desktop/" + track.getTitle() + ".html" ;

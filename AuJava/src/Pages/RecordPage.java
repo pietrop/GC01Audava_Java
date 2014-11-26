@@ -1,40 +1,41 @@
 package Pages;
 
+import java.awt.CardLayout;
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import javax.swing.Timer;
 import javax.swing.JTextField;
+import javax.swing.Timer;
 
-import AlbumHierarchy.AlbumOrTrack;
 import AlbumHierarchy.Track;
+import SoundRecorder.Recorder;
+
 
 
 
 public class RecordPage extends Page{
+	
 
 	//to measure recording time, and give feedback to user that audio is beeing recorded
 	long startTime = System.currentTimeMillis();
 
-	public static SoundRecorder.Recorder rec ;
+	public static Recorder rec ;
 	
 	private JTextField timerTextField;
 	
 	private static Calendar cal;
-	 private static Date timeNow ;
+	private static Date timeNow ;
 	private static SimpleDateFormat ft ;
 	static String outputFilename;
-	public static Track recordedTrack;
+//	
 
 	public RecordPage(){
-		
 
 		ImageIcon  recButtonIcon = new ImageIcon("img/rec.png");
 		ImageIcon  stopButtonIcon = new ImageIcon("img/stop.png");
@@ -52,7 +53,6 @@ public class RecordPage extends Page{
 		btnStop.setBounds(365, 58, 258, 260);
 		add(btnStop);
 
-
 		btnRec.setEnabled(true);
 		btnStop.setEnabled(false);
 
@@ -61,9 +61,6 @@ public class RecordPage extends Page{
 		add(timerTextField);
 		timerTextField.setEditable(false);
 		timerTextField.setColumns(10);
-
-
-
 
 		ActionListener actListner = new ActionListener() {
 			@Override
@@ -84,11 +81,10 @@ public class RecordPage extends Page{
 
 		Timer timer = new Timer(500, actListner);
 
-
 		btnRec.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				Track.loadTracks();
 				//add date to filename to make them all different
 				 Calendar cal = Calendar.getInstance();
 				 Date timeNow = cal.getTime();
@@ -99,18 +95,19 @@ public class RecordPage extends Page{
 				btnStop.setEnabled(true);
 				//end of date time now
 				outputFilename = ft.format(timeNow) +"_AuJava"+".wav" ;
-				
+//				String outputFilenameWithFilePath =  "audio/" + outputFilename ;
+//				String outputFilenameWithFilePath =  "audio/" + RecordPage.recordedTrack.getPicFileLocation().toString() ;
 				rec = new SoundRecorder.Recorder(outputFilename);
 				
 				rec.startRecording();
 
 				timer.start();
 	
-		
 			}
 		});
 
-
+		
+		
 		btnStop.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -121,15 +118,24 @@ public class RecordPage extends Page{
 				timer.stop();
 				/* creating a track object with the audio file name constructor*/
 				Track recordedTrack = new Track(outputFilename);
-				System.out.println("--");
-				System.out.println(recordedTrack.getTitle().toString());
-				System.out.println(recordedTrack.getDescription().toString());
+				
+				/* creating track page that takes the newly recorded track in as an argument*/
+				 TrackPage trackCard = new TrackPage(recordedTrack);
+				 /*adding track page to cards group*/
+				 TrackView.cards.add(TrackView.TRACKPAGE, trackCard);
+				 /*defining card layout var card layout from TrackView */
+				 CardLayout cardLayout = (CardLayout) TrackView.cards.getLayout();
+				 /*show/change to the newly created Track page*/
+				 cardLayout.show( TrackView.cards, TrackView.TRACKPAGE);	
+				 Track.saveTracks();
+				 TrackSPage tracksCard = new TrackSPage(Track.getAllTracks());
+				 TrackView.cards.add(TrackView.TRACKSPAGE, tracksCard);
+//				 cardLayout.show( TrackView.cards, TrackView.TRACKSPAGE);
+						
+				 
+//				 Track.saveTracks();
 			}
 
 		});
 	}//constructor
-
-
-
-
 }

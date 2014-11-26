@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tracks>
+  <track id="0">
+    <name>01.36.58_26:11:2014_AuJava.wav</name>
+    <albumid>0</albumid>
+    <description><![CDATA[A default track description]]></description>
+    <picture>img/Track.png</picture>
+    <audiolocation>01.36.58_26:11:2014_AuJava.wav</audiolocation>
+    <added>2014-11-26T01:37:02</added>
+  </track>
+  <track id="0">
+    <name>01.37.10_26:11:2014_AuJava.wav</name>
+    <albumid>0</albumid>
+    <description><![CDATA[A default track description]]></description>
+    <picture>img/Track.png</picture>
+    <audiolocation>01.37.10_26:11:2014_AuJava.wav</audiolocation>
+    <added>2014-11-26T01:37:12</added>
+  </track>
+  <track id="0">
+    <name>01.37.48_26:11:2014_AuJava.wav</name>
+    <albumid>0</albumid>
+    <description><![CDATA[A default track description]]></description>
+    <picture>img/Track.png</picture>
+    <audiolocation>01.37.48_26:11:2014_AuJava.wav</audiolocation>
+    <added>2014-11-26T01:37:50</added>
+  </track>
+  <track id="0">
+    <name>17.51.15_26:11:2014_AuJava.wav</name>
+    <albumid>0</albumid>
+    <description><![CDATA[A default track description]]></description>
+    <picture>img/Track.png</picture>
+    <audiolocation>17.51.15_26:11:2014_AuJava.wav</audiolocation>
+    <added>2014-11-26T17:51:20</added>
+  </track>
+</tracks>

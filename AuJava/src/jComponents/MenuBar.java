@@ -1,9 +1,16 @@
 package jComponents;
+import java.awt.BorderLayout;
+import java.awt.CardLayout;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.event.MenuEvent;
+import javax.swing.event.MenuListener;
+
+import Pages.TrackView;
 
 /**
  * The <code>MenuBar</code> class provides basic navigation for the 
@@ -12,10 +19,13 @@ import javax.swing.JMenuItem;
  * @author Axel
  * @version 15/11/2014
  */
-public class MenuBar extends JMenuBar {	
+public class MenuBar extends JMenuBar{	
 	
 	private static String username = "Username"; 
-	
+	/**
+	 * define card layout local var, calling tack view card layout
+	 */
+	private static CardLayout cardLayout = (CardLayout) TrackView.cards.getLayout();
 	/**
 	 * Cascading constructor.
 	 */
@@ -29,32 +39,70 @@ public class MenuBar extends JMenuBar {
 		
 		this.username = username;
 		
-		JMenu audava = new JMenu("AUDAVA");
-		JMenu record = new JMenu("Record");
-		JMenu upload = new JMenu("Upload");
-		JMenu albums = new JMenu("Albums");
-		JMenu aboutUs = new JMenu("AboutUs");
-		JMenu account = new JMenu(username);
-		
-		
-		
-        
+		JMenuItem audava = new JMenuItem("AUDAVA");
+		JMenuItem record = new JMenuItem("Record");
+		JMenuItem tracks = new JMenuItem("Tracks");
+		JMenuItem aboutUs = new JMenuItem("AboutUs");
+   
 		this.add(audava);
 		this.add(record);
-		this.add(upload);
-		this.add(albums);
+		this.add(tracks);
 		this.add(aboutUs);
-		this.add(account);
-		
-		JMenuItem settings = new JMenuItem("Settings");
-		JMenuItem logout = new JMenuItem("Logout");
-		
-		account.add(settings);
-		account.add(logout);
-		
 	
 
+		record.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				/**
+				 * changes card layout
+				 */
+		        cardLayout.show( TrackView.cards, TrackView.RECORDPAGE);
+		        System.out.println("pressed record button in menu bar");//console troubleshooting
+			} 
+			});	
 		
+		tracks.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				/**
+				 * changes card layout
+				 */
+		        cardLayout.show( TrackView.cards, TrackView.TRACKSPAGE);
+		        System.out.println("pressed track button in menu bar");//console troubleshooting
+			} 
+			});	
+		
+		
+		audava.addActionListener(new ActionListener(){
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+//				
+				
+		        cardLayout.show( TrackView.cards, TrackView.HOMEPAGE);	
+			} 
+			});	
+		
+		
+		aboutUs.addActionListener(new ActionListener(){
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+		        cardLayout.show( TrackView.cards, TrackView.ABOUTUSPAGE);	
+			} 
+			});
+
+		
+//		tracks.addActionListener(new ActionListener(){
+//			
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//		        cardLayout.show( TrackView.cards, TrackView.TRACKSPAGE);	
+//			} 
+//			});
+
 	}
 	
 }

@@ -17,45 +17,55 @@ import javax.swing.JPanel;
  * @version 21 Nov 2014
  */
 public class AudioPlayer extends JPanel {
-	
+	private final String AUDIOPATH = "audio/";
 	private Clip clip = null;
 	
-	public AudioPlayer (String fileLocation) {
+	public AudioPlayer(String filename){
 		
-		this.setSize(700, 250);
+		this.setSize(360, 107);
 		this.setLayout(null);
-		
-		/* Play Button */
+		/*  Buttons */
+		JButton btnStop = new JButton("Stop");
 		JButton btnPlay = new JButton("Play");
+		btnPlay.setEnabled(true);
+		btnStop.setEnabled(false);
+		/*Action listeners*/
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
+				btnPlay.setEnabled(false);
+				btnStop.setEnabled(true);
 				try {
-					File file = new File(fileLocation);
+					File file = new File(AUDIOPATH+filename);
+					System.out.println("audio file name in audio play: "+filename);
 					if (file.exists()) {
 						 AudioInputStream inputStream = AudioSystem.getAudioInputStream(file);
 					       clip = AudioSystem.getClip();
 					       clip.open(inputStream);	
+					       clip.setFramePosition(0);
+					       clip.start(); 
 					} else { System.out.println("file does not exist.");}
-					clip.setFramePosition(0);
-					clip.start(); 
+//					clip.setFramePosition(0);
+//					clip.start(); 
 				} catch (Exception e) {
 					e.printStackTrace();
 					System.err.println(e.getMessage());
 				}
 			}
 		});
-		btnPlay.setBounds(40, 39, 117, 29);
+		btnPlay.setBounds(49, 39, 117, 29);
 		this.add(btnPlay);
 		
 		/* Stop Button */
-		JButton btnStop = new JButton("Stop");
+		
 		btnStop.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
+				btnPlay.setEnabled(true);
+				btnStop.setEnabled(false);
 				clip.setFramePosition(0);
 				clip.stop();
 			}
 		});
-		btnStop.setBounds(40, 80, 117, 29);
+		btnStop.setBounds(191, 39, 117, 29);
 		this.add(btnStop);
 		
 		/*

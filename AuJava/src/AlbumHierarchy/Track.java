@@ -18,7 +18,7 @@ import Utilities.TrackDOMReader;
  */
 public class Track extends AlbumOrTrack {
 
-	public static final String TRACKFILE = "db/tracks.txt";
+	public static final String TRACKFILE = "db/tracks.xml";
 
 	public static final String ALBUMID = "albumid";
 
@@ -43,6 +43,7 @@ public class Track extends AlbumOrTrack {
 		this.audioFileLocation = aud;
 		this.id=allTracks.size();
 		allTracks.add(this);
+		saveTracks();
 	}
 /*P trying out stuff */
 	static String dsc = "A default track description";
@@ -50,6 +51,8 @@ public class Track extends AlbumOrTrack {
 	public Track(String outputFilename) {
 		super(outputFilename, dsc, pic);
 		this.audioFileLocation = outputFilename;
+		allTracks.add(this);
+		saveTracks();
 	}
 /*end*/
 	public String getAudioFileLocation() {
