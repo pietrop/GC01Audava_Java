@@ -65,6 +65,12 @@ public class AlbumCreateXMLWithDOM {
 		return xmlString;
 	}
 
+	/**
+	 * 
+	 * @return
+	 * @throws TransformerFactoryConfigurationError
+	 * @throws TransformerConfigurationException
+	 */
 	private static Transformer getTransformer()
 			throws TransformerFactoryConfigurationError,
 			TransformerConfigurationException {
