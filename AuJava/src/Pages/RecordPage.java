@@ -16,14 +16,14 @@ import sound.Recorder;
 import AlbumHierarchy.Track;
 
 /**
- * 
+ * <code>RecordPage</code> to record an audio track, with record button and stop button.
+ * includes a time for measuring recording time, and give feedback to user that audio is being recorded.
  * @author Pietro Passarelli
  *
  */
 public class RecordPage extends Page{
 	
-
-	//to measure recording time, and give feedback to user that audio is beeing recorded
+	/** measuring recording time, and give feedback to user that audio is being recorded */
 	long startTime = System.currentTimeMillis();
 
 	public static Recorder rec ;
@@ -34,10 +34,12 @@ public class RecordPage extends Page{
 	private static Date timeNow ;
 	private static SimpleDateFormat ft ;
 	static String outputFilename;
-//	
 
+	/**
+	 * default constructor	
+	 */
 	public RecordPage(){
-
+		/** initialises GUI */
 		ImageIcon  recButtonIcon = new ImageIcon("img/rec.png");
 		ImageIcon  stopButtonIcon = new ImageIcon("img/stop.png");
 		setLayout(null);
@@ -62,7 +64,8 @@ public class RecordPage extends Page{
 		add(timerTextField);
 		timerTextField.setEditable(false);
 		timerTextField.setColumns(10);
-
+		
+		/** timer action listener */
 		ActionListener actListner = new ActionListener() {
 			@Override
 
@@ -73,70 +76,57 @@ public class RecordPage extends Page{
 				long elapsedSeconds = elapsedTime / 1000;
 				long elapsedMinutes = elapsedSeconds / 60;
 				timerTextField.setText(Long.toString(elapsedMinutes)+":"+Long.toString(elapsedSeconds));
-
-				System.out.print("Inside actListner action listener for timer  \t");
-				System.out.println(Long.toString(elapsedMinutes)+":"+Long.toString(elapsedSeconds));
 			}
 
 		};
-
+		/** Timer */
 		Timer timer = new Timer(500, actListner);
-
+		
+		/** record button action listener */
 		btnRec.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Track.loadTracks();
-				//add date to filename to make them all different
+				/** adds date to filename to make them all different */
 				 Calendar cal = Calendar.getInstance();
 				 Date timeNow = cal.getTime();
 				 SimpleDateFormat ft = new SimpleDateFormat ("HH.mm.ss_dd:MM:yyyy");
-				
-				
+			
 				btnRec.setEnabled(false);
 				btnStop.setEnabled(true);
-				//end of date time now
+				/* starts recording */
 				outputFilename = ft.format(timeNow) +"_AuJava"+".wav" ;
-//				String outputFilenameWithFilePath =  "audio/" + outputFilename ;
-//				String outputFilenameWithFilePath =  "audio/" + RecordPage.recordedTrack.getPicFileLocation().toString() ;
 				rec = new sound.Recorder(outputFilename);
 				
 				rec.startRecording();
 
 				timer.start();
-	
 			}
 		});
 
-		
-		
+		/** stop button action listener */
 		btnStop.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				btnRec.setEnabled(true);
 				btnStop.setEnabled(false);
 				rec.stopRecording();
-
+				/* stops timer*/
 				timer.stop();
-				/* creating a track object with the audio file name constructor*/
+				/** creating a track object with the audio file name constructor*/
 				Track recordedTrack = new Track(outputFilename);
-				
-				/* creating track page that takes the newly recorded track in as an argument*/
+				/** creating track page that takes the newly recorded track in as an argument*/
 				 TrackPage trackCard = new TrackPage(recordedTrack);
-				 /*adding track page to cards group*/
+				 /** adding track page to cards group*/
 				 TrackView.cards.add(TrackView.TRACKPAGE, trackCard);
-				 /*defining card layout var card layout from TrackView */
+				 /** defining card layout var card layout from TrackView */
 				 CardLayout cardLayout = (CardLayout) TrackView.cards.getLayout();
-				 /*show/change to the newly created Track page*/
+				 /** show/changes to the newly created Track page*/
 				 cardLayout.show( TrackView.cards, TrackView.TRACKPAGE);	
 				 Track.saveTracks();
 				 TrackSPage tracksCard = new TrackSPage(Track.getAllTracks());
 				 TrackView.cards.add(TrackView.TRACKSPAGE, tracksCard);
-//				 cardLayout.show( TrackView.cards, TrackView.TRACKSPAGE);
-						
-				 
-//				 Track.saveTracks();
 			}
-
 		});
-	}//constructor
+	}
 }

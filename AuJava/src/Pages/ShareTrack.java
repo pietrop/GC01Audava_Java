@@ -1,23 +1,27 @@
 package Pages;
 import jComponents.MenuBar;
 
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 /**
- * 
- * @author Pietro Passarelli
+ * <code>ShareTrack</code> creates a dummy URL to mock sharable link feature.
+ * not in currently in use due to refactoring.
+ * @author Pietro Passarelli 
  *
  */
 public class ShareTrack extends Page {
 	private JTextField emailField;
 	
+	/**
+	 * default constructor
+	 */
 	public ShareTrack(){
 		MenuBar menuBar = new MenuBar("user");
 		add(menuBar);
@@ -62,7 +66,6 @@ public class ShareTrack extends Page {
 		messageTextArea.setBounds(92, 269, 285, 124);
 		shareTrackPanel.add(messageTextArea);
 
-		
 		uRLTextField.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {

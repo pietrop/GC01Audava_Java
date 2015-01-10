@@ -2,8 +2,8 @@ package Pages;
 import javax.swing.JPanel;
 
 /**
- * 
- * @author Pietro Passarelli
+ * abstract <code>Page</code> class from which other pages inherits from.
+ * @author Pietro Passarelli 
  *
  */
 public abstract class Page extends JPanel{

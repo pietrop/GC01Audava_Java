@@ -6,11 +6,17 @@ package Pages;
 import javax.swing.JLabel;
 
 /**
- * @author Pietro Passarelli
+ * <code>UploadPage</code> to upload audio file.
+ * not in use due to refactoring.
+ * 
+ * @author Pietro Passarelli 
  *
  */
 public class UploadPage extends Page {
 	
+	/**
+	 * default constructor.
+	 */
 	public UploadPage(){
 		setLayout(null);
 		JLabel uploadLabel = new JLabel("Upload Label");

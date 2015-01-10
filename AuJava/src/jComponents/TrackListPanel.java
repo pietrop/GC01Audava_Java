@@ -20,7 +20,7 @@ import javax.swing.JScrollBar;
 /**
  * 
  * @author SamiStart
- *@author PietroPasserelli
+ * @author PietroPasserelli
  */
 public class TrackListPanel extends JPanel {
 	int j;

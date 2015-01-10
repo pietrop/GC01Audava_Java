@@ -1,11 +1,25 @@
 package users;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import javax.swing.border.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
 /**
+ * part of login/sign up library from  <a href="http://www.zentut.com/java-swing/simple-login-dialog/">zentut.com</a> 
+ * not implemented due to refactoring.
  * 
- * @author Pietro Passarelli
+ * @author Pietro Passarelli 
  *
  */
 public class LoginDialog extends JDialog {

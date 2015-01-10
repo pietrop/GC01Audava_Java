@@ -1,13 +1,18 @@
 package users;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
- /**
-  * 
-  * @author Pietro Passarelli
-  *
-  */
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+/**
+ * part of login/sign up library from  <a href="http://www.zentut.com/java-swing/simple-login-dialog/">zentut.com</a> 
+ * not implemented due to refactoring.
+ * 
+ * @author Pietro Passarelli 
+ *
+ */
 public class LoginTest {
     public static void main(String[] args) {
         final JFrame frame = new JFrame("Login Demo");

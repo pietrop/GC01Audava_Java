@@ -9,9 +9,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 /**
+ * testing size of frame
+ * not in use.
+ * @author Pietro Passarelli 
  * 
- * @author Pietro Passarelli
- *
  */
 public class TestingFrame extends JFrame {
 

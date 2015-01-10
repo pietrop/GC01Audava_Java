@@ -1,7 +1,9 @@
 package users;
 /**
+ * part of login/sign up library from  <a href="http://www.zentut.com/java-swing/simple-login-dialog/">zentut.com</a> 
+ * not implemented due to refactoring.
  * 
- * @author Pietro Passarelli
+ * @author Pietro Passarelli 
  *
  */
 public class SignUp {

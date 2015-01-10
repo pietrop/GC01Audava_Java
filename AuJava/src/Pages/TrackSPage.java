@@ -7,26 +7,32 @@ import javax.swing.JLabel;
 
 import AlbumHierarchy.Track;
 /**
- * 
- * @author Pietro Passarelli
+ * <code>TrackSPage</code> lists all the tracks and displays them in tracks page.
+ * @author Pietro Passarelli 
  *
  */
 public class TrackSPage extends Page{
+	
+	/**
+	 * Default constructor, calling <code>showTracks</code> on array list of Tracks.
+	 * @param TracksArrayList
+	 */
 	public TrackSPage(ArrayList<Track> TracksArrayList) {
 		setLayout(null);
 		
 		showTracks(TracksArrayList);
 	}
 	
-/**
- * constructor for when there are no recordings
- */
+	/**
+	 * Default constructor overloading for when there are no recordings being passed. 
+	 * 
+	 */
 	public TrackSPage() {
 	setLayout(null);
 	/**
-	 * if db already has tracks then show them
+	 * If database already has tracks then it shows them
 	 */
-	if (Track.getAllTracks().size()!=0){
+	if (Track.getAllTracks().size()==0){
 		JLabel lbltracks = new JLabel("<html><h1>Tracks</h1></html>");
 		lbltracks.setBounds(304, 6, 95, 26);
 		add(lbltracks);
@@ -41,14 +47,13 @@ public class TrackSPage extends Page{
 		// TODO Auto-generated constructor stub
 	}
 	
+	/**
+	 * 
+	 * @param TracksArrayList
+	 */
 	private void showTracks(ArrayList<Track> TracksArrayList) {
 		TrackListPanel tracksPane = new TrackListPanel();
 		tracksPane.setBounds(149, 44, 439, 264);
 		add(tracksPane);
-		
-		 for(Track track : TracksArrayList){
-//	        	listModel.addElement(track.toString());
-	        	System.out.println(track.toString());
-	        }
 	}
 }
