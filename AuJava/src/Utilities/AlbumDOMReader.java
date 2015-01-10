@@ -43,12 +43,9 @@ public class AlbumDOMReader {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-//		Element root = doc.getDocumentElement();
-//		System.out.println(root.getNodeName());
+
 		
 		NodeList list = doc.getElementsByTagName("album");
-		System.out.println("Nodes found: "+ list.getLength());
 		
 		for (int i = 0; i < list.getLength(); i++) {
 			Album album = new Album();
@@ -56,7 +53,6 @@ public class AlbumDOMReader {
 			
 			Element albElement = (Element) list.item(i);
 			String idAsString = albElement.getAttribute(Album.ID);
-			System.out.println("id found to be " + Integer.parseInt(idAsString));
 			album.setId(Integer.parseInt(idAsString));
 			String content = getTextFromElement(albElement,Album.TITLE);
 			album.setTitle(content);

@@ -53,8 +53,6 @@ public class AudioPlayer extends JPanel {
 					       clip.setFramePosition(0);
 					       clip.start(); 
 					} else { System.out.println("file does not exist.");}
-//					clip.setFramePosition(0);
-//					clip.start(); 
 				} catch (Exception e) {
 					e.printStackTrace();
 					System.err.println(e.getMessage());

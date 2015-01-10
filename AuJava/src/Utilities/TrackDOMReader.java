@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -44,11 +43,8 @@ public class TrackDOMReader {
 			e.printStackTrace();
 		}
 		
-//		Element root = doc.getDocumentElement();
-//		System.out.println(root.getNodeName());
 		
 		NodeList list = doc.getElementsByTagName("track");
-		System.out.println("Nodes found: "+ list.getLength());
 		
 		for (int i = 0; i < list.getLength(); i++) {
 			Track track = new Track();
@@ -56,7 +52,6 @@ public class TrackDOMReader {
 			
 			Element albElement = (Element) list.item(i);
 			String idAsString = albElement.getAttribute(Track.ID);
-			System.out.println("id found to be " + Integer.parseInt(idAsString));
 			track.setId(Integer.parseInt(idAsString));
 			String content = getTextFromElement(albElement,Track.TITLE);
 			track.setTitle(content);
