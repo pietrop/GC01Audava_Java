@@ -16,7 +16,7 @@ import javax.swing.JPanel;
  * @author Pietro Passarelli 
  *
  */
-public class TrackView extends JPanel {
+public class TrackView {
 	
 	public static JPanel cards;
 	public static CardLayout cardLayout;
@@ -33,7 +33,7 @@ public class TrackView extends JPanel {
     final static int extraWindowHeight = 600;
    
     /** creating cards of pages  */
-    public static Component addComponentToPane(Container pane) {
+    public static Component addComponentToPane() {
        
     	cards = new JPanel();
     	cards.setLayout(new CardLayout());
@@ -82,13 +82,13 @@ public class TrackView extends JPanel {
         cards.add(ABOUTUSPAGE, aboutUsCard);
         
         /** adding cards from card layout to centre element of panel*/
-        pane.add(cards);
-        pane.setVisible(true);
+//        pane.add(cards);
+//        pane.setVisible(true);
            
         /** card layout showing home page*/
         CardLayout cardLayout = (CardLayout) cards.getLayout();
         cardLayout.show(cards, HOMEPAGE);
-		return pane;    
+		return cards;    
     }
 
 	/**
@@ -100,8 +100,7 @@ public class TrackView extends JPanel {
     	JFrame frame = new JFrame("AuJava - Demo");
     	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     	
-    	addComponentToPane(containerPanel);
-    	frame.add(containerPanel);
+       	frame.add(addComponentToPane());
     	 /** adding menu bar, to north element of panel*/
         MenuBar menu = new MenuBar();
         frame.add(menu, BorderLayout.NORTH);

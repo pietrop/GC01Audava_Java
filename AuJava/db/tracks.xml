@@ -1,27 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <tracks>
-  <track id="0">
-    <name>default constructor title</name>
-    <albumid>0</albumid>
-    <description><![CDATA[default constructor description]]></description>
-    <picture>default constructor pic location</picture>
-    <audiolocation>14.59.14_10:01:2015_AuJava.wav</audiolocation>
-    <added>2015-01-10T14:59:17</added>
-  </track>
-  <track id="0">
-    <name>15.00.53_10:01:2015_AuJava.wav</name>
-    <albumid>0</albumid>
-    <description><![CDATA[A default track description]]></description>
-    <picture>img/Track.png</picture>
-    <audiolocation>15.00.53_10:01:2015_AuJava.wav</audiolocation>
-    <added>2015-01-10T15:00:56</added>
-  </track>
-  <track id="0">
-    <name>15.05.33_10:01:2015_AuJava.wav</name>
-    <albumid>0</albumid>
-    <description><![CDATA[A default track description]]></description>
-    <picture>img/Track.png</picture>
-    <audiolocation>15.05.33_10:01:2015_AuJava.wav</audiolocation>
-    <added>2015-01-10T15:05:36</added>
-  </track>
+
 </tracks>
