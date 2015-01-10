@@ -26,22 +26,6 @@ public class CreateNewTrackPage extends CreateNewAlbumOrTrackPage {
 	private JTextField textField_aud;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					CreateNewTrackPage frame = new CreateNewTrackPage();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
 	public CreateNewTrackPage() {

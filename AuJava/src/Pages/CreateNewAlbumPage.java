@@ -18,22 +18,6 @@ public class CreateNewAlbumPage extends CreateNewAlbumOrTrackPage {
 	private JPanel contentPane;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					CreateNewAlbumPage frame = new CreateNewAlbumPage();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
 	public CreateNewAlbumPage() {
