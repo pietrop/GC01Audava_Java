@@ -83,7 +83,6 @@ public class TrackCreateXMLWithDOM {
 		transformer.transform(source, result);
 		String xmlString = writer.toString();
 
-		System.out.println(xmlString);
 		return xmlString;
 	}
 
