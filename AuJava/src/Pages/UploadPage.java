@@ -6,10 +6,8 @@ package Pages;
 import javax.swing.JLabel;
 
 /**
- * @author Pietro
+ * @author Pietro Passarelli
  *
- * @version 19 Nov 2014 
- * @time 21:38:21
  */
 public class UploadPage extends Page {
 	

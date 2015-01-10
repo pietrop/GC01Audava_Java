@@ -1,5 +1,9 @@
 package users;
-
+/**
+ * 
+ * @author Pietro Passarelli
+ *
+ */
 public class SignUp {
 	public static boolean authenticate(String username, String password) {
         // hardcoded username and password

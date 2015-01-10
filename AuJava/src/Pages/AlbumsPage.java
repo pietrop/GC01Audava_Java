@@ -2,33 +2,13 @@ package Pages;
 
 import jComponents.InfoPanel;
 import jComponents.TrackListPanel;
-import jComponents.InfoPanel;
-import jComponents.MenuBar;
-
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-import jComponents.MenuBar;
-import jComponents.InfoPanel;
-
-import java.awt.GridBagLayout;
-
-import javax.swing.JLabel;
-
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import java.awt.Component;
-
-import javax.swing.Box;
-
 import AlbumHierarchy.Album;
 
-
+/**
+ * 
+ * @author Pietro Passarelli
+ *
+ */
 public class AlbumsPage extends Page {
 	/**
 	 * Create the frame.
@@ -49,25 +29,6 @@ public class AlbumsPage extends Page {
 		TrackListPanel albumSideBar = new TrackListPanel();
 		albumSideBar.setBounds(6, 29, 149, 425);
 		add(albumSideBar);
-		
-//		
-//		
-//		JLabel lblTracks = new JLabel("Tracks");
-//		lblTracks.setBounds(211, 164, 64, 31);
-//		add(lblTracks);
-//		
-//		Component verticalStrut = Box.createVerticalStrut(20);
-//		verticalStrut.setBounds(139, 29, 1, 229);
-//		add(verticalStrut);
-//		
-//		Component horizontalGlue = Box.createHorizontalGlue();
-//		horizontalGlue.setBounds(162, 143, 201, 9);
-//		add(horizontalGlue);
-//		
-//		Component verticalGlue = Box.createVerticalGlue();
-//		verticalGlue.setBounds(126, 39, 14, 218);
-//		add(verticalGlue);
-		
-
+	
 	}
 }

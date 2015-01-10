@@ -14,10 +14,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 /**
- * @author: Pietro 
  * 
+ * @author Pietro Passarelli 
+ *
  */
-
 public class InfoPanel extends JPanel{
 
 	public InfoPanel(String title, String description, String albumImage) {

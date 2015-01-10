@@ -3,7 +3,11 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
-
+/**
+ * 
+ * @author Pietro Passarelli
+ *
+ */
 public class LoginDialog extends JDialog {
 
     private JTextField tfUsername;
