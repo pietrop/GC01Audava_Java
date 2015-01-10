@@ -10,7 +10,7 @@ import AlbumHierarchy.Track;
 
 
 /**
- * 
+ * For testing the XML parser and writer
  * @author SamiStart
  *
  */

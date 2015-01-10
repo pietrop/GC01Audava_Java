@@ -17,7 +17,7 @@ import AlbumHierarchy.Album;
 /**
  * {@link}http://www.lynda.com/Java-tutorials/Adding-data-elements-attributes-DOM/
  * @author SamiStart
- *
+ *Creates the Document Object Model for albums.
  */
 public class AlbumDOMCreator {
 
@@ -28,6 +28,12 @@ public class AlbumDOMCreator {
 	public AlbumDOMCreator() {
 	}
 
+	/**
+	 * Converts the List of all albums into an XML doc
+	 * @param data
+	 * @return XML doc for albums
+	 * @throws ParserConfigurationException
+	 */
 	public Document createXMLDoc(List<Album> data) throws ParserConfigurationException {
 
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -59,6 +65,13 @@ public class AlbumDOMCreator {
 		return doc;
 	}
 
+	/**
+	 * Factored out from <code>createXMLDoc</code> where many elements are added.
+	 * @param parent
+	 * @param elementName
+	 * @param textValue
+	 * @return
+	 */
 	private Element addElement(Element parent, String elementName, String textValue) {
 		Element childElement = doc.createElement(elementName);
 		childElement.setTextContent(textValue);

@@ -19,7 +19,7 @@ import org.xml.sax.SAXException;
 import AlbumHierarchy.Album;
 
 /**
- * 
+ * Reads a from the XML DB and generates and arraylist of albums for that data.
  * @author SamiStart
  *
  */
@@ -77,6 +77,12 @@ public class AlbumDOMReader {
 		return data;	
 	}
 
+	/**
+	 * Factored out from <code>getDataFromXML</code>
+	 * @param albElement
+	 * @param elementName
+	 * @return
+	 */
 	private String getTextFromElement(Element albElement, String elementName) {
 		Element node = (Element) albElement.getElementsByTagName(elementName).item(0);
 		String content = node.getTextContent();

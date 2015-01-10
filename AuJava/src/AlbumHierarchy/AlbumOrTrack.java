@@ -22,6 +22,9 @@ public abstract class AlbumOrTrack {
 	private String picFileLocation;
 	private Date added;
 
+	/**
+	 * Default constructor
+	 */
 	public AlbumOrTrack() {
 		this.title = "default constructor title";
 		this.description = "default constructor description";
@@ -30,6 +33,12 @@ public abstract class AlbumOrTrack {
 
 	}
 
+	/**
+	 * A constructor for when the user specifies the params.
+	 * @param ttl
+	 * @param dsc
+	 * @param pic
+	 */
 	public AlbumOrTrack(String ttl, String dsc, String pic) {
 		this.title = ttl;
 		this.description = dsc;

@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 import AlbumHierarchy.Track;
 
 /**
- * 
+ * JPanel with a form and submission for creating new tracks
  * @author SamiStart
  *
  */

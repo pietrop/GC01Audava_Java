@@ -17,7 +17,7 @@ import AlbumHierarchy.Track;
 /**
  * {@link}
  * http://www.lynda.com/Java-tutorials/Adding-data-elements-attributes-DOM/
- * 
+ * Sets up the Document Object Model for tracks
  * @author SamiStart
  *
  */
@@ -30,6 +30,12 @@ public class TrackDOMCreator {
 	public TrackDOMCreator() {
 	}
 
+	/**
+	 * Takes a tracklist and creates an XML doc with all metadata as nodes.
+	 * @param data
+	 * @return
+	 * @throws ParserConfigurationException
+	 */
 	public Document createXMLDoc(List<Track> data)
 			throws ParserConfigurationException {
 
@@ -69,6 +75,13 @@ public class TrackDOMCreator {
 		return doc;
 	}
 
+	/**
+	 * Factored out this method to from <code>createXMLDOC</code> where many elements are added.
+	 * @param parent
+	 * @param elementName
+	 * @param textValue
+	 * @return
+	 */
 	private Element addElement(Element parent, String elementName,
 			String textValue) {
 		Element childElement = doc.createElement(elementName);
