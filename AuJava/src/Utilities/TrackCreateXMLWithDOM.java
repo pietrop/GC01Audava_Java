@@ -22,13 +22,20 @@ import AlbumHierarchy.Track;
 /**
  * {@link}
  * http://www.lynda.com/Java-tutorials/Adding-data-elements-attributes-DOM/
- * 
+ * Takes the java objects and writes them to the XML DB
  * @author SamiStart
  *
  */
 public class TrackCreateXMLWithDOM {
 	
 
+	/**
+	 * Use this to output all info of tracks to the XML DB
+	 * @param allTracks as an ArrayList
+	 * @throws ParserConfigurationException
+	 * @throws TransformerException
+	 * @throws FileNotFoundException
+	 */
 	public static void createXmlAllTracks(ArrayList<Track> allTracks)
 			throws ParserConfigurationException, TransformerException,
 			FileNotFoundException {
@@ -42,6 +49,14 @@ public class TrackCreateXMLWithDOM {
 
 	}
 
+	/**
+	 * Take the XML document and write it to a .xml file.
+	 * @param doc
+	 * @param filename
+	 * @throws TransformerConfigurationException
+	 * @throws TransformerException
+	 * @throws TransformerFactoryConfigurationError
+	 */
 	private static void outputAsFile(Document doc, String filename) throws TransformerConfigurationException, TransformerException, TransformerFactoryConfigurationError {
 		DOMSource source = new DOMSource(doc);
 		StreamResult result = new StreamResult(new File(filename));
@@ -49,6 +64,14 @@ public class TrackCreateXMLWithDOM {
 
 	}
 
+	/**
+	 * Takes the XML document and returns all XML as a string.
+	 * @param doc
+	 * @return all XML as a string
+	 * @throws TransformerFactoryConfigurationError
+	 * @throws TransformerConfigurationException
+	 * @throws TransformerException
+	 */
 	private static String outputToString(Document doc)
 			throws TransformerFactoryConfigurationError,
 			TransformerConfigurationException, TransformerException {
@@ -64,6 +87,12 @@ public class TrackCreateXMLWithDOM {
 		return xmlString;
 	}
 
+	/**
+	 * 
+	 * @return
+	 * @throws TransformerFactoryConfigurationError
+	 * @throws TransformerConfigurationException
+	 */
 	private static Transformer getTransformer()
 			throws TransformerFactoryConfigurationError,
 			TransformerConfigurationException {

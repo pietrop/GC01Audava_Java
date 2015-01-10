@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 import AlbumHierarchy.Album;
 
 /**
- * 
+ * Contains a form for user input to create a new album.
  * @author SamiStart
  *
  */
@@ -50,6 +50,7 @@ public class CreateNewAlbumPage extends CreateNewAlbumOrTrackPage {
 		
 	}
 	
+	/**Saves the user input once the "Create New Album" button has been pressed*/
 	private void writeInfoToFile(){
 		Album album = new Album(super.textField_ttl.getText(),
 				super.textField_dscrptn.getText(),

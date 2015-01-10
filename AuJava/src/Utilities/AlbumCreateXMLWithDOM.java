@@ -23,7 +23,7 @@ import AlbumHierarchy.Album;
 /**
  * {@link}
  * http://www.lynda.com/Java-tutorials/Adding-data-elements-attributes-DOM/
- * 
+ * Takes the java objects and writes them to the XML DB
  * @author SamiStart
  *
  */

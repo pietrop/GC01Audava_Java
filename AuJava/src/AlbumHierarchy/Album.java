@@ -11,6 +11,10 @@ import Utilities.AlbumCreateXMLWithDOM;
 import Utilities.AlbumDOMReader;
 
 /**
+ * An album is an object that holds an arraylist of tracks. It is used in the
+ * album hierarchy for organisation. It has not been implemented in this
+ * version, therefore this class is not used. It has been left in to show our
+ * work anyway.
  * 
  * @author SamiStart
  *
@@ -31,14 +35,16 @@ public class Album extends AlbumOrTrack {
 		this.id = allAlbums.size();
 		allAlbums.add(this);
 		for (int i = 0; i < Track.getAllTracks().size(); i++) {
-			if (Track.getTrack(i).getAlbumId()==this.id) {
+			if (Track.getTrack(i).getAlbumId() == this.id) {
 				tracksInAlbum.add(Track.getTrack(i));
 			}
 		}
 	}
 
 	/**
-	 * A constructor for the album when the params are specified by the user
+	 * A constructor for the album when the params need to be specified by the
+	 * user
+	 * 
 	 * @param ttl
 	 * @param dsc
 	 * @param pic
@@ -48,20 +54,25 @@ public class Album extends AlbumOrTrack {
 		this.id = allAlbums.size();
 		allAlbums.add(this);
 		for (int i = 0; i < Track.getAllTracks().size(); i++) {
-			if (Track.getTrack(i).getAlbumId()==this.id) {
+			if (Track.getTrack(i).getAlbumId() == this.id) {
 				tracksInAlbum.add(Track.getTrack(i));
 			}
 		}
 	}
 
 	/**
-	 * 
+	 * Load albums from the XML database into the Arraylist. Should be called at
+	 * the start of a session.
 	 */
 	static public void loadAlbums() {
 		AlbumDOMReader reader = new AlbumDOMReader();
-		allAlbums=reader.getDataFromXML();
+		allAlbums = reader.getDataFromXML();
 	}
 
+	/**
+	 * Save all albums from the arraylist to the XML database. Should be used at
+	 * least once per session
+	 */
 	static public void saveAlbums() {
 		try {
 			AlbumCreateXMLWithDOM.createXmlAllAlbums(allAlbums);
@@ -82,6 +93,7 @@ public class Album extends AlbumOrTrack {
 	}
 
 	/**
+	 * Returns a track at a specified position in the arraylist
 	 * 
 	 * @param index
 	 *            the index of the ArrayList of tracks for this album that you
@@ -95,6 +107,7 @@ public class Album extends AlbumOrTrack {
 	}
 
 	/**
+	 * Return all tracks as an arraylist
 	 * 
 	 * @return
 	 */
@@ -104,6 +117,7 @@ public class Album extends AlbumOrTrack {
 	}
 
 	/**
+	 * Return all albums as an arraylist
 	 * 
 	 * @return Arraylist<Album> all currently stored albums.
 	 */
@@ -113,6 +127,7 @@ public class Album extends AlbumOrTrack {
 	}
 
 	/**
+	 * Get an album from the arraylist of albums
 	 * 
 	 * @param index
 	 * @return Album at specified position in ArrayList
@@ -133,7 +148,7 @@ public class Album extends AlbumOrTrack {
 	public void delete(Album album) {
 
 	}
-	
+
 	public static void setAllAlbums(ArrayList<Album> allAlbums) {
 		Album.allAlbums = allAlbums;
 	}
