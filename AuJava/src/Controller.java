@@ -1,6 +1,7 @@
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import AlbumHierarchy.Track;
 import Pages.TrackView;
 
 /**
@@ -13,6 +14,8 @@ public class Controller {
 
 	public static void main(String[] args) {
 
+		Track.loadTracks();
+		
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (UnsupportedLookAndFeelException ex) {

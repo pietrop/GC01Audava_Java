@@ -19,22 +19,33 @@ import Utilities.TrackDOMReader;
  */
 public class Track extends AlbumOrTrack {
 
-	/**The name of the file for the xml database*/
+	/** The name of the file for the xml database */
 	public static final String TRACKFILE = "db/tracks.xml";
 
-	/**The album id of the album that this track belongs to (not used for this version)*/
+	/**
+	 * The album id of the album that this track belongs to (not used for this
+	 * version)
+	 */
 	public static final String ALBUMID = "albumid";
-	
+
 	/***/
 	public static final String AUDIOLOCATION = "audiolocation";
 
-	/**The location of the audio file is saved to the track, rather than the audio file itself. Audio is stored in the audio folder*/
+	/**
+	 * The location of the audio file is saved to the track, rather than the
+	 * audio file itself. Audio is stored in the audio folder
+	 */
 	private String audioFileLocation;
-	/**ID for the track in the DB*/
+	/** ID for the track in the DB */
 	private int id;
-	/**The ID of the album that this track belongs to (not used for this version)*/
+	/**
+	 * The ID of the album that this track belongs to (not used for this
+	 * version)
+	 */
 	private int AlbumId;
-	/**A static arraylist to hold all the tracks in order throughout the session*/
+	/**
+	 * A static arraylist to hold all the tracks in order throughout the session
+	 */
 	private static ArrayList<Track> allTracks = new ArrayList<Track>();
 
 	public Track() {
@@ -44,14 +55,14 @@ public class Track extends AlbumOrTrack {
 		this.id = allTracks.size();
 		allTracks.add(this);
 	}
-	
-	public Track(String outputFilename){
-		super();
-		this.AlbumId = 0;
-		this.audioFileLocation = outputFilename;
-		this.id = allTracks.size();
-		allTracks.add(this);
-	}
+
+//	public Track(String outputFilename) {
+//		super();
+//		this.AlbumId = 0;
+//		this.audioFileLocation = outputFilename;
+//		this.id = allTracks.size();
+//		allTracks.add(this);
+//	}
 
 	public Track(String ttl, String dsc, String pic, String aud) {
 		super(ttl, dsc, pic);
@@ -61,7 +72,19 @@ public class Track extends AlbumOrTrack {
 		saveTracks();
 	}
 
-	
+	/* P trying out stuff */
+	static String dsc = "A default track description";
+	static String pic = "img/Track.png";
+
+	public Track(String outputFilename) {
+		super(outputFilename, dsc, pic);
+		this.audioFileLocation = outputFilename;
+		allTracks.add(this);
+		saveTracks();
+	}
+
+	/* end */
+
 	/**
 	 * 
 	 * @return the location of the file with the audio for this track
@@ -72,7 +95,8 @@ public class Track extends AlbumOrTrack {
 
 	/**
 	 * 
-	 * @param audioFileLocation set this file location as the audio file for this track
+	 * @param audioFileLocation
+	 *            set this file location as the audio file for this track
 	 */
 	public void setAudioFileLocation(String audioFileLocation) {
 		this.audioFileLocation = audioFileLocation;
@@ -80,6 +104,7 @@ public class Track extends AlbumOrTrack {
 
 	/**
 	 * Used for saving to the XML database
+	 * 
 	 * @return all the tracks as an arraylist
 	 */
 	public static ArrayList<Track> getAllTracks() {
@@ -88,6 +113,7 @@ public class Track extends AlbumOrTrack {
 
 	/**
 	 * Used for loading from the DB
+	 * 
 	 * @param allTracks
 	 */
 	public static void setAllTracks(ArrayList<Track> allTracks) {
@@ -120,7 +146,8 @@ public class Track extends AlbumOrTrack {
 	}
 
 	/**
-	 * Save all tracks to the DB. This should be called at least once per session.
+	 * Save all tracks to the DB. This should be called at least once per
+	 * session.
 	 */
 	public static void saveTracks() {
 		try {
