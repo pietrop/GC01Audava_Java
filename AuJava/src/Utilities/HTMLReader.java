@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * Basic HTML file to String reader. 
  * 
- * @author Axel
+ * @author Axel Striesow
  * @version 25 Nov 2014
  */
 public class HTMLReader {

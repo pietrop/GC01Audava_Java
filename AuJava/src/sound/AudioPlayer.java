@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 /**
  * Audioplayer with minimal GUI as JPanel
  * 
- * @author Axel
+ * @author Axel Striesow
  * @version 21 Nov 2014
  */
 public class AudioPlayer extends JPanel {

@@ -5,6 +5,12 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
+/**
+ * 
+ * 
+ * @author Axel
+ * @version 10 Jan 2015
+ */
 public class PictureLabel extends JLabel {
 
 	public PictureLabel () {
