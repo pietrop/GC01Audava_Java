@@ -1,5 +1,4 @@
 package sound;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -11,25 +10,35 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
- * Audioplayer with minimal GUI as JPanel
+ * Audioplayer with minimal GUI for Playing and Stopping an audio file.
+ * 
+ * Resources used were: 
+ * <a href="https://docs.oracle.com/javase/tutorial/sound/playing.html">Oracle Sound Tutorial</a> 
+ * <a href="http://stackoverflow.com/questions/26305/how-can-i-play-sound-in-java">http://stackoverflow.com/questions/26305/how-can-i-play-sound-in-java</a> 
  * 
  * @author Axel Striesow
- * @version 21 Nov 2014
  */
 public class AudioPlayer extends JPanel {
+	
 	private final String AUDIOPATH = "audio/";
 	private Clip clip = null;
 	
+	/**
+	 * 
+	 * @param filename  needs to include the file extension: e.g. name.wav
+	 */
 	public AudioPlayer(String filename){
 		
 		this.setSize(360, 107);
 		this.setLayout(null);
-		/*  Buttons */
+		
+		/* Buttons */
 		JButton btnStop = new JButton("Stop");
 		JButton btnPlay = new JButton("Play");
 		btnPlay.setEnabled(true);
 		btnStop.setEnabled(false);
-		/*Action listeners*/
+		
+		/* Play Button */
 		btnPlay.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
 				btnPlay.setEnabled(false);
@@ -56,7 +65,6 @@ public class AudioPlayer extends JPanel {
 		this.add(btnPlay);
 		
 		/* Stop Button */
-		
 		btnStop.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
 				btnPlay.setEnabled(true);
@@ -68,7 +76,7 @@ public class AudioPlayer extends JPanel {
 		btnStop.setBounds(191, 39, 117, 29);
 		this.add(btnStop);
 		
-		/*
+		/* not in use due to scope reduction.
 		JButton btnPause = new JButton("Pause");
 		btnPause.setBounds(40, 121, 117, 29);
 		this.add(btnPause);

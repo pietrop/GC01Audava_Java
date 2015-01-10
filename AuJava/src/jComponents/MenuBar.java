@@ -12,27 +12,26 @@ import Pages.TrackView;
  * The <code>MenuBar</code> class provides basic navigation for the 
  * AuJava application and is a common component on every page of the app.
  * 
- * @author Axel
- * @version 15/11/2014
+ * @author Axel Striesow
  */
 public class MenuBar extends JMenuBar{	
 	
 	private static String username = "Username"; 
 	
-	/**
-	 * define card layout local var, calling tack view card layout
-	 */
+	/** define card layout local var, calling tack view card layout */
 	private static CardLayout cardLayout = (CardLayout) TrackView.cards.getLayout();
 	
 	/**
-	 * Cascading constructor.
+	 * Cascading constructors. If MenuBar is called without a username the default "Username" is used.
+	 * This is not used in the current application, because the application starts without sign up/in.
 	 */
 	public MenuBar () {
 		this(username);
 	}
 	
 	/**
-	 * Populate the menubar.
+	 * Populates the <code>Menubar</code>
+	 * @param username	Unused, because application starts without sign up/in.
 	 */
 	public MenuBar (String username) {
 		
@@ -43,35 +42,32 @@ public class MenuBar extends JMenuBar{
 		JMenuItem tracks = new JMenuItem("Tracks");
 		JMenuItem aboutUs = new JMenuItem("AboutUs");
    
+		/* Add all MenuItems to the Menubar. */
 		this.add(audava);
 		this.add(record);
 		this.add(tracks);
 		this.add(aboutUs);
 	
-
 		record.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				/* changes the card layout */
+				/* Brings the clicked card to the front in the GUI. */
 		        cardLayout.show( TrackView.cards, TrackView.RECORDPAGE);
-		        System.out.println("pressed record button in menu bar");//console troubleshooting
 			} 
 		});
 		
 		tracks.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				/* changes the card layout */
+				/* Brings the clicked card to the front in the GUI. */
 		        cardLayout.show( TrackView.cards, TrackView.TRACKSPAGE);
-		        System.out.println("pressed track button in menu bar");//console troubleshooting
 			} 
 		});	
-		
 		
 		audava.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				/* changes the card layout */
+				/* Brings the clicked card to the front in the GUI. */
 		        cardLayout.show( TrackView.cards, TrackView.HOMEPAGE);	
 			} 
 			});	
@@ -79,6 +75,7 @@ public class MenuBar extends JMenuBar{
 		aboutUs.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				/* Brings the clicked card to the front in the GUI. */
 		        cardLayout.show( TrackView.cards, TrackView.ABOUTUSPAGE);	
 			} 
 		});

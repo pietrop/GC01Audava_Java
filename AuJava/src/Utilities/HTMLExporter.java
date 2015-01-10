@@ -10,7 +10,6 @@ import java.io.IOException;
  * HTMlExporter class to enable exporting/sharing of individual tracks.
  * 
  * @author Axel Striesow
- * @version 24 Nov 2014
  */
 public class HTMLExporter {
 	

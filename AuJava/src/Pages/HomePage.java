@@ -8,7 +8,6 @@ import Utilities.HTMLReader;
  * Homepage utilizing the HTMLReader to display a pre-written HTML file.
  * 
  * @author Axel Striesow
- * @version 25 Nov 2014
  */
 public class HomePage extends Page {
 	

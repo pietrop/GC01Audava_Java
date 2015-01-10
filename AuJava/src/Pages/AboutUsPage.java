@@ -1,14 +1,13 @@
 package Pages;
-
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+
 import Utilities.HTMLReader;
 
 /**
  * AboutUs page utilizing the HTMLReader to display a pre-written HTML file.
  * 
- * @author Axel
- * @version 25 Nov 2014
+ * @author Axel Striesow
  */
 public class AboutUsPage extends Page {
 
@@ -29,10 +28,10 @@ public class AboutUsPage extends Page {
 		imranPicture.setBounds(471, 37, 189, 150);
 		add(imranPicture);
 		
-		JLabel usamanPicture = new JLabel("Usman Pic");
-		usamanPicture.setIcon(new ImageIcon(imageUsman));
-		usamanPicture.setBounds(465, 220, 195, 132);
-		add(usamanPicture);
+		JLabel usmanPicture = new JLabel("Usman Pic");
+		usmanPicture.setIcon(new ImageIcon(imageUsman));
+		usmanPicture.setBounds(465, 220, 195, 132);
+		add(usmanPicture);
 		
 	}
 }
