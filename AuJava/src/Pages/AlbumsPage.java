@@ -1,8 +1,8 @@
-package Pages;
+package pages;
 
+import albumHierarchy.Album;
 import jComponents.InfoPanel;
 import jComponents.TrackListPanel;
-import AlbumHierarchy.Album;
 
 /**
  * <code>AlbumsPage</code> displays Albums.

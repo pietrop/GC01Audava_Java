@@ -8,7 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import AlbumHierarchy.Track;
+import albumHierarchy.Track;
 
 /**
  * <code>InfoPanel</code> class JPanel, displays <code>title</code>, <code>description</code> and <code>image</code> for an album or track object.

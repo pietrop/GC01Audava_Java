@@ -1,4 +1,4 @@
-package Utilities;
+package utilities;
 /**
  * Timer to visualise record time in record page.
  * @author Pietro Passarelli 

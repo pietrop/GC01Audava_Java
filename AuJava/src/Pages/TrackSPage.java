@@ -1,11 +1,11 @@
-package Pages;
+package pages;
 import jComponents.TrackListPanel;
 
 import java.util.ArrayList;
 
 import javax.swing.JLabel;
 
-import AlbumHierarchy.Track;
+import albumHierarchy.Track;
 /**
  * <code>TrackSPage</code> lists all the tracks and displays them in tracks page.
  * @author Pietro Passarelli 

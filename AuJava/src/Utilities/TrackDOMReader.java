@@ -1,4 +1,4 @@
-package Utilities;
+package utilities;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +15,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import AlbumHierarchy.Track;
+import albumHierarchy.Track;
 
 
 /**

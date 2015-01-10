@@ -1,4 +1,4 @@
-package AlbumHierarchy;
+package albumHierarchy;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 
-import Utilities.TrackCreateXMLWithDOM;
-import Utilities.TrackDOMReader;
+import utilities.TrackCreateXMLWithDOM;
+import utilities.TrackDOMReader;
 
 /**
  * A track class holds all the fields you might expect from an audio file with

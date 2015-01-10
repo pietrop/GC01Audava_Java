@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Pages;
+package pages;
 
 import javax.swing.JLabel;
 

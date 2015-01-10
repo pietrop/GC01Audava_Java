@@ -1,4 +1,4 @@
-package Utilities;
+package utilities;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +16,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import AlbumHierarchy.Album;
+import albumHierarchy.Album;
 
 /**
  * Reads a from the XML DB and generates and arraylist of albums for that data.

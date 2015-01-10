@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-import Pages.TrackView;
+import pages.TrackView;
 
 /**
  * The <code>MenuBar</code> class provides basic navigation for the 

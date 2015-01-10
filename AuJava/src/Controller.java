@@ -1,8 +1,8 @@
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import AlbumHierarchy.Track;
-import Pages.TrackView;
+import pages.TrackView;
+import albumHierarchy.Track;
 
 /**
  * Contains main method that runs the application.

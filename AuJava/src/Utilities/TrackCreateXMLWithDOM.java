@@ -1,4 +1,4 @@
-package Utilities;
+package utilities;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,7 +17,7 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 
-import AlbumHierarchy.Track;
+import albumHierarchy.Track;
 
 /**
  * {@link}

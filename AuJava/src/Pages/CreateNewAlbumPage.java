@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
 
-import AlbumHierarchy.Album;
+import albumHierarchy.Album;
 
 /**
  * Contains a form for user input to create a new album.

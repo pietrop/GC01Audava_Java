@@ -1,4 +1,4 @@
-package Utilities;
+package utilities;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -12,7 +12,7 @@ import org.w3c.dom.CDATASection;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import AlbumHierarchy.Album;
+import albumHierarchy.Album;
 
 /**
  * {@link}http://www.lynda.com/Java-tutorials/Adding-data-elements-attributes-DOM/

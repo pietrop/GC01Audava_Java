@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
@@ -12,8 +12,8 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.Timer;
 
+import albumHierarchy.Track;
 import sound.Recorder;
-import AlbumHierarchy.Track;
 
 /**
  * <code>RecordPage</code> to record an audio track, with record button and stop button.

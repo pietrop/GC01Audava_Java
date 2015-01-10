@@ -1,4 +1,4 @@
-package Utilities;
+package utilities;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -12,7 +12,7 @@ import org.w3c.dom.CDATASection;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import AlbumHierarchy.Track;
+import albumHierarchy.Track;
 
 /**
  * {@link}

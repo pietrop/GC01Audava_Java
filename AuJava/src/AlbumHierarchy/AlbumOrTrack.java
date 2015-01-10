@@ -1,4 +1,4 @@
-package AlbumHierarchy;
+package albumHierarchy;
 
 import java.util.Date;
 

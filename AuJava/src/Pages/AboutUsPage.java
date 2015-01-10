@@ -1,8 +1,8 @@
-package Pages;
+package pages;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-import Utilities.HTMLReader;
+import utilities.HTMLReader;
 
 /**
  * AboutUs page utilizing the HTMLReader to display a pre-written HTML file.

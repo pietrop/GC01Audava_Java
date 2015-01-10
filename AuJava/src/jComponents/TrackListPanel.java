@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import AlbumHierarchy.Track;
-import Pages.TrackPage;
-import Pages.TrackView;
+import pages.TrackPage;
+import pages.TrackView;
+import albumHierarchy.Track;
 
 /**
  * This is a JPanel with a button for each track. The buttons link to the track

@@ -1,10 +1,11 @@
-package Utilities;
+package utilities;
 
-import AlbumHierarchy.Track;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+
+import albumHierarchy.Track;
 
 /**
  * HTMlExporter class to enable exporting/sharing of individual tracks.

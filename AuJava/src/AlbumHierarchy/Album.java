@@ -1,4 +1,4 @@
-package AlbumHierarchy;
+package albumHierarchy;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 
-import Utilities.AlbumCreateXMLWithDOM;
-import Utilities.AlbumDOMReader;
+import utilities.AlbumCreateXMLWithDOM;
+import utilities.AlbumDOMReader;
 
 /**
  * An album is an object that holds an arraylist of tracks. It is used in the

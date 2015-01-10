@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,12 +9,13 @@ import jComponents.PictureLabel;
 import javax.sound.sampled.Clip;
 import javax.swing.JPanel;
 
-import AlbumHierarchy.Track;
 import sound.AudioPlayer;
-import Utilities.HTMLExporter;
+import utilities.HTMLExporter;
 
 import javax.swing.JLabel;
 import javax.swing.JButton;
+
+import albumHierarchy.Track;
 
 /**
  * Displays one track with detailed information and the audio player to play the track.

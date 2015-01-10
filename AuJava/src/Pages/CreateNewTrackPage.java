@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import java.awt.EventQueue;
 import java.awt.GridBagConstraints;
@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import AlbumHierarchy.Track;
+import albumHierarchy.Track;
 
 /**
  * JPanel with a form and submission for creating new tracks

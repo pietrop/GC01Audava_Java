@@ -1,12 +1,12 @@
-package Testing;
+package testing;
 
 import java.io.FileNotFoundException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 
-import AlbumHierarchy.Album;
-import AlbumHierarchy.Track;
+import albumHierarchy.Album;
+import albumHierarchy.Track;
 
 
 /**
