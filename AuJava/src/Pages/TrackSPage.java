@@ -37,7 +37,7 @@ public class TrackSPage extends Page{
 		lbltracks.setBounds(304, 6, 95, 26);
 		add(lbltracks);
 		
-		JLabel lblYouDontHave = new JLabel("You don't have any Tracks yet, click the Record Page to create some");
+		JLabel lblYouDontHave = new JLabel("You don't have any Tracks yet, click the Record Page to create some.");
 		lblYouDontHave.setBounds(149, 44, 439, 264);
 		add(lblYouDontHave);
 	}
