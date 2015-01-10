@@ -16,7 +16,12 @@ import Utilities.HTMLExporter;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
-
+/**
+ * 
+ * 
+ * @author Axel Striesow
+ * @author Pietro Passarelli
+ */
 public class TrackPage extends Page {
 
 	public TrackPage(Track track) {
