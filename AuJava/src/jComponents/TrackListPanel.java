@@ -17,6 +17,11 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JScrollBar;
 
+/**
+ * 
+ * @author SamiStart
+ *@author PietroPasserelli
+ */
 public class TrackListPanel extends JPanel {
 	int j;
 	ArrayList<Track> tracks;

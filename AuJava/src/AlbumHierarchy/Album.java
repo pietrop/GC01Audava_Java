@@ -17,12 +17,15 @@ import Utilities.AlbumDOMReader;
  */
 public class Album extends AlbumOrTrack {
 
-	public static final String ALBUMFILE = "db/albums.txt";
+	public static final String ALBUMFILE = "db/albums.xml";
 
 	private static ArrayList<Album> allAlbums = new ArrayList<Album>();
 	private ArrayList<Track> tracksInAlbum = new ArrayList<Track>();
 	private int id;
 
+	/**
+	 * Default constructor for album
+	 */
 	public Album() {
 		super();
 		this.id = allAlbums.size();
@@ -34,6 +37,12 @@ public class Album extends AlbumOrTrack {
 		}
 	}
 
+	/**
+	 * A constructor for the album when the params are specified by the user
+	 * @param ttl
+	 * @param dsc
+	 * @param pic
+	 */
 	public Album(String ttl, String dsc, String pic) {
 		super(ttl, dsc, pic);
 		this.id = allAlbums.size();
@@ -45,6 +54,9 @@ public class Album extends AlbumOrTrack {
 		}
 	}
 
+	/**
+	 * 
+	 */
 	static public void loadAlbums() {
 		AlbumDOMReader reader = new AlbumDOMReader();
 		allAlbums=reader.getDataFromXML();
