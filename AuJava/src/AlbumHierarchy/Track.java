@@ -47,6 +47,9 @@ public class Track extends AlbumOrTrack {
 	 * A static arraylist to hold all the tracks in order throughout the session
 	 */
 	private static ArrayList<Track> allTracks = new ArrayList<Track>();
+	
+	static String dsc = "A default track description";
+	static String pic = "img/Track.png";
 
 	public Track() {
 		super();
@@ -56,14 +59,6 @@ public class Track extends AlbumOrTrack {
 		allTracks.add(this);
 	}
 
-//	public Track(String outputFilename) {
-//		super();
-//		this.AlbumId = 0;
-//		this.audioFileLocation = outputFilename;
-//		this.id = allTracks.size();
-//		allTracks.add(this);
-//	}
-
 	public Track(String ttl, String dsc, String pic, String aud) {
 		super(ttl, dsc, pic);
 		this.audioFileLocation = aud;
@@ -72,10 +67,10 @@ public class Track extends AlbumOrTrack {
 		saveTracks();
 	}
 
-	/* P trying out stuff */
-	static String dsc = "A default track description";
-	static String pic = "img/Track.png";
-
+	/**
+	 * Constructor for track which puts the time of creation as title. Used in record page.
+	 * @param outputFilename
+	 */
 	public Track(String outputFilename) {
 		super(outputFilename, dsc, pic);
 		this.audioFileLocation = outputFilename;
@@ -83,7 +78,6 @@ public class Track extends AlbumOrTrack {
 		saveTracks();
 	}
 
-	/* end */
 
 	/**
 	 * 

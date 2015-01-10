@@ -114,7 +114,7 @@ public class Recorder extends Thread{
 		
 		/** Start our thread */
 		start();
-		System.out.println("started recording");
+		
 		long startTime = System.currentTimeMillis();
 	}
 
@@ -123,7 +123,7 @@ public class Recorder extends Thread{
 		/** Stop and close the TargetDataLine */
 		this.line.stop();
 		this.line.close();
-		System.out.println("Stoped recording button");
+		
 		recording = false; 
 	}
 	
@@ -132,8 +132,7 @@ public class Recorder extends Thread{
 			AudioSystem.write( this.inputStream, this.targetType, this.file );
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			
-			System.out.println("problem with writing audio");		
+	
 		}
 	}
 	
