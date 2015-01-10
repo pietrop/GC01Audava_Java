@@ -46,6 +46,14 @@ public class Track extends AlbumOrTrack {
 		this.id = allTracks.size();
 		allTracks.add(this);
 	}
+	
+	public Track(String outputFilename){
+		super();
+		this.AlbumId = 0;
+		this.audioFileLocation = outputFilename;
+		this.id = allTracks.size();
+		allTracks.add(this);
+	}
 
 	public Track(String ttl, String dsc, String pic, String aud) {
 		super(ttl, dsc, pic);
