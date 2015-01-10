@@ -6,7 +6,11 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-
+/**
+ * 
+ * @author Pietro Passarelli
+ *
+ */
 public class SignUpTest {
 
 	public static void main(String[] args) {

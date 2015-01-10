@@ -12,7 +12,11 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 import jComponents.MenuBar;
-
+/**
+ * 
+ * @author Pietro Passarelli
+ *
+ */
 public class TrackView extends JPanel {
 	
 	public static JPanel cards;

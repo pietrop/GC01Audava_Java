@@ -3,9 +3,11 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 import Pages.TrackView;
 
-
-
-
+/**
+ * 
+ * @author Pietro Passarelli
+ *
+ */
 public class Controller {
 
 	public static void main(String[] args) {

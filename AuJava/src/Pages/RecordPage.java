@@ -1,7 +1,6 @@
 package Pages;
 
 import java.awt.CardLayout;
-import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
@@ -13,12 +12,14 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.Timer;
 
-import AlbumHierarchy.Track;
 import sound.Recorder;
+import AlbumHierarchy.Track;
 
-
-
-
+/**
+ * 
+ * @author Pietro Passarelli
+ *
+ */
 public class RecordPage extends Page{
 	
 

@@ -6,7 +6,10 @@ import java.io.File;
 import java.io.IOException;
 
 /**
+ * 
+ * @author Pietro Passarelli
  * from http://www.informit.com/guides/content.aspx?g=java&seqNum=375
+ *
  */
 public class Recorder extends Thread{
 	

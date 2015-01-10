@@ -3,7 +3,11 @@ package users;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
- 
+ /**
+  * 
+  * @author Pietro Passarelli
+  *
+  */
 public class LoginTest {
     public static void main(String[] args) {
         final JFrame frame = new JFrame("Login Demo");

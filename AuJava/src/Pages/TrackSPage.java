@@ -1,26 +1,19 @@
 package Pages;
+import jComponents.TrackListPanel;
+
 import java.util.ArrayList;
 
 import javax.swing.JLabel;
 
-import jComponents.TrackListPanel;
 import AlbumHierarchy.Track;
-
+/**
+ * 
+ * @author Pietro Passarelli
+ *
+ */
 public class TrackSPage extends Page{
 	public TrackSPage(ArrayList<Track> TracksArrayList) {
 		setLayout(null);
-		
-//		JLabel lbltracks = new JLabel("<html><h1>Tracks</h1></html>");
-//		lbltracks.setBounds(304, 6, 95, 26);
-//		add(lbltracks);
-//	
-//		DisplayTracks tracksList = new DisplayTracks(TracksArrayList);
-//		tracksList.setBounds(65, 52, 550, 529);
-//		add(tracksList);
-//		
-//		JListTracks listOfTracks = new JListTracks();
-//		listOfTracks.setBounds(149, 44, 439, 264);
-//		add(listOfTracks);
 		
 		showTracks(TracksArrayList);
 	}
@@ -45,9 +38,6 @@ public class TrackSPage extends Page{
 	else {
 		showTracks(Track.getAllTracks());
 	}
-	
-	
-	
 		// TODO Auto-generated constructor stub
 	}
 	

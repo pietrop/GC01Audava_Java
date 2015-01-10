@@ -1,5 +1,9 @@
 package Utilities;
-
+/**
+ * 
+ * @author Pietro Passarelli
+ *
+ */
 public class Stopwatch {
 
 	private long start;
