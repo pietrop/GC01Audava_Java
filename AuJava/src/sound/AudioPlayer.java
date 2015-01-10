@@ -45,7 +45,6 @@ public class AudioPlayer extends JPanel {
 				btnStop.setEnabled(true);
 				try {
 					File file = new File(AUDIOPATH+filename);
-					System.out.println("audio file name in audio play: "+filename);
 					if (file.exists()) {
 						 AudioInputStream inputStream = AudioSystem.getAudioInputStream(file);
 					       clip = AudioSystem.getClip();

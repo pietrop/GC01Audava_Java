@@ -65,8 +65,6 @@ public class TrackListPanel extends JPanel {
 		trackPaneList.setLayout(new CardLayout());
 		// /
 		if (tracks.size() != 0) {
-			System.out.println("tracks list not empty");
-			System.out.println(tracks.size());
 			for (int i = 0; i < tracks.size(); i++) {
 				gbc.insets = new Insets(0, 0, 5, 0);
 				gbc.gridx = 0;
@@ -74,32 +72,28 @@ public class TrackListPanel extends JPanel {
 
 				buttons.add(new JButton(tracks.get(i).getTitle()));
 				Track recordedTrack = tracks.get(i);
-				/* adding track page to cards group */
-				// TrackView.cards.add(TrackView.TRACKPAGE, trackCard);//
-				// +4
 
 				buttons.get(i).addActionListener(new ActionListener() {
 
 					@Override
 					public void actionPerformed(ActionEvent e) {
 
-						/*
+						/**
 						 * creating track page that takes the newly recorded
 						 * track in as an argument
 						 */
 						TrackPage trackCard = new TrackPage(recordedTrack);
-						/* adding track page to cards group */
+						/** adding track page to cards group */
 						TrackView.cards.add(TrackView.TRACKPAGE, trackCard);
-						/* defining card layout var card layout from TrackView */
+						/** defining card layout var card layout from TrackView */
 						CardLayout cardLayout = (CardLayout) TrackView.cards
 								.getLayout();
-						/* show/change to the newly created Track page */
+						/** show/change to the newly created Track page */
 						cardLayout.show(TrackView.cards, TrackView.TRACKPAGE);
 
 					}
 				});
 				add(buttons.get(i), gbc);
-				// System.out.println("Clicke on select track "+ i);
 			}
 		}
 

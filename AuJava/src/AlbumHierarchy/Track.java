@@ -60,7 +60,6 @@ public class Track extends AlbumOrTrack {
 		allTracks.add(this);
 		saveTracks();
 	}
-
 	
 	/**
 	 * 
