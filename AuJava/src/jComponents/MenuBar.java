@@ -16,6 +16,11 @@ import Pages.TrackView;
  */
 public class MenuBar extends JMenuBar{	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private static String username = "Username"; 
 	
 	/** define card layout local var, calling tack view card layout */

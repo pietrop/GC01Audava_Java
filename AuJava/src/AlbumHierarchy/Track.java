@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 
-import Utilities.AlbumCreateXMLWithDOM;
-import Utilities.AlbumDOMReader;
 import Utilities.TrackCreateXMLWithDOM;
 import Utilities.TrackDOMReader;
 

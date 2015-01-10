@@ -17,6 +17,11 @@ import AlbumHierarchy.Track;
  */
 public class InfoPanel extends JPanel{
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
 	 * default constructor 
 	 * @param title
 	 * @param description

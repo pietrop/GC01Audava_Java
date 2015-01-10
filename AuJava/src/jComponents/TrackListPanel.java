@@ -1,21 +1,19 @@
 package jComponents;
 
-import java.awt.GridBagConstraints;
-import java.util.ArrayList;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-
-import AlbumHierarchy.Track;
-import Pages.TrackPage;
-import Pages.TrackView;
-
 import java.awt.CardLayout;
+import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
-import javax.swing.JScrollBar;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+import AlbumHierarchy.Track;
+import Pages.TrackPage;
+import Pages.TrackView;
 
 /**
  * This is a JPanel with a button for each track. The buttons link to the track
