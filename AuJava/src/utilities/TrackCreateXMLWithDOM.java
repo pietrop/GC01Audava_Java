@@ -59,7 +59,7 @@ public class TrackCreateXMLWithDOM {
 	 */
 	private static void outputAsFile(Document doc, String filename) throws TransformerConfigurationException, TransformerException, TransformerFactoryConfigurationError {
 		DOMSource source = new DOMSource(doc);
-		StreamResult result = new StreamResult(new File(filename));
+		StreamResult result = new StreamResult(new File(System.getProperty("user.dir")+"/audava/db/"+ filename));
 		getTransformer().transform(source, result);
 
 	}

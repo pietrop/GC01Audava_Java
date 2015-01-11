@@ -20,7 +20,7 @@ public class HomePage extends Page {
 		
 		setLayout(null);
 		
-		String htmlPath = "html/Homepage.html";
+		String htmlPath = System.getProperty("user.dir")+"/audava/html/" +"Homepage.html";
 		
 		BufferedImage imagePath = null;
 		 try {

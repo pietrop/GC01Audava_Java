@@ -10,6 +10,8 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.TargetDataLine;
 
+import albumHierarchy.Track;
+
 /**
  * 
  * @author Pietro Passarelli 
@@ -53,7 +55,7 @@ public class Recorder extends Thread{
 	 */
 	public Recorder(String outputFile){
 		
-		outputFilename = "audio/"+outputFile;
+		outputFilename = outputFile;
 	}
 
 	public void startRecording(){
@@ -99,7 +101,8 @@ public class Recorder extends Thread{
 				/**
 				 *  Create the output file
 				 */
-				this.file = new File( outputFilename );
+				this.file = new File(System.getProperty("user.dir")+"/audava/audio/" +outputFilename );
+
 			}
 			catch( Exception e )
 			{

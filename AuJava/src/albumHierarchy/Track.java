@@ -20,7 +20,7 @@ import utilities.TrackDOMReader;
 public class Track extends AlbumOrTrack {
 
 	/** The name of the file for the xml database */
-	public static final String TRACKFILE = "db/tracks.xml";
+	public static final String TRACKFILE = "tracks.xml";
 
 	/**
 	 * The album id of the album that this track belongs to (not used for this
@@ -49,7 +49,7 @@ public class Track extends AlbumOrTrack {
 	private static ArrayList<Track> allTracks = new ArrayList<Track>();
 	
 	static String dsc = "A default track description";
-	static String pic = "img/Track.png";
+	static String pic = System.getProperty("user.dir")+"/audava/img/" +"Track.png";
 
 	public Track() {
 		super();

@@ -31,7 +31,8 @@ public class TrackDOMReader {
 		
 		ArrayList<Track> data = new ArrayList<>();
 		
-		File xmlFile = new File(Track.TRACKFILE);
+		File xmlFile = new File(System.getProperty("user.dir")+"/audava/db/" + Track.TRACKFILE );
+		
 		Document doc = null;
 		
 		try {

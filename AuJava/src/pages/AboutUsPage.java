@@ -19,7 +19,7 @@ public class AboutUsPage extends Page {
 		
 		setLayout(null);
 		
-		String htmlPath = "html/AboutUs.html";
+		String htmlPath = System.getProperty("user.dir")+"/audava/html/" + "AboutUs.html";
 		
 		BufferedImage imageImran = null;
 		 try {

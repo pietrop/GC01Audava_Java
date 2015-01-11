@@ -20,7 +20,7 @@ import javax.swing.JPanel;
  */
 public class AudioPlayer extends JPanel {
 	
-	private final String AUDIOPATH = "audio/";
+	private final String AUDIOPATH = System.getProperty("user.dir")+"/audava/audio/" ;
 	private Clip clip = null;
 	
 	/**
