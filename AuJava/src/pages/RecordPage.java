@@ -136,16 +136,16 @@ public class RecordPage extends Page{
 				/** creating a track object with the audio file name constructor*/
 				Track recordedTrack = new Track(outputFilename);
 				/** creating track page that takes the newly recorded track in as an argument*/
-				 TrackPage trackCard = new TrackPage(recordedTrack);
+				 IndividualTrackPage trackCard = new IndividualTrackPage(recordedTrack);
 				 /** adding track page to cards group*/
-				 TrackView.cards.add(TrackView.TRACKPAGE, trackCard);
+				 ApplicationView.cards.add(ApplicationView.TRACKPAGE, trackCard);
 				 /** defining card layout var card layout from TrackView */
-				 CardLayout cardLayout = (CardLayout) TrackView.cards.getLayout();
+				 CardLayout cardLayout = (CardLayout) ApplicationView.cards.getLayout();
 				 /** show/changes to the newly created Track page*/
-				 cardLayout.show( TrackView.cards, TrackView.TRACKPAGE);	
+				 cardLayout.show( ApplicationView.cards, ApplicationView.TRACKPAGE);	
 				 Track.saveTracks();
-				 TrackSPage tracksCard = new TrackSPage(Track.getAllTracks());
-				 TrackView.cards.add(TrackView.TRACKSPAGE, tracksCard);
+				 TracksPage tracksCard = new TracksPage(Track.getAllTracks());
+				 ApplicationView.cards.add(ApplicationView.TRACKSPAGE, tracksCard);
 			}
 		});
 	}

@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import pages.TrackPage;
-import pages.TrackView;
+import pages.IndividualTrackPage;
+import pages.ApplicationView;
 import albumHierarchy.Track;
 
 /**
@@ -82,14 +82,14 @@ public class TrackListPanel extends JPanel {
 						 * creating track page that takes the newly recorded
 						 * track in as an argument
 						 */
-						TrackPage trackCard = new TrackPage(recordedTrack);
+						IndividualTrackPage trackCard = new IndividualTrackPage(recordedTrack);
 						/** adding track page to cards group */
-						TrackView.cards.add(TrackView.TRACKPAGE, trackCard);
+						ApplicationView.cards.add(ApplicationView.TRACKPAGE, trackCard);
 						/** defining card layout var card layout from TrackView */
-						CardLayout cardLayout = (CardLayout) TrackView.cards
+						CardLayout cardLayout = (CardLayout) ApplicationView.cards
 								.getLayout();
 						/** show/change to the newly created Track page */
-						cardLayout.show(TrackView.cards, TrackView.TRACKPAGE);
+						cardLayout.show(ApplicationView.cards, ApplicationView.TRACKPAGE);
 
 					}
 				});

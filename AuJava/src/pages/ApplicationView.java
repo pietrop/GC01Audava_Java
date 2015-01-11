@@ -16,7 +16,7 @@ import javax.swing.JPanel;
  * @author Pietro Passarelli 
  *
  */
-public class TrackView {
+public class ApplicationView {
 	
 	public static JPanel cards;
 	public static CardLayout cardLayout;
@@ -72,7 +72,7 @@ public class TrackView {
         };
      
         /** Tracks page*/
-        TrackSPage tracksCard = new TrackSPage();
+        TracksPage tracksCard = new TracksPage();
         
         /** add to cards*/
         

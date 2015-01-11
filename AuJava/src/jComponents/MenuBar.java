@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-import pages.TrackView;
+import pages.ApplicationView;
 
 /**
  * The <code>MenuBar</code> class provides basic navigation for the 
@@ -24,7 +24,7 @@ public class MenuBar extends JMenuBar{
 	private static String username = "Username"; 
 	
 	/** define card layout local var, calling tack view card layout */
-	private static CardLayout cardLayout = (CardLayout) TrackView.cards.getLayout();
+	private static CardLayout cardLayout = (CardLayout) ApplicationView.cards.getLayout();
 	
 	/**
 	 * Cascading constructors. If MenuBar is called without a username the default "Username" is used.
@@ -57,7 +57,7 @@ public class MenuBar extends JMenuBar{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				/* Brings the clicked card to the front in the GUI. */
-		        cardLayout.show( TrackView.cards, TrackView.RECORDPAGE);
+		        cardLayout.show( ApplicationView.cards, ApplicationView.RECORDPAGE);
 			} 
 		});
 		
@@ -65,7 +65,7 @@ public class MenuBar extends JMenuBar{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				/* Brings the clicked card to the front in the GUI. */
-		        cardLayout.show( TrackView.cards, TrackView.TRACKSPAGE);
+		        cardLayout.show( ApplicationView.cards, ApplicationView.TRACKSPAGE);
 			} 
 		});	
 		
@@ -73,7 +73,7 @@ public class MenuBar extends JMenuBar{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				/* Brings the clicked card to the front in the GUI. */
-		        cardLayout.show( TrackView.cards, TrackView.HOMEPAGE);	
+		        cardLayout.show( ApplicationView.cards, ApplicationView.HOMEPAGE);	
 			} 
 			});	
 		
@@ -81,7 +81,7 @@ public class MenuBar extends JMenuBar{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				/* Brings the clicked card to the front in the GUI. */
-		        cardLayout.show( TrackView.cards, TrackView.ABOUTUSPAGE);	
+		        cardLayout.show( ApplicationView.cards, ApplicationView.ABOUTUSPAGE);	
 			} 
 		});
 		

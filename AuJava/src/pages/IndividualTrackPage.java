@@ -23,7 +23,7 @@ import albumHierarchy.Track;
  * @author Axel Striesow
  * @author Pietro Passarelli
  */
-public class TrackPage extends Page {
+public class IndividualTrackPage extends Page {
 
 	/**
 	 * Takes in a track object and populates the page with its information and attached
@@ -31,7 +31,7 @@ public class TrackPage extends Page {
 	 * 
 	 * @param track   Track object containing information and attached files.
 	 */
-	public TrackPage(Track track) {
+	public IndividualTrackPage(Track track) {
 		this.setLayout(null);
 
 		InfoPanel infoPanel = new InfoPanel(track.getTitle(), track.getDescription(), track.getPicFileLocation());
