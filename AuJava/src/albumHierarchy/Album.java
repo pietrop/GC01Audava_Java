@@ -118,7 +118,7 @@ public class Album extends AlbumOrTrack {
 	/**
 	 * Return all albums as an arraylist
 	 * 
-	 * @return Arraylist<Album> all currently stored albums.
+	 * @return Arraylist of all currently stored albums.
 	 */
 	public static ArrayList<Album> getAllAlbums() {
 
