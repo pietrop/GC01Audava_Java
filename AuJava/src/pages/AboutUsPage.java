@@ -1,4 +1,8 @@
 package pages;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
@@ -16,12 +20,26 @@ public class AboutUsPage extends Page {
 		setLayout(null);
 		
 		String htmlPath = "html/AboutUs.html";
-		String imageImran = "img/duke-java.png";
-		String imageUsman = "img/duke-java.png";
 		
-		JLabel lblHome = new JLabel(HTMLReader.read(htmlPath));
-		lblHome.setBounds(39, 41, 295, 400);
-		this.add(lblHome);
+		BufferedImage imageImran = null;
+		 try {
+			 imageImran = ImageIO.read(getClass().getResource("/duke-java.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		BufferedImage imageUsman = null;
+		 try {
+			 imageUsman = ImageIO.read(getClass().getResource("/duke-java.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		JLabel lblAboutUs = new JLabel(HTMLReader.read(htmlPath));
+		lblAboutUs.setBounds(39, 41, 295, 450);
+		this.add(lblAboutUs);
 		
 		JLabel imranPicture = new JLabel("Imran Pic");
 		imranPicture.setIcon(new ImageIcon(imageImran));

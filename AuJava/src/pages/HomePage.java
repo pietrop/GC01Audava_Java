@@ -1,5 +1,9 @@
 package pages;
 
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
@@ -17,7 +21,14 @@ public class HomePage extends Page {
 		setLayout(null);
 		
 		String htmlPath = "html/Homepage.html";
-		String imagePath = "img/duke-java.png";
+		
+		BufferedImage imagePath = null;
+		 try {
+			imagePath = ImageIO.read(getClass().getResource("/duke-java.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		JLabel lblHome = new JLabel(HTMLReader.read(htmlPath));
 		lblHome.setBounds(39, 41, 295, 400);

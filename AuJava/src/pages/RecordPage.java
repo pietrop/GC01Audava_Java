@@ -3,10 +3,13 @@ package pages;
 import java.awt.CardLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextField;
@@ -40,8 +43,25 @@ public class RecordPage extends Page{
 	 */
 	public RecordPage(){
 		/** initialises GUI */
-		ImageIcon  recButtonIcon = new ImageIcon("img/rec.png");
-		ImageIcon  stopButtonIcon = new ImageIcon("img/stop.png");
+		
+		BufferedImage recImg = null;
+		 try {
+			 recImg = ImageIO.read(getClass().getResource("/rec.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		 BufferedImage stopImg = null;
+		 try {
+			 stopImg = ImageIO.read(getClass().getResource("/stop.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		ImageIcon  recButtonIcon = new ImageIcon(recImg);
+		ImageIcon  stopButtonIcon = new ImageIcon(stopImg);
 		setLayout(null);
 
 		JButton btnRec = new JButton(recButtonIcon);
