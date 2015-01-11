@@ -1,7 +1,7 @@
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import pages.TrackView;
+import pages.ApplicationView;
 import albumHierarchy.Track;
 
 /**
@@ -34,7 +34,7 @@ public class Controller {
 		   creating and showing this application's GUI. */
 		javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
-				TrackView.createAndShowGUI();
+				ApplicationView.createAndShowGUI();
 			}
 		});
 

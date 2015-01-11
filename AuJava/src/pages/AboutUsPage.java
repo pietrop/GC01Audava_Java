@@ -19,9 +19,9 @@ public class AboutUsPage extends Page {
 		String imageImran = "img/duke-java.png";
 		String imageUsman = "img/duke-java.png";
 		
-		JLabel lblHome = new JLabel(HTMLReader.read(htmlPath));
-		lblHome.setBounds(39, 41, 295, 400);
-		this.add(lblHome);
+		JLabel lblAboutUs = new JLabel(HTMLReader.read(htmlPath));
+		lblAboutUs.setBounds(39, 41, 295, 450);
+		this.add(lblAboutUs);
 		
 		JLabel imranPicture = new JLabel("Imran Pic");
 		imranPicture.setIcon(new ImageIcon(imageImran));

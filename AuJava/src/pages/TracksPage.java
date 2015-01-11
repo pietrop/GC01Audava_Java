@@ -11,13 +11,13 @@ import albumHierarchy.Track;
  * @author Pietro Passarelli 
  *
  */
-public class TrackSPage extends Page{
+public class TracksPage extends Page{
 	
 	/**
 	 * Default constructor, calling <code>showTracks</code> on array list of Tracks.
 	 * @param TracksArrayList
 	 */
-	public TrackSPage(ArrayList<Track> TracksArrayList) {
+	public TracksPage(ArrayList<Track> TracksArrayList) {
 		setLayout(null);
 		
 		showTracks(TracksArrayList);
@@ -27,7 +27,7 @@ public class TrackSPage extends Page{
 	 * Default constructor overloading for when there are no recordings being passed. 
 	 * 
 	 */
-	public TrackSPage() {
+	public TracksPage() {
 	setLayout(null);
 	/**
 	 * If database already has tracks then it shows them
